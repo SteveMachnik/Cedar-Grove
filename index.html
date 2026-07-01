@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cedar Grove School — Rooted in Wonder</title>
+<meta name="description" content="A Waldorf-inspired, nature-based elementary school set on an organic farm in Prince Edward County. Learning with head, heart, and hands." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;500;700&family=Caveat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest: #3E5B4A;
+    --forest-deep: #2c4135;
+    --cedar: #7A5A44;
+    --moss: #8E9B7B;
+    --cream: #F4F0E6;
+    --cream-warm: #EDE5D2;
+    --bark: #C6B7A6;
+    --wheat: #C8A96B;
+    --sky: #DCE7E5;
+    --clay: #B67B5A;
+    --ink: #2A2823;
+    --ink-soft: #5a554b;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+    --hand: 'Caveat', cursive;
+    --r-sm: 8px;
+    --r-md: 16px;
+    --r-lg: 28px;
+    --r-xl: 48px;
+    --shadow-sm: 0 2px 12px rgba(46, 65, 53, 0.06);
+    --shadow-md: 0 12px 40px rgba(46, 65, 53, 0.10);
+    --shadow-lg: 0 24px 60px rgba(46, 65, 53, 0.14);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.65;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; transition: color .25s ease; }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--forest-deep); line-height: 1.15; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(2.6rem, 5.8vw, 5.4rem); font-weight: 500; }
+  h2 { font-size: clamp(2rem, 3.6vw, 3.2rem); }
+  h3 { font-size: clamp(1.5rem, 2.2vw, 2rem); }
+  p  { font-size: 1.05rem; color: var(--ink-soft); }
+
+  .container { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+  .narrow    { max-width: 880px; margin: 0 auto; padding: 0 32px; }
+
+  .hand { font-family: var(--hand); color: var(--cedar); font-size: 1.4rem; font-weight: 500; letter-spacing: 0.02em; }
+
+  /* ========== Announcement bar ========== */
+  .announce {
+    background: var(--forest);
+    color: var(--cream);
+    text-align: center;
+    padding: 10px 24px;
+    font-size: 0.92rem;
+    letter-spacing: 0.02em;
+  }
+  .announce a { color: var(--wheat); text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
+  .announce a:hover { color: var(--cream); }
+  .leaf { display: inline-block; transform: translateY(2px); margin: 0 4px; }
+
+  /* ========== Header / nav ========== */
+  header.site {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(244, 240, 230, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(124, 90, 68, 0.08);
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 32px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo-mark { width: 44px; height: 44px; }
+  .logo-text { font-family: var(--serif); font-size: 1.5rem; color: var(--forest-deep); font-weight: 600; letter-spacing: 0.01em; }
+  .logo-sub { font-family: var(--hand); font-size: 0.95rem; color: var(--cedar); margin-top: -4px; display: block; }
+
+  .nav-links { display: flex; gap: 36px; align-items: center; }
+  .nav-links a {
+    font-size: 0.92rem;
+    color: var(--forest-deep);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    position: relative;
+    padding: 6px 0;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 100%; bottom: 0;
+    height: 1.5px;
+    background: var(--cedar);
+    transition: right .3s ease;
+  }
+  .nav-links a:hover::after { right: 0; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    letter-spacing: 0.04em;
+    transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background: var(--forest);
+    color: var(--cream);
+    box-shadow: 0 6px 20px rgba(62, 91, 74, 0.25);
+  }
+  .btn-primary:hover { background: var(--forest-deep); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(62, 91, 74, 0.32); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--forest-deep);
+    border: 1.5px solid var(--forest);
+  }
+  .btn-ghost:hover { background: var(--forest); color: var(--cream); }
+
+  .nav-links a.nav-apply {
+    padding: 16px 38px;
+    font-size: 0.98rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #ffffff;
+    background: linear-gradient(135deg, #4a6b58 0%, var(--forest) 55%, var(--forest-deep) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow:
+      0 8px 22px rgba(62, 91, 74, 0.32),
+      inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav-links a.nav-apply::after { display: none; }
+  .nav-links a.nav-apply:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--forest) 0%, var(--forest-deep) 100%);
+    box-shadow:
+      0 12px 28px rgba(62, 91, 74, 0.42),
+      inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+  }
+  .nav-apply .leaf-ico { color: var(--wheat); flex: none; }
+
+  .menu-toggle { display: none; }
+
+  /* ========== Hero ========== */
+  .hero {
+    position: relative;
+    padding: 70px 0 100px;
+    overflow: hidden;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--cedar);
+    font-family: var(--hand);
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+  }
+  .hero-eyebrow svg { color: var(--moss); }
+  .hero h1 { margin-bottom: 24px; }
+  .hero h1 em { font-style: italic; color: var(--cedar); font-weight: 500; }
+  .hero p.lead {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 36px;
+    max-width: 520px;
+  }
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  .hero-visual {
+    position: relative;
+    aspect-ratio: 4/5;
+  }
+  .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--r-xl) var(--r-xl) var(--r-lg) var(--r-lg);
+    box-shadow: var(--shadow-lg);
+  }
+  .hero-badge {
+    position: absolute;
+    top: 28px;
+    left: -28px;
+    background: var(--cream);
+    border-radius: 999px;
+    padding: 14px 22px;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--forest-deep);
+  }
+  .hero-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--moss); animation: pulse 2.4s infinite; }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.4); }
+  }
+  .hero-card {
+    position: absolute;
+    bottom: -40px;
+    right: -28px;
+    background: var(--cream);
+    padding: 24px 28px;
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-lg);
+    max-width: 260px;
+  }
+  .hero-card .stat { font-family: var(--serif); font-size: 2.6rem; color: var(--forest); font-weight: 600; line-height: 1; }
+  .hero-card .label { font-size: 0.88rem; color: var(--ink-soft); margin-top: 6px; }
+
+  .hero-decor {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.18;
+  }
+  .hero-decor.top-right { top: 40px; right: -60px; transform: rotate(15deg); width: 240px; color: var(--moss); }
+  .hero-decor.bot-left  { bottom: 0; left: -80px; transform: rotate(-10deg); width: 200px; color: var(--cedar); }
+
+  /* ========== Marquee values ========== */
+  .marquee {
+    background: var(--forest);
+    color: var(--cream);
+    padding: 28px 0;
+    overflow: hidden;
+    border-top: 1px solid rgba(244, 240, 230, 0.1);
+    border-bottom: 1px solid rgba(244, 240, 230, 0.1);
+  }
+  .marquee-track {
+    display: flex;
+    gap: 60px;
+    animation: scroll 38s linear infinite;
+    white-space: nowrap;
+    width: max-content;
+  }
+  .marquee-item {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    color: var(--cream);
+  }
+  .marquee-item::after {
+    content: '';
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--wheat);
+  }
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ========== Section base ========== */
+  section { padding: 120px 0; position: relative; }
+  .eyebrow {
+    display: inline-block;
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--cedar);
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  .section-head { max-width: 720px; margin-bottom: 64px; }
+  .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+  .section-head h2 { margin-bottom: 20px; }
+  .section-head p { font-size: 1.1rem; }
+
+  /* ========== Three-pillar (Head, Heart, Hands) ========== */
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .pillar {
+    background: var(--cream-warm);
+    border-radius: var(--r-lg);
+    padding: 44px 36px;
+    transition: transform .35s ease, box-shadow .35s ease;
+    border: 1px solid transparent;
+  }
+  .pillar:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: rgba(124, 90, 68, 0.12); }
+  .pillar-icon {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    background: var(--cream);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--forest);
+    margin-bottom: 24px;
+    box-shadow: inset 0 0 0 1px rgba(62, 91, 74, 0.12);
+  }
+  .pillar h3 { margin-bottom: 12px; }
+  .pillar h3 .accent { font-family: var(--hand); color: var(--cedar); display: block; font-size: 1.4rem; font-weight: 500; margin-bottom: 4px; }
+
+  /* ========== About / story split ========== */
+  .story { background: var(--cream-warm); }
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .story-images {
+    position: relative;
+    aspect-ratio: 1/1;
+  }
+  .story-img-1 {
+    position: absolute;
+    width: 70%; height: 75%;
+    top: 0; left: 0;
+    object-fit: cover;
+    border-radius: var(--r-lg);
+    box-shadow: var(--shadow-md);
+  }
+  .story-img-2 {
+    position: absolute;
+    width: 55%; height: 55%;
+    bottom: 0; right: 0;
+    object-fit: cover;
+    border-radius: var(--r-lg);
+    box-shadow: var(--shadow-lg);
+    border: 8px solid var(--cream-warm);
+  }
+  .story-content blockquote {
+    border-left: 3px solid var(--wheat);
+    padding-left: 20px;
+    margin: 28px 0;
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--forest-deep);
+    line-height: 1.4;
+  }
+  .story-meta {
+    display: flex;
+    gap: 40px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+  }
+  .story-meta div .num { font-family: var(--serif); font-size: 2.4rem; color: var(--forest); font-weight: 600; }
+  .story-meta div .label { font-size: 0.88rem; color: var(--ink-soft); margin-top: 2px; }
+
+  /* ========== Programs ========== */
+  .programs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+  .program {
+    position: relative;
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    aspect-ratio: 5/4;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+  }
+  .program img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s ease;
+  }
+  .program:hover img { transform: scale(1.06); }
+  .program-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(44, 65, 53, 0.85) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 36px;
+    color: var(--cream);
+  }
+  .program-overlay .tag {
+    background: rgba(244, 240, 230, 0.15);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(244, 240, 230, 0.25);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    align-self: flex-start;
+    margin-bottom: 16px;
+  }
+  .program-overlay h3 { color: var(--cream); margin-bottom: 8px; font-size: 1.7rem; }
+  .program-overlay p { color: rgba(244, 240, 230, 0.85); font-size: 0.98rem; max-width: 420px; }
+  .program-overlay .more {
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--wheat);
+    font-weight: 600;
+    font-size: 0.92rem;
+    letter-spacing: 0.04em;
+  }
+  .program-overlay .more svg { transition: transform .3s ease; }
+  .program:hover .more svg { transform: translateX(6px); }
+
+  /* ========== A day at Cedar Grove ========== */
+  .day { background: var(--cream-warm); }
+  .day-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .day-timeline { position: relative; }
+  .day-timeline::before {
+    content: '';
+    position: absolute;
+    left: 11px; top: 8px; bottom: 8px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--moss), var(--cedar));
+    opacity: 0.4;
+  }
+  .day-item {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 20px;
+    padding: 18px 0;
+    align-items: start;
+  }
+  .day-item .marker {
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: var(--cream-warm);
+    border: 2px solid var(--moss);
+    position: relative;
+    z-index: 1;
+    margin-top: 4px;
+  }
+  .day-item.active .marker { background: var(--forest); border-color: var(--forest); }
+  .day-item h4 { font-family: var(--serif); font-size: 1.2rem; color: var(--forest-deep); margin-bottom: 2px; }
+  .day-item .time { font-size: 0.82rem; color: var(--cedar); letter-spacing: 0.04em; font-weight: 600; }
+  .day-item p { font-size: 0.96rem; margin-top: 4px; }
+
+  /* ========== Gallery ========== */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .gallery-item {
+    border-radius: var(--r-md);
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    background: var(--bark);
+    cursor: pointer;
+  }
+  .gallery-item.tall { grid-row: span 2; aspect-ratio: 1/2; }
+  .gallery-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform .8s ease;
+  }
+  .gallery-item:hover img { transform: scale(1.05); }
+
+  /* ========== Land acknowledgment ========== */
+  .land {
+    background: var(--forest-deep);
+    color: var(--cream);
+  }
+  .land::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath fill='%23F4F0E6' fill-opacity='0.025' d='M30 5 L35 22 L52 22 L38 32 L43 49 L30 39 L17 49 L22 32 L8 22 L25 22 Z'/%3E%3C/svg%3E");
+    opacity: 0.6;
+  }
+  .land .container { position: relative; z-index: 1; }
+  .land .eyebrow { color: var(--wheat); }
+  .land h2 { color: var(--cream); }
+  .land p { color: rgba(244, 240, 230, 0.82); font-size: 1.15rem; max-width: 760px; margin-top: 24px; }
+  .land .signature {
+    font-family: var(--hand);
+    color: var(--wheat);
+    font-size: 1.6rem;
+    margin-top: 32px;
+    display: block;
+  }
+
+  /* ========== Testimonials ========== */
+  .quotes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .quote {
+    background: var(--cream-warm);
+    padding: 36px 32px;
+    border-radius: var(--r-lg);
+    position: relative;
+  }
+  .quote .mark {
+    font-family: var(--serif);
+    font-size: 4rem;
+    color: var(--wheat);
+    line-height: 1;
+    position: absolute;
+    top: 20px; right: 28px;
+    opacity: 0.7;
+  }
+  .quote p {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    line-height: 1.55;
+    color: var(--forest-deep);
+    font-style: italic;
+    margin-bottom: 24px;
+  }
+  .quote .attr { display: flex; align-items: center; gap: 14px; }
+  .quote .avatar {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: var(--moss);
+    color: var(--cream);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif); font-size: 1.2rem; font-weight: 600;
+  }
+  .quote .name { font-weight: 600; color: var(--forest-deep); font-size: 0.95rem; }
+  .quote .role { font-size: 0.84rem; color: var(--ink-soft); }
+
+  /* ========== CTA ========== */
+  .cta-band {
+    padding: 100px 0;
+  }
+  .cta-card {
+    background: linear-gradient(135deg, var(--forest) 0%, var(--forest-deep) 100%);
+    color: var(--cream);
+    border-radius: var(--r-xl);
+    padding: 80px 64px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-card::before, .cta-card::after {
+    content: '';
+    position: absolute;
+    width: 360px; height: 360px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--moss) 0%, transparent 70%);
+    opacity: 0.18;
+  }
+  .cta-card::before { top: -120px; left: -120px; }
+  .cta-card::after  { bottom: -180px; right: -120px; background: radial-gradient(circle, var(--wheat) 0%, transparent 70%); }
+  .cta-card h2 { color: var(--cream); margin-bottom: 16px; position: relative; z-index: 1; }
+  .cta-card p { color: rgba(244, 240, 230, 0.82); font-size: 1.15rem; max-width: 520px; margin: 0 auto 36px; position: relative; z-index: 1; }
+  .cta-card .btn { position: relative; z-index: 1; }
+  .cta-card .btn-primary { background: var(--wheat); color: var(--forest-deep); box-shadow: 0 6px 24px rgba(200, 169, 107, 0.4); }
+  .cta-card .btn-primary:hover { background: var(--cream); }
+
+  /* ========== Footer ========== */
+  footer {
+    background: var(--cream-warm);
+    padding: 80px 0 32px;
+    color: var(--ink-soft);
+  }
+  .foot-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 56px;
+  }
+  .foot-brand .logo-text { color: var(--forest-deep); font-size: 1.6rem; }
+  .foot-brand p { margin: 18px 0 24px; max-width: 320px; font-size: 0.96rem; }
+  .foot-col h4 {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--forest-deep);
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  .foot-col ul { list-style: none; }
+  .foot-col li { margin-bottom: 10px; }
+  .foot-col a { font-size: 0.95rem; color: var(--ink-soft); }
+  .foot-col a:hover { color: var(--forest); }
+  .socials { display: flex; gap: 12px; margin-top: 8px; }
+  .social-icon {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--cream);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--forest);
+    transition: background .25s ease, color .25s ease, transform .25s ease;
+  }
+  .social-icon:hover { background: var(--forest); color: var(--cream); transform: translateY(-3px); }
+  .foot-bottom {
+    border-top: 1px solid rgba(124, 90, 68, 0.15);
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.86rem;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .foot-bottom .tag-line { font-family: var(--hand); color: var(--cedar); font-size: 1.2rem; }
+
+  /* ========== Reveal animations ========== */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* ========== Responsive ========== */
+  @media (max-width: 960px) {
+    .hero-grid, .story-grid, .day-grid { grid-template-columns: 1fr; gap: 56px; }
+    .pillars, .programs, .quotes, .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-item.tall { grid-row: auto; aspect-ratio: 1/1; }
+    .foot-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+    .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; background: var(--cream); padding: 24px 32px; gap: 18px; box-shadow: var(--shadow-md); }
+    .nav-links.open { display: flex; }
+    .nav-links .btn { align-self: flex-start; }
+    .menu-toggle { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: var(--forest); color: var(--cream); }
+    section { padding: 80px 0; }
+    .cta-card { padding: 56px 28px; }
+  }
+  @media (max-width: 560px) {
+    .pillars, .programs, .quotes, .foot-grid { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .container, .narrow, .nav { padding-left: 20px; padding-right: 20px; }
+    .hero { padding: 40px 0 70px; }
+    .hero-card { right: 16px; bottom: -28px; padding: 16px 20px; }
+    .hero-card .stat { font-size: 2rem; }
+    .hero-badge { left: 16px; }
+    .marquee-item { font-size: 1.25rem; gap: 36px; }
+    .quote { padding: 28px 24px; }
+    .cta-card { padding: 48px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== Announcement bar ========== -->
+<div class="announce">
+  <span class="leaf">🌱</span>
+  Enrolment for the 2026–2027 school year is open —
+  <a href="#enrol">apply now</a>
+</div>
+
+<!-- ========== Header ========== -->
+<header class="site">
+  <div class="nav">
+    <a href="#" class="logo" aria-label="Cedar Grove School home">
+      <!-- Cedar tree emblem mark -->
+      <svg class="logo-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" stroke="#3E5B4A" stroke-width="1.5" fill="#F4F0E6"/>
+        <path d="M32 12 L24 24 L28 24 L20 36 L26 36 L18 50 L46 50 L38 36 L44 36 L36 24 L40 24 Z" fill="#3E5B4A"/>
+        <rect x="30" y="48" width="4" height="8" fill="#7A5A44"/>
+      </svg>
+      <div>
+        <span class="logo-text">Cedar Grove</span>
+        <span class="logo-sub">school</span>
+      </div>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#day">A Day Here</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+      <a href="#enrol" class="btn btn-primary nav-apply">
+        <svg class="leaf-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M12 3 C 8 7, 6 11, 12 21 C 18 11, 16 7, 12 3 Z M12 7 L12 19" stroke-linecap="round"/>
+        </svg>
+        Apply for 2026–27
+      </a>
+    </nav>
+
+    <button class="menu-toggle" aria-label="Open menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <!-- Decorative leaves -->
+  <svg class="hero-decor top-right" viewBox="0 0 200 200" fill="currentColor" aria-hidden="true">
+    <path d="M100 20 C 60 60, 40 100, 100 180 C 160 100, 140 60, 100 20 Z M100 40 L100 170" stroke="currentColor" stroke-width="2" fill="none"/>
+    <path d="M100 70 L80 60 M100 90 L75 75 M100 110 L72 92 M100 130 L78 118 M100 70 L120 60 M100 90 L125 75 M100 110 L128 92 M100 130 L122 118" stroke="currentColor" stroke-width="2" fill="none"/>
+  </svg>
+
+  <div class="container">
+    <div class="hero-grid">
+      <div class="reveal">
+        <span class="hero-eyebrow">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 C 8 6, 6 10, 12 22 C 18 10, 16 6, 12 2 Z M12 6 L12 20"/></svg>
+          A Waldorf-inspired forest school
+        </span>
+        <h1>Rooted in <em>wonder.</em><br/>Growing with the seasons.</h1>
+        <p class="lead">
+          A small, not-for-profit elementary school nestled on an organic farm
+          in Prince Edward County. We learn outdoors, work with our hands, and
+          let childhood unfold at its natural pace.
+        </p>
+        <div class="hero-actions">
+          <a href="#enrol" class="btn btn-primary">
+            Visit our school
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#about" class="btn btn-ghost">Our approach</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <img class="hero-img"
+             src="https://static.wixstatic.com/media/53124a_ad9c336c30c14b40a0d881249d562709~mv2.jpg/v1/fill/w_900,h_1125,al_c,q_85,enc_auto/image.jpg"
+             alt="A Cedar Grove student outdoors"
+             loading="lazy"/>
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Now enrolling, JK – Grade 6
+        </div>
+        <div class="hero-card">
+          <div class="stat">9:1</div>
+          <div class="label">Student-to-teacher ratio — small classes, deep relationships.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Marquee ========== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Nature</span>
+    <span class="marquee-item">Wonder</span>
+    <span class="marquee-item">Growth</span>
+    <span class="marquee-item">Belonging</span>
+    <span class="marquee-item">Curiosity</span>
+    <span class="marquee-item">Rhythm</span>
+    <span class="marquee-item">Creativity</span>
+    <span class="marquee-item">Stewardship</span>
+    <span class="marquee-item">Childhood</span>
+    <span class="marquee-item">Connection</span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee-item">Nature</span>
+    <span class="marquee-item">Wonder</span>
+    <span class="marquee-item">Growth</span>
+    <span class="marquee-item">Belonging</span>
+    <span class="marquee-item">Curiosity</span>
+    <span class="marquee-item">Rhythm</span>
+    <span class="marquee-item">Creativity</span>
+    <span class="marquee-item">Stewardship</span>
+    <span class="marquee-item">Childhood</span>
+    <span class="marquee-item">Connection</span>
+  </div>
+</div>
+
+<!-- ========== Pillars: Head, Heart, Hands ========== -->
+<section id="about">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Our Approach</span>
+      <h2>Head, Heart &amp; Hands</h2>
+      <p>
+        Holistic, nature-based education rooted in Waldorf traditions —
+        nurturing every part of who a child is becoming.
+      </p>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar reveal">
+        <div class="pillar-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9 9 a3 3 0 0 1 6 0 c0 2-3 2-3 4 M12 17 v.01"/></svg>
+        </div>
+        <h3><span class="accent">thinking</span>Head</h3>
+        <p>Imaginative academics that build curiosity, critical thinking, and a deep love of learning — at a pace that honours childhood.</p>
+      </div>
+
+      <div class="pillar reveal">
+        <div class="pillar-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21 C 4 14, 4 8, 8 6 c 2-1 3 0 4 2 c 1-2 2-3 4-2 c 4 2 4 8 -4 15 Z"/></svg>
+        </div>
+        <h3><span class="accent">feeling</span>Heart</h3>
+        <p>Strong relationships, emotional intelligence, music, story and reverence for the rhythms of the natural world.</p>
+      </div>
+
+      <div class="pillar reveal">
+        <div class="pillar-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 11 V 5 a1.5 1.5 0 0 1 3 0 V 11 M12 11 V 4 a1.5 1.5 0 0 1 3 0 V 11 M15 11 V 6 a1.5 1.5 0 0 1 3 0 V 13 c 0 4-2 8-6 8 H 9 c-3 0-5-2-6-5 L 1 12 a1.5 1.5 0 0 1 3-1 L 6 14"/></svg>
+        </div>
+        <h3><span class="accent">doing</span>Hands</h3>
+        <p>Real work — gardening, baking, woodwork, handcrafts — building competence, capability, and confidence in the body.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Story / About ========== -->
+<section class="story">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-images reveal">
+        <img class="story-img-1"
+             src="https://static.wixstatic.com/media/53124a_c2733e59ada045e49b26b46fc800010b~mv2.jpg/v1/fill/w_900,h_900,al_c,q_85,enc_auto/image.jpg"
+             alt="A child climbing a tree at Cedar Grove"
+             loading="lazy"/>
+        <img class="story-img-2"
+             src="https://static.wixstatic.com/media/53124a_a7482f33ac1143d9afc9e7449a14219b~mv2.jpg/v1/fill/w_700,h_700,al_c,q_85,enc_auto/image.jpg"
+             alt="A moment from a Cedar Grove school day"
+             loading="lazy"/>
+      </div>
+
+      <div class="story-content reveal">
+        <span class="eyebrow">Our Story</span>
+        <h2>A peaceful woodland classroom on an organic farm.</h2>
+        <p>
+          Cedar Grove is a small, not-for-profit school where the day moves
+          with the weather, the season, and the child in front of us.
+          Mornings might begin with a forest walk, an animal to feed, or
+          bread to bake — and unfold into reading, painting, math and music.
+        </p>
+        <blockquote>
+          "Where childhood grows naturally — and learning happens with the
+          whole self."
+        </blockquote>
+        <p>
+          We blend academics with creativity, movement, and a strong
+          connection to nature, fostering curiosity, confidence, and a
+          lifelong love of learning.
+        </p>
+
+        <div class="story-meta">
+          <div>
+            <div class="num">JK – 6</div>
+            <div class="label">Mixed-age learning</div>
+          </div>
+          <div>
+            <div class="num">40</div>
+            <div class="label">Acres of farm &amp; forest</div>
+          </div>
+          <div>
+            <div class="num">Daily</div>
+            <div class="label">Outdoor learning</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Programs ========== -->
+<section id="programs">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Programs</span>
+      <h2>Pathways for every kind of family.</h2>
+      <p>Full and part-time programming, designed to fit naturally into the rhythms of family life and the seasons of childhood.</p>
+    </div>
+
+    <div class="programs">
+      <div class="program reveal">
+        <img src="https://static.wixstatic.com/media/53124a_2fc1267c2feb4221bf687f86190cd81a~mv2.jpg/v1/fill/w_1000,h_800,al_c,q_85,enc_auto/image.jpg" alt="Children in a forest classroom" loading="lazy"/>
+        <div class="program-overlay">
+          <span class="tag">Ages 4 – 6</span>
+          <h3>Kindergarten in the Grove</h3>
+          <p>A gentle, play-based introduction to school — full of story, song, baking, and time outside.</p>
+          <a href="#" class="more">Learn more
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="program reveal">
+        <img src="https://static.wixstatic.com/media/53124a_9778686f78d543a9bd73bb403e453375~mv2.jpg/v1/fill/w_1000,h_800,al_c,q_85,enc_auto/image.jpg" alt="Children working together at Cedar Grove" loading="lazy"/>
+        <div class="program-overlay">
+          <span class="tag">Grades 1 – 3</span>
+          <h3>The Lower Grades</h3>
+          <p>Stories, fairy tales and the natural world become the doorway into reading, writing, math and the arts.</p>
+          <a href="#" class="more">Learn more
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="program reveal">
+        <img src="https://static.wixstatic.com/media/53124a_e4c6d8e728ca498ab82479561c867adc~mv2.jpeg/v1/fill/w_1200,h_800,al_c,q_85,enc_auto/image.jpg" alt="Older students learning outdoors" loading="lazy"/>
+        <div class="program-overlay">
+          <span class="tag">Grades 4 – 6</span>
+          <h3>The Upper Grades</h3>
+          <p>Deeper academics paired with stewardship of the land — geography, science, history and craft come alive.</p>
+          <a href="#" class="more">Learn more
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="program reveal">
+        <img src="https://static.wixstatic.com/media/53124a_168023cc529e49a79c56b5086001daa7~mv2.jpg/v1/fill/w_1000,h_800,al_c,q_85,enc_auto/image.jpg" alt="Children exploring the woods" loading="lazy"/>
+        <div class="program-overlay">
+          <span class="tag">Part-Time</span>
+          <h3>Forest Days &amp; Drop-Ins</h3>
+          <p>For homeschool families and curious newcomers — spend a day with us in the woods, the garden and the studio.</p>
+          <a href="#" class="more">Learn more
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== A Day at Cedar Grove ========== -->
+<section id="day" class="day">
+  <div class="container">
+    <div class="day-grid">
+      <div class="reveal">
+        <span class="eyebrow">A Day Here</span>
+        <h2>Days that breathe with rhythm.</h2>
+        <p>
+          Each day moves between focused academic work and time outdoors — between
+          stillness and movement, doing and resting. Children know what to expect,
+          and within that rhythm, they're free to wonder.
+        </p>
+      </div>
+
+      <div class="day-timeline reveal">
+        <div class="day-item">
+          <div class="marker"></div>
+          <div>
+            <div class="time">8:30 — Arrival</div>
+            <h4>Morning circle &amp; verse</h4>
+            <p>Greeting the day together with song, movement and a moment of quiet.</p>
+          </div>
+        </div>
+        <div class="day-item active">
+          <div class="marker"></div>
+          <div>
+            <div class="time">9:00 — Main Lesson</div>
+            <h4>Deep academic work</h4>
+            <p>A two-hour block on one subject — math, language, history or science — taught through story and image.</p>
+          </div>
+        </div>
+        <div class="day-item">
+          <div class="marker"></div>
+          <div>
+            <div class="time">11:00 — Outdoors</div>
+            <h4>Forest, farm &amp; play</h4>
+            <p>Free play, animal care, gardening, and exploration of the woods around the school.</p>
+          </div>
+        </div>
+        <div class="day-item">
+          <div class="marker"></div>
+          <div>
+            <div class="time">12:30 — Lunch</div>
+            <h4>A shared, unhurried meal</h4>
+            <p>Often featuring food the children helped prepare or harvest themselves.</p>
+          </div>
+        </div>
+        <div class="day-item">
+          <div class="marker"></div>
+          <div>
+            <div class="time">1:30 — Afternoon</div>
+            <h4>Arts, crafts &amp; practical work</h4>
+            <p>Painting, handwork, baking, music, French — the work of the hands and the heart.</p>
+          </div>
+        </div>
+        <div class="day-item">
+          <div class="marker"></div>
+          <div>
+            <div class="time">3:15 — Closing</div>
+            <h4>A grateful goodbye</h4>
+            <p>A quiet ending and a verse to carry home.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Gallery ========== -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Our Days, Quietly</span>
+      <h2>Glimpses of life at the Grove.</h2>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item tall reveal"><img src="https://static.wixstatic.com/media/53124a_ec9a830c103e472d989f3903ad9c7958~mv2.jpg/v1/fill/w_700,h_1400,al_c,q_85,enc_auto/image.jpg" alt="" loading="lazy"/></div>
+      <div class="gallery-item reveal"><img src="https://static.wixstatic.com/media/53124a_5acf1ec50284471e86521599c53bd770~mv2.jpg/v1/fill/w_700,h_700,al_c,q_85,enc_auto/image.jpg" alt="" loading="lazy"/></div>
+      <div class="gallery-item reveal"><img src="https://static.wixstatic.com/media/53124a_b64dfb826e0c4c5fbb8db509c7f0f710~mv2.jpg/v1/fill/w_700,h_700,al_c,q_85,enc_auto/image.jpg" alt="" loading="lazy"/></div>
+      <div class="gallery-item tall reveal"><img src="https://static.wixstatic.com/media/53124a_8fc2679c39944866b2bcea36acb87dec~mv2.jpg/v1/fill/w_700,h_1400,al_c,q_85,enc_auto/image.jpg" alt="" loading="lazy"/></div>
+      <div class="gallery-item reveal"><img src="https://static.wixstatic.com/media/53124a_73535f57fe7346f5a0da5e7f32f088ea~mv2.jpg/v1/fill/w_700,h_700,al_c,q_85,enc_auto/image.jpg" alt="" loading="lazy"/></div>
+      <div class="gallery-item reveal"><img src="https://static.wixstatic.com/media/53124a_df98115520b74d7da3b5e138b66b9fca~mv2.jpg/v1/fill/w_700,h_700,al_c,q_85,enc_auto/image.jpg" alt="" loading="lazy"/></div>
+      <div class="gallery-item reveal"><img src="https://static.wixstatic.com/media/53124a_bce15d3d08bc4efba64e815f018c6b40~mv2.jpg/v1/fill/w_700,h_700,al_c,q_85,enc_auto/image.jpg" alt="" loading="lazy"/></div>
+      <div class="gallery-item reveal"><img src="https://static.wixstatic.com/media/53124a_6d8ee6833aa64f8ebd0f0da9a5adac78~mv2.jpg/v1/fill/w_700,h_700,al_c,q_85,enc_auto/image.jpg" alt="" loading="lazy"/></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Testimonials ========== -->
+<section style="background: var(--cream-warm);">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Voices from our Community</span>
+      <h2>What families are saying.</h2>
+    </div>
+
+    <div class="quotes">
+      <div class="quote reveal">
+        <span class="mark">"</span>
+        <p>Our daughter wakes up excited to go to school. She comes home with stories about the forest, songs she learned, and bread she helped bake.</p>
+        <div class="attr">
+          <div class="avatar">S</div>
+          <div>
+            <div class="name">Sarah M.</div>
+            <div class="role">Parent, Grade 2</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote reveal">
+        <span class="mark">"</span>
+        <p>The teachers truly know each child. There's a calm here that's hard to describe — and a real respect for childhood.</p>
+        <div class="attr">
+          <div class="avatar">J</div>
+          <div>
+            <div class="name">James &amp; Anna</div>
+            <div class="role">Parents, JK &amp; Grade 4</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote reveal">
+        <span class="mark">"</span>
+        <p>It's the closest thing to the kind of childhood I always wished for: outside, hands in the dirt, with people who care.</p>
+        <div class="attr">
+          <div class="avatar">L</div>
+          <div>
+            <div class="name">Liz K.</div>
+            <div class="role">Parent, Grade 5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Land acknowledgment ========== -->
+<section class="land">
+  <div class="container">
+    <div class="reveal" style="max-width: 760px;">
+      <span class="eyebrow">Land Acknowledgment</span>
+      <h2>We learn on borrowed land.</h2>
+      <p>
+        Cedar Grove School recognizes that we live, learn, and gather on the
+        traditional territory of the Anishnaabeg, Wendat, and Haudenosaunee
+        peoples, and near the Kanien&rsquo;keha:ka (Mohawk) community of
+        Tyendinaga. We honour their deep, enduring relationship with this
+        land and express our gratitude for their ongoing care and stewardship.
+      </p>
+      <p>
+        We are committed to fostering respectful partnerships and to protecting
+        the land and water for generations to come.
+      </p>
+      <span class="signature">— with gratitude</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA / Enrolment ========== -->
+<section id="enrol" class="cta-band">
+  <div class="container">
+    <div class="cta-card reveal">
+      <span class="eyebrow" style="color: var(--wheat);">Now Enrolling</span>
+      <h2>Come spend a day with us.</h2>
+      <p>
+        The best way to know if Cedar Grove is the right home for your child
+        is to walk the land with us. We'd love to meet you.
+      </p>
+      <a href="#" class="btn btn-primary">
+        Apply for 2026 – 2027
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Footer ========== -->
+<footer id="contact">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="logo">
+          <svg class="logo-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="32" cy="32" r="30" stroke="#3E5B4A" stroke-width="1.5" fill="#F4F0E6"/>
+            <path d="M32 12 L24 24 L28 24 L20 36 L26 36 L18 50 L46 50 L38 36 L44 36 L36 24 L40 24 Z" fill="#3E5B4A"/>
+            <rect x="30" y="48" width="4" height="8" fill="#7A5A44"/>
+          </svg>
+          <div>
+            <span class="logo-text">Cedar Grove</span>
+            <span class="logo-sub">school</span>
+          </div>
+        </div>
+        <p>A Waldorf-inspired, not-for-profit elementary school nestled on an organic farm in Prince Edward County, Ontario.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/cedargroveschool.pec/" class="social-icon" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.facebook.com/cedargroveschoolpec/" class="social-icon" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h2V5h-2c-1.66 0-3 1.34-3 3v2H9v3h2v8h3v-8h2.5l.5-3H14V8.5c0-.28.22-.5.5-.5z"/></svg>
+          </a>
+          <a href="mailto:Admin@cedargroveschool.ca" class="social-icon" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="foot-col">
+        <h4>Visit</h4>
+        <ul>
+          <li>2590 County Rd 15</li>
+          <li>Picton, Ontario</li>
+          <li>K0K 2T0</li>
+          <li><a href="mailto:Admin@cedargroveschool.ca">Admin@cedargroveschool.ca</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#day">A Day Here</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#enrol">Apply</a></li>
+          <li><a href="#">Faculty &amp; Staff</a></li>
+          <li><a href="#">Calendar</a></li>
+          <li><a href="#">Job Opportunities</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>© 2026 Cedar Grove School. A registered not-for-profit.</span>
+      <span class="tag-line">Where childhood grows naturally.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal-on-scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Close mobile menu on link click
+  document.querySelectorAll('#navLinks a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+  });
+</script>
+
+</body>
+</html>
