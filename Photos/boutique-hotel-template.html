@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>[Hotel Name] — Boutique Hotel, Restaurant &amp; Spa</title>
+<meta name="description" content="A boutique hotel and restaurant in [Location]. [Short tagline about your property and what makes it special]." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  /* ---------- Reset & base ---------- */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+  :root {
+    --bg:        #f4efe7;   /* warm ivory */
+    --bg-alt:   #ebe3d6;   /* sand */
+    --ink:      #1f1d1a;   /* near-black */
+    --muted:    #5b554c;
+    --accent:   #8a3c2a;   /* burnt sienna */
+    --line:     rgba(31,29,26,0.18);
+    --serif:    'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    --sans:     'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.01em; line-height: 1.1; }
+  h1 { font-size: clamp(2.4rem, 5.5vw, 4.6rem); }
+  h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
+  h3 { font-size: clamp(1.5rem, 2.4vw, 2.1rem); }
+  em, .italic { font-style: italic; }
+
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    padding: 0.85rem 1.6rem;
+    border: 1px solid var(--ink);
+    border-radius: 999px;
+    font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase;
+    transition: background .25s ease, color .25s ease;
+  }
+  .btn:hover { background: var(--ink); color: var(--bg); }
+  .btn--solid { background: var(--ink); color: var(--bg); }
+  .btn--solid:hover { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+
+  .link-arrow {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-family: var(--serif); font-style: italic; font-size: 1.1rem;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    transition: color .25s ease, gap .25s ease;
+  }
+  .link-arrow:hover { color: var(--accent); gap: 0.85rem; }
+  .link-arrow::after { content: '→'; font-style: normal; }
+
+  /* ---------- Navigation ---------- */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+    padding: 1.1rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    background: linear-gradient(to bottom, rgba(244,239,231,0.92), rgba(244,239,231,0));
+    backdrop-filter: blur(6px);
+    transition: background .3s ease;
+  }
+  .nav.is-scrolled { background: rgba(244,239,231,0.96); border-bottom: 1px solid var(--line); }
+  .nav__logo {
+    font-family: var(--serif); font-size: 1.5rem; font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+  .nav__logo span { font-style: italic; color: var(--accent); }
+  .nav__links { display: flex; gap: 2.2rem; list-style: none; }
+  .nav__links a {
+    font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase;
+    position: relative; padding-bottom: 4px;
+  }
+  .nav__links a::after {
+    content: ''; position: absolute; left: 0; bottom: 0; width: 0; height: 1px;
+    background: currentColor; transition: width .3s ease;
+  }
+  .nav__links a:hover::after { width: 100%; }
+  .nav__cta { display: flex; gap: 0.8rem; align-items: center; }
+  .nav__burger { display: none; flex-direction: column; gap: 5px; padding: 0.4rem; }
+  .nav__burger span { width: 24px; height: 1.5px; background: var(--ink); transition: transform .3s ease; }
+
+  @media (max-width: 960px) {
+    .nav__links { display: none; }
+    .nav__burger { display: flex; }
+    .nav { padding: 1rem 1.25rem; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative; min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 0 2rem 4rem;
+    color: #fff;
+    overflow: hidden;
+  }
+  .hero__media {
+    position: absolute; inset: 0; z-index: -1;
+    background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)),
+                url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2000&q=80') center/cover;
+  }
+  .hero__inner { max-width: 980px; }
+  .hero__eyebrow { color: rgba(255,255,255,0.85); margin-bottom: 1.4rem; }
+  .hero__title { color: #fff; max-width: 18ch; }
+  .hero__title em { color: #f1c9a5; }
+  .hero__scroll {
+    position: absolute; left: 50%; bottom: 2rem; transform: translateX(-50%);
+    font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase;
+    display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
+    color: rgba(255,255,255,0.8);
+  }
+  .hero__scroll::after {
+    content: ''; width: 1px; height: 50px; background: rgba(255,255,255,0.6);
+    animation: drop 2s ease-in-out infinite;
+  }
+  @keyframes drop {
+    0%, 100% { transform: scaleY(1); transform-origin: top; }
+    50%      { transform: scaleY(0.3); }
+  }
+
+  /* ---------- Section primitives ---------- */
+  section { padding: 6rem 0; }
+  .section-mark {
+    width: 60px; height: 1px; background: var(--ink); margin: 0 auto 2.5rem;
+  }
+  .split {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+  }
+  .split--reverse .split__image { order: 2; }
+  .split__image img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+  .split__body .eyebrow { margin-bottom: 1.2rem; }
+  .split__body h2 { margin-bottom: 1.5rem; }
+  .split__body p { margin-bottom: 1.2rem; color: var(--muted); max-width: 46ch; }
+
+  @media (max-width: 880px) {
+    .split { grid-template-columns: 1fr; gap: 2.5rem; }
+    .split--reverse .split__image { order: 0; }
+    section { padding: 4rem 0; }
+  }
+
+  /* ---------- About intro block ---------- */
+  .intro {
+    text-align: center; padding: 8rem 0 5rem;
+  }
+  .intro__text {
+    font-family: var(--serif); font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+    font-weight: 400; line-height: 1.35; max-width: 24ch; margin: 0 auto;
+  }
+  .intro__text em { color: var(--accent); }
+
+  /* ---------- Rooms ---------- */
+  .rooms { background: var(--bg-alt); }
+  .rooms__header {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    margin-bottom: 3rem; gap: 2rem; flex-wrap: wrap;
+  }
+  .rooms__header p { max-width: 42ch; color: var(--muted); }
+  .rooms__grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+  }
+  .room-card {
+    cursor: pointer; transition: transform .4s ease;
+  }
+  .room-card:hover { transform: translateY(-6px); }
+  .room-card__img {
+    aspect-ratio: 4/5; overflow: hidden; margin-bottom: 1.2rem;
+  }
+  .room-card__img img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform .8s ease;
+  }
+  .room-card:hover .room-card__img img { transform: scale(1.06); }
+  .room-card__name {
+    font-family: var(--serif); font-size: 1.6rem; margin-bottom: 0.3rem;
+  }
+  .room-card__meta {
+    font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  @media (max-width: 880px) { .rooms__grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .rooms__grid { grid-template-columns: 1fr; } }
+
+  /* ---------- Dining tabs ---------- */
+  .dining__tabs {
+    display: flex; gap: 2rem; flex-wrap: wrap;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 2.5rem;
+  }
+  .dining__tab {
+    font-family: var(--serif); font-style: italic; font-size: 1.4rem;
+    padding-bottom: 1rem; color: var(--muted);
+    border-bottom: 1px solid transparent; margin-bottom: -1px;
+    transition: color .25s ease, border-color .25s ease;
+  }
+  .dining__tab.is-active { color: var(--ink); border-color: var(--ink); }
+  .dining__panel { display: none; }
+  .dining__panel.is-active { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center; }
+  .dining__panel img { width: 100%; aspect-ratio: 5/4; object-fit: cover; }
+  .dining__panel h3 { margin-bottom: 1rem; }
+  .dining__panel p { color: var(--muted); margin-bottom: 1.5rem; }
+
+  @media (max-width: 880px) {
+    .dining__panel.is-active { grid-template-columns: 1fr; gap: 2rem; }
+  }
+
+  /* ---------- Gallery ---------- */
+  .gallery { background: var(--bg-alt); }
+  .gallery__grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+  }
+  .gallery__grid img {
+    width: 100%; aspect-ratio: 1/1; object-fit: cover;
+    transition: opacity .3s ease;
+  }
+  .gallery__grid img:hover { opacity: 0.85; }
+  .gallery__grid img:nth-child(1) { grid-column: span 2; grid-row: span 2; aspect-ratio: 1/1; }
+
+  @media (max-width: 880px) { .gallery__grid { grid-template-columns: repeat(2, 1fr); } }
+
+  /* ---------- Contact / Newsletter ---------- */
+  .contact { text-align: center; }
+  .contact h2 { margin-bottom: 1rem; }
+  .contact > .container > p { color: var(--muted); max-width: 50ch; margin: 0 auto 2.5rem; }
+
+  .newsletter {
+    max-width: 520px; margin: 0 auto;
+    display: flex; gap: 0.6rem; border-bottom: 1px solid var(--ink); padding-bottom: 0.6rem;
+  }
+  .newsletter input {
+    flex: 1; border: none; background: transparent; font: inherit;
+    font-size: 1rem; padding: 0.6rem 0; outline: none; color: var(--ink);
+  }
+  .newsletter input::placeholder { color: var(--muted); }
+  .newsletter button {
+    font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase;
+  }
+  .newsletter button:hover { color: var(--accent); }
+
+  .contact__info {
+    margin-top: 4rem;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; text-align: center;
+  }
+  .contact__info h4 {
+    font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase;
+    font-family: var(--sans); font-weight: 500; margin-bottom: 0.6rem;
+  }
+  .contact__info p { color: var(--muted); }
+
+  @media (max-width: 700px) { .contact__info { grid-template-columns: 1fr; gap: 1.5rem; } }
+
+  /* ---------- Footer ---------- */
+  .footer {
+    background: var(--ink); color: rgba(244,239,231,0.85);
+    padding: 4rem 0 2rem;
+  }
+  .footer .container {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem;
+  }
+  .footer h4 {
+    font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.22em;
+    text-transform: uppercase; color: rgba(244,239,231,0.6);
+    margin-bottom: 1.2rem; font-weight: 500;
+  }
+  .footer__logo {
+    font-family: var(--serif); font-size: 2rem; color: var(--bg);
+    margin-bottom: 1rem;
+  }
+  .footer__logo span { font-style: italic; color: #f1c9a5; }
+  .footer ul { list-style: none; }
+  .footer li { margin-bottom: 0.5rem; font-size: 0.92rem; }
+  .footer a:hover { color: var(--bg); }
+  .footer__bottom {
+    margin-top: 3rem; padding-top: 1.5rem;
+    border-top: 1px solid rgba(244,239,231,0.15);
+    font-size: 0.78rem; color: rgba(244,239,231,0.5);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+  }
+
+  @media (max-width: 880px) {
+    .footer .container { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 560px) {
+    .footer .container { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- Reveal on scroll ---------- */
+  .reveal {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- ============== NAV ============== -->
+<nav class="nav" id="nav">
+  <a href="#" class="nav__logo">[Hotel]<span>.</span></a>
+  <ul class="nav__links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#rooms">Stay</a></li>
+    <li><a href="#dining">Eat &amp; Drink</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav__cta">
+    <a href="#book" class="btn btn--solid">Book</a>
+    <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ============== HERO ============== -->
+<header class="hero">
+  <div class="hero__media"></div>
+  <div class="hero__inner">
+    <p class="hero__eyebrow eyebrow">Boutique Hotel · Restaurant · Spa</p>
+    <h1 class="hero__title">A quiet kind of <em>luxury</em>, in the heart of [Location].</h1>
+  </div>
+  <div class="hero__scroll">Scroll</div>
+</header>
+
+<!-- ============== INTRO ============== -->
+<section class="intro reveal">
+  <div class="container">
+    <div class="section-mark"></div>
+    <p class="intro__text">
+      Life moves at an <em>unrushed pace</em> at [Hotel Name], where every detail is shaped by craft, place, and the people who call this home.
+    </p>
+  </div>
+</section>
+
+<!-- ============== ABOUT — Always There ============== -->
+<section id="about">
+  <div class="container split reveal">
+    <div class="split__image">
+      <img src="https://images.unsplash.com/photo-1551776235-dde6d4829808?auto=format&fit=crop&w=1200&q=80" alt="Hotel facade or signature space" />
+    </div>
+    <div class="split__body">
+      <p class="eyebrow">Our Story</p>
+      <h2>Always <em>There.</em></h2>
+      <p>Dating back to [year], [Hotel Name] has been lovingly restored — reimagined for today's traveller while honouring its place in the community.</p>
+      <p>A stone's throw from [nearby landmark], [local attractions], and [scenic feature], we're the ideal jumping-off point for exploring everything that makes this corner of the world special.</p>
+      <a href="#" class="link-arrow">Read more</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ABOUT — Community ============== -->
+<section style="background:var(--bg-alt);">
+  <div class="container split split--reverse reveal">
+    <div class="split__image">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80" alt="Local growers, farm, or community" />
+    </div>
+    <div class="split__body">
+      <p class="eyebrow">Our Community</p>
+      <h2>Rooted in <em>place.</em></h2>
+      <p>We're deeply rooted in [Region]. We work with local growers, artisans, and producers — friends whose talent and care are woven into everything we serve and every room we shape.</p>
+      <p>Our commitment to sustainably supporting this land and its people is what drives our sense of purpose.</p>
+      <a href="#" class="link-arrow">Read more</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ROOMS ============== -->
+<section id="rooms" class="rooms">
+  <div class="container reveal">
+    <div class="rooms__header">
+      <div>
+        <p class="eyebrow">Stay</p>
+        <h2>Rooms &amp; <em>Suites</em></h2>
+      </div>
+      <p>Each room is a quiet study in warmth and texture — designed for slow mornings, long baths, and the kind of rest you remember.</p>
+    </div>
+    <div class="rooms__grid">
+      <a href="#" class="room-card">
+        <div class="room-card__img"><img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=900&q=80" alt="Room Cortland" /></div>
+        <h3 class="room-card__name">Cortland</h3>
+        <p class="room-card__meta">Classic · From $[XXX]/night</p>
+      </a>
+      <a href="#" class="room-card">
+        <div class="room-card__img"><img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80" alt="Room Russet" /></div>
+        <h3 class="room-card__name">Russet</h3>
+        <p class="room-card__meta">Deluxe · From $[XXX]/night</p>
+      </a>
+      <a href="#" class="room-card">
+        <div class="room-card__img"><img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80" alt="Room Empire" /></div>
+        <h3 class="room-card__name">Empire</h3>
+        <p class="room-card__meta">Suite · From $[XXX]/night</p>
+      </a>
+      <a href="#" class="room-card">
+        <div class="room-card__img"><img src="https://images.unsplash.com/photo-1631049035182-249067d7618e?auto=format&fit=crop&w=900&q=80" alt="Room Bartlett" /></div>
+        <h3 class="room-card__name">Bartlett</h3>
+        <p class="room-card__meta">Garden View · From $[XXX]/night</p>
+      </a>
+      <a href="#" class="room-card">
+        <div class="room-card__img"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80" alt="Room Royal Gala" /></div>
+        <h3 class="room-card__name">Royal Gala</h3>
+        <p class="room-card__meta">Signature Suite · From $[XXX]/night</p>
+      </a>
+      <a href="#" class="room-card">
+        <div class="room-card__img"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=900&q=80" alt="Room Bosc" /></div>
+        <h3 class="room-card__name">Bosc</h3>
+        <p class="room-card__meta">Loft · From $[XXX]/night</p>
+      </a>
+    </div>
+    <div style="text-align:center; margin-top:3rem;">
+      <a href="#" class="btn">View all rooms</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== DINING ============== -->
+<section id="dining">
+  <div class="container reveal">
+    <div style="margin-bottom:2.5rem;">
+      <p class="eyebrow">Eat &amp; Drink</p>
+      <h2>A table for <em>every hour.</em></h2>
+    </div>
+
+    <div class="dining__tabs" id="diningTabs">
+      <button class="dining__tab is-active" data-tab="0">The Restaurant</button>
+      <button class="dining__tab" data-tab="1">The Counter Bar</button>
+      <button class="dining__tab" data-tab="2">The Garden</button>
+      <button class="dining__tab" data-tab="3">The Parlour</button>
+    </div>
+
+    <div class="dining__panels">
+      <div class="dining__panel is-active">
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80" alt="The Restaurant" />
+        <div>
+          <h3>The <em>Restaurant</em></h3>
+          <p>Seasonal menus shaped by what's growing and what's good — long lunches, candlelit dinners, and the kind of cooking that lingers.</p>
+          <a href="#" class="link-arrow">View menu</a>
+        </div>
+      </div>
+      <div class="dining__panel">
+        <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=1200&q=80" alt="The Counter Bar" />
+        <div>
+          <h3>The <em>Counter Bar</em></h3>
+          <p>Morning espresso, freshly-baked pastries, and an all-day menu of small plates — our most casual room.</p>
+          <a href="#" class="link-arrow">View menu</a>
+        </div>
+      </div>
+      <div class="dining__panel">
+        <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?auto=format&fit=crop&w=1200&q=80" alt="The Garden" />
+        <div>
+          <h3>The <em>Garden</em></h3>
+          <p>Open in the warmer months — outdoor seating, wood-fired plates, and long evenings under the trees.</p>
+          <a href="#" class="link-arrow">View menu</a>
+        </div>
+      </div>
+      <div class="dining__panel">
+        <img src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?auto=format&fit=crop&w=1200&q=80" alt="The Parlour" />
+        <div>
+          <h3>The <em>Parlour</em></h3>
+          <p>A quiet, low-lit bar for nightcaps, cocktails, and slow conversations.</p>
+          <a href="#" class="link-arrow">View menu</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== GALLERY ============== -->
+<section id="gallery" class="gallery">
+  <div class="container reveal">
+    <div style="text-align:center; margin-bottom:3rem;">
+      <p class="eyebrow">Gallery</p>
+      <h2>Moments at <em>[Hotel Name].</em></h2>
+    </div>
+    <div class="gallery__grid">
+      <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80" alt="Hotel interior" />
+      <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80" alt="" />
+      <img src="https://images.unsplash.com/photo-1455587734955-081b22074882?auto=format&fit=crop&w=600&q=80" alt="" />
+      <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=600&q=80" alt="" />
+      <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80" alt="" />
+      <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=600&q=80" alt="" />
+      <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80" alt="" />
+      <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=600&q=80" alt="" />
+      <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=600&q=80" alt="" />
+    </div>
+  </div>
+</section>
+
+<!-- ============== CONTACT / NEWSLETTER ============== -->
+<section id="contact" class="contact">
+  <div class="container reveal">
+    <p class="eyebrow">Stay In Touch</p>
+    <h2>Royal <em>Mail</em></h2>
+    <p>Sign up for our newsletter and be the first to hear about events, packages, and announcements.</p>
+    <form class="newsletter" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('button').textContent='Thank you ✓';">
+      <input type="email" placeholder="Your email address" required />
+      <button type="submit">Subscribe</button>
+    </form>
+
+    <div class="contact__info">
+      <div>
+        <h4>Visit</h4>
+        <p>[Street Address]<br/>[City, Province / State, Postal Code]</p>
+      </div>
+      <div>
+        <h4>Call</h4>
+        <p><a href="tel:+10000000000">+1 (000) 000-0000</a></p>
+      </div>
+      <div>
+        <h4>Write</h4>
+        <p><a href="mailto:hello@example.com">hello@example.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="footer">
+  <div class="container">
+    <div>
+      <div class="footer__logo">[Hotel]<span>.</span></div>
+      <p style="max-width: 32ch; font-size: 0.92rem;">A boutique hotel, restaurant, and spa in [Location]. Open year-round.</p>
+    </div>
+    <div>
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#rooms">Rooms</a></li>
+        <li><a href="#dining">Dining</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Plan</h4>
+      <ul>
+        <li><a href="#">Reservations</a></li>
+        <li><a href="#">Gift Cards</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Follow</h4>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>© [Year] [Hotel Name]. All rights reserved.</span>
+    <span>Site template · Crafted with care.</span>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll state
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('is-scrolled', window.scrollY > 40);
+  });
+
+  // Dining tabs
+  const tabs = document.querySelectorAll('.dining__tab');
+  const panels = document.querySelectorAll('.dining__panel');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const i = tab.dataset.tab;
+      tabs.forEach(t => t.classList.remove('is-active'));
+      panels.forEach(p => p.classList.remove('is-active'));
+      tab.classList.add('is-active');
+      panels[i].classList.add('is-active');
+    });
+  });
+
+  // Reveal on scroll
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

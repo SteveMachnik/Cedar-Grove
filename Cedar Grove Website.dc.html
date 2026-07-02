@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="description" content="A Waldorf-inspired, nature-based elementary school set on an organic farm in Prince Edward County. Learning with head, heart, and hands.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; -webkit-font-smoothing: antialiased; }
+    @keyframes cg-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @keyframes cg-pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.6; transform: scale(1.4); } }
+  </style>
+</helmet>
+
+<div style="font-family: 'Quicksand', sans-serif; color: #2A2823; background: #FFF4D6; line-height: 1.65; overflow-x: hidden;">
+
+  <!-- Announcement bar -->
+  <div style="background: #375D47; color: #FFF4D6; text-align: center; padding: 10px 24px; font-size: 0.92rem; letter-spacing: 0.02em;" data-screen-label="announcement">
+    Enrolment for the 2026&ndash;2027 school year is open &mdash;
+    <a href="#enrol" style="color: #C2E0ED; text-decoration: underline; text-underline-offset: 3px; font-weight: 600;">apply now</a>
+  </div>
+
+  <!-- Header -->
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(255, 244, 214, 0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(161, 103, 74, 0.12);" data-screen-label="header">
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 32px; max-width: 1400px; margin: 0 auto; gap: 24px; flex-wrap: wrap;">
+      <a href="#" aria-label="Cedar Grove School home" style="display: flex; align-items: center; text-decoration: none;">
+        <img src="assets/logo-cropped.png" alt="Cedar Grove School" style="height: 54px; width: auto; display: block;"/>
+      </a>
+
+      <nav style="display: flex; gap: 28px; align-items: center; flex-wrap: wrap;">
+        <a href="#about" style="font-size: 0.92rem; color: #253F30; font-weight: 600; letter-spacing: 0.03em; text-decoration: none;" style-hover="color: #A1674A;">About</a>
+        <a href="#programs" style="font-size: 0.92rem; color: #253F30; font-weight: 600; letter-spacing: 0.03em; text-decoration: none;" style-hover="color: #A1674A;">Programs</a>
+        <a href="#day" style="font-size: 0.92rem; color: #253F30; font-weight: 600; letter-spacing: 0.03em; text-decoration: none;" style-hover="color: #A1674A;">A Day Here</a>
+        <a href="#gallery" style="font-size: 0.92rem; color: #253F30; font-weight: 600; letter-spacing: 0.03em; text-decoration: none;" style-hover="color: #A1674A;">Gallery</a>
+        <a href="#contact" style="font-size: 0.92rem; color: #253F30; font-weight: 600; letter-spacing: 0.03em; text-decoration: none;" style-hover="color: #A1674A;">Contact</a>
+        <a href="#enrol" style="padding: 15px 32px; border-radius: 999px; font-size: 0.92rem; font-weight: 700; letter-spacing: 0.04em; color: #FFF4D6; background: #375D47; box-shadow: 0 8px 22px rgba(55, 93, 71, 0.32); display: inline-flex; align-items: center; text-decoration: none;" style-hover="background: #253F30;">Apply for 2026&ndash;27</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section style="padding: 70px 0 100px; position: relative;" data-screen-label="hero">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 64px; align-items: center;">
+        <div>
+          <span style="display: inline-flex; align-items: center; gap: 10px; color: #A1674A; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.3rem; margin-bottom: 18px;">A Waldorf-inspired forest school</span>
+          <h1 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; line-height: 1.12; letter-spacing: -0.01em; font-size: clamp(2.6rem, 5.8vw, 5.2rem); margin: 0 0 24px;">Rooted in <em style="color: #A1674A; font-weight: 600;">wonder.</em><br/>Growing with the seasons.</h1>
+          <p style="font-size: 1.2rem; line-height: 1.6; margin: 0 0 36px; max-width: 520px; color: #5B5347;">
+            A small, not-for-profit elementary school nestled on an organic farm
+            in Prince Edward County. We learn outdoors, work with our hands, and
+            let childhood unfold at its natural pace.
+          </p>
+          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            <a href="#enrol" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; border-radius: 999px; font-weight: 700; font-size: 0.94rem; letter-spacing: 0.03em; background: #375D47; color: #FFF4D6; box-shadow: 0 6px 20px rgba(55, 93, 71, 0.25); text-decoration: none;" style-hover="background: #253F30;">
+              Visit our school
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#about" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; border-radius: 999px; font-weight: 700; font-size: 0.94rem; letter-spacing: 0.03em; background: transparent; color: #253F30; border: 1.5px solid #375D47; text-decoration: none;" style-hover="background: #375D47; color: #FFF4D6;">Our approach</a>
+          </div>
+        </div>
+
+        <div style="position: relative; aspect-ratio: 4/5;">
+          <img src="https://static.wixstatic.com/media/53124a_ad9c336c30c14b40a0d881249d562709~mv2.jpg/v1/fill/w_900,h_1125,al_c,q_85,enc_auto/image.jpg"
+               alt="A Cedar Grove student outdoors" loading="lazy"
+               style="width: 100%; height: 100%; object-fit: cover; border-radius: 48px 48px 28px 28px; box-shadow: 0 24px 60px rgba(37, 63, 48, 0.16);"/>
+          <div style="position: absolute; top: 28px; left: -20px; background: #FFF4D6; border-radius: 999px; padding: 14px 22px; box-shadow: 0 12px 40px rgba(37, 63, 48, 0.12); display: flex; align-items: center; gap: 10px; font-size: 0.9rem; font-weight: 600; color: #253F30;">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: #8DA57C; animation: cg-pulse 2.4s infinite; display: inline-block;"></span>
+            Now enrolling, JK &ndash; Grade 6
+          </div>
+          <div style="position: absolute; bottom: -32px; right: -20px; background: #FFF4D6; padding: 24px 28px; border-radius: 16px; box-shadow: 0 24px 60px rgba(37, 63, 48, 0.16); max-width: 240px;">
+            <div style="font-family: 'Playfair Display', serif; font-size: 2.6rem; color: #375D47; font-weight: 700; line-height: 1;">9:1</div>
+            <div style="font-size: 0.88rem; color: #5B5347; margin-top: 6px;">Student-to-teacher ratio &mdash; small classes, deep relationships.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div style="background: #375D47; color: #FFF4D6; padding: 28px 0; overflow: hidden; border-top: 1px solid rgba(255,244,214,0.1); border-bottom: 1px solid rgba(255,244,214,0.1);" aria-hidden="true">
+    <div style="display: flex; gap: 60px; animation: cg-scroll 38s linear infinite; white-space: nowrap; width: max-content;">
+      <sc-for list="{{ marqueeItems }}" as="word" hint-placeholder-count="20">
+        <span style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">{{ word }}<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- Pillars -->
+  <section id="about" style="padding: 120px 0;" data-screen-label="pillars">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
+      <div style="max-width: 720px; margin: 0 auto 64px; text-align: center;">
+        <span style="display: inline-block; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: #A1674A; font-weight: 700; margin-bottom: 18px;">Our Approach</span>
+        <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0 0 20px;">Head, Heart &amp; Hands</h2>
+        <p style="font-size: 1.1rem; color: #5B5347; margin: 0;">Holistic, nature-based education rooted in Waldorf traditions &mdash; nurturing every part of who a child is becoming.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+        <div style="background: #F7EAC4; border-radius: 24px; padding: 44px 36px;">
+          <div style="width: 64px; height: 64px; border-radius: 50%; background: #FFF4D6; display: flex; align-items: center; justify-content: center; color: #375D47; margin-bottom: 24px; box-shadow: inset 0 0 0 1px rgba(55, 93, 71, 0.14);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9 9 a3 3 0 0 1 6 0 c0 2-3 2-3 4 M12 17 v.01"/></svg>
+          </div>
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: 1.7rem; margin: 0 0 12px;"><span style="font-family: 'Playfair Display', serif; font-style: italic; color: #A1674A; display: block; font-size: 1.2rem; font-weight: 500; margin-bottom: 4px;">thinking</span>Head</h3>
+          <p style="margin: 0; color: #5B5347;">Imaginative academics that build curiosity, critical thinking, and a deep love of learning &mdash; at a pace that honours childhood.</p>
+        </div>
+
+        <div style="background: #F7EAC4; border-radius: 24px; padding: 44px 36px;">
+          <div style="width: 64px; height: 64px; border-radius: 50%; background: #FFF4D6; display: flex; align-items: center; justify-content: center; color: #375D47; margin-bottom: 24px; box-shadow: inset 0 0 0 1px rgba(55, 93, 71, 0.14);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21 C 4 14, 4 8, 8 6 c 2-1 3 0 4 2 c 1-2 2-3 4-2 c 4 2 4 8 -4 15 Z"/></svg>
+          </div>
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: 1.7rem; margin: 0 0 12px;"><span style="font-family: 'Playfair Display', serif; font-style: italic; color: #A1674A; display: block; font-size: 1.2rem; font-weight: 500; margin-bottom: 4px;">feeling</span>Heart</h3>
+          <p style="margin: 0; color: #5B5347;">Strong relationships, emotional intelligence, music, story and reverence for the rhythms of the natural world.</p>
+        </div>
+
+        <div style="background: #F7EAC4; border-radius: 24px; padding: 44px 36px;">
+          <div style="width: 64px; height: 64px; border-radius: 50%; background: #FFF4D6; display: flex; align-items: center; justify-content: center; color: #375D47; margin-bottom: 24px; box-shadow: inset 0 0 0 1px rgba(55, 93, 71, 0.14);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 11 V 5 a1.5 1.5 0 0 1 3 0 V 11 M12 11 V 4 a1.5 1.5 0 0 1 3 0 V 11 M15 11 V 6 a1.5 1.5 0 0 1 3 0 V 13 c 0 4-2 8-6 8 H 9 c-3 0-5-2-6-5 L 1 12 a1.5 1.5 0 0 1 3-1 L 6 14"/></svg>
+          </div>
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: 1.7rem; margin: 0 0 12px;"><span style="font-family: 'Playfair Display', serif; font-style: italic; color: #A1674A; display: block; font-size: 1.2rem; font-weight: 500; margin-bottom: 4px;">doing</span>Hands</h3>
+          <p style="margin: 0; color: #5B5347;">Real work &mdash; gardening, baking, woodwork, handcrafts &mdash; building competence, capability, and confidence in the body.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section style="padding: 120px 0; background: #F7EAC4;" data-screen-label="story">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 80px; align-items: center;">
+        <div style="position: relative; aspect-ratio: 1/1;">
+          <img src="https://static.wixstatic.com/media/53124a_c2733e59ada045e49b26b46fc800010b~mv2.jpg/v1/fill/w_900,h_900,al_c,q_85,enc_auto/image.jpg" alt="A child climbing a tree at Cedar Grove" loading="lazy"
+               style="position: absolute; width: 70%; height: 75%; top: 0; left: 0; object-fit: cover; border-radius: 24px; box-shadow: 0 12px 40px rgba(37, 63, 48, 0.12);"/>
+          <img src="https://static.wixstatic.com/media/53124a_a7482f33ac1143d9afc9e7449a14219b~mv2.jpg/v1/fill/w_700,h_700,al_c,q_85,enc_auto/image.jpg" alt="A moment from a Cedar Grove school day" loading="lazy"
+               style="position: absolute; width: 55%; height: 55%; bottom: 0; right: 0; object-fit: cover; border-radius: 24px; box-shadow: 0 24px 60px rgba(37, 63, 48, 0.16); border: 8px solid #F7EAC4;"/>
+        </div>
+
+        <div>
+          <span style="display: inline-block; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: #A1674A; font-weight: 700; margin-bottom: 18px;">Our Story</span>
+          <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0 0 20px;">A peaceful woodland classroom on an organic farm.</h2>
+          <p style="color: #5B5347;">
+            Cedar Grove is a small, not-for-profit school where the day moves
+            with the weather, the season, and the child in front of us.
+            Mornings might begin with a forest walk, an animal to feed, or
+            bread to bake &mdash; and unfold into reading, painting, math and music.
+          </p>
+          <blockquote style="border-left: 3px solid #A1674A; padding-left: 20px; margin: 28px 0; font-family: 'Playfair Display', serif; font-size: 1.4rem; font-style: italic; color: #253F30; line-height: 1.4;">
+            &ldquo;Where childhood grows naturally &mdash; and learning happens with the whole self.&rdquo;
+          </blockquote>
+          <p style="color: #5B5347;">
+            We blend academics with creativity, movement, and a strong
+            connection to nature, fostering curiosity, confidence, and a
+            lifelong love of learning.
+          </p>
+
+          <div style="display: flex; gap: 40px; margin-top: 36px; flex-wrap: wrap;">
+            <div>
+              <div style="font-family: 'Playfair Display', serif; font-size: 2.4rem; color: #375D47; font-weight: 700;">JK &ndash; 6</div>
+              <div style="font-size: 0.88rem; color: #5B5347; margin-top: 2px;">Mixed-age learning</div>
+            </div>
+            <div>
+              <div style="font-family: 'Playfair Display', serif; font-size: 2.4rem; color: #375D47; font-weight: 700;">40</div>
+              <div style="font-size: 0.88rem; color: #5B5347; margin-top: 2px;">Acres of farm &amp; forest</div>
+            </div>
+            <div>
+              <div style="font-family: 'Playfair Display', serif; font-size: 2.4rem; color: #375D47; font-weight: 700;">Daily</div>
+              <div style="font-size: 0.88rem; color: #5B5347; margin-top: 2px;">Outdoor learning</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section id="programs" style="padding: 120px 0;" data-screen-label="programs">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
+      <div style="max-width: 720px; margin-bottom: 64px;">
+        <span style="display: inline-block; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: #A1674A; font-weight: 700; margin-bottom: 18px;">Programs</span>
+        <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0 0 20px;">Pathways for every kind of family.</h2>
+        <p style="font-size: 1.1rem; color: #5B5347; margin: 0;">Full and part-time programming, designed to fit naturally into the rhythms of family life and the seasons of childhood.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 28px;">
+        <sc-for list="{{ programs }}" as="prog" hint-placeholder-count="4">
+          <div style="position: relative; border-radius: 24px; overflow: hidden; aspect-ratio: 5/4; box-shadow: 0 2px 12px rgba(37, 63, 48, 0.08);">
+            <img src="{{ prog.img }}" alt="{{ prog.alt }}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;"/>
+            <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(37, 63, 48, 0.85) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 36px; color: #FFF4D6;">
+              <span style="background: rgba(255, 244, 214, 0.15); backdrop-filter: blur(6px); border: 1px solid rgba(255, 244, 214, 0.3); padding: 6px 14px; border-radius: 999px; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; align-self: flex-start; margin-bottom: 16px;">{{ prog.tag }}</span>
+              <h3 style="color: #FFF4D6; margin: 0 0 8px; font-size: 1.6rem; font-family: 'Playfair Display', serif; font-weight: 600;">{{ prog.title }}</h3>
+              <p style="color: rgba(255, 244, 214, 0.88); font-size: 0.98rem; max-width: 420px; margin: 0;">{{ prog.desc }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- A Day -->
+  <section id="day" style="padding: 120px 0; background: #F7EAC4;" data-screen-label="day">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 80px; align-items: start;">
+        <div>
+          <span style="display: inline-block; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: #A1674A; font-weight: 700; margin-bottom: 18px;">A Day Here</span>
+          <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0 0 20px;">Days that breathe with rhythm.</h2>
+          <p style="color: #5B5347;">
+            Each day moves between focused academic work and time outdoors &mdash; between
+            stillness and movement, doing and resting. Children know what to expect,
+            and within that rhythm, they're free to wonder.
+          </p>
+        </div>
+
+        <div style="position: relative;">
+          <sc-for list="{{ dayItems }}" as="item" hint-placeholder-count="6">
+            <div style="display: grid; grid-template-columns: 24px 1fr; gap: 20px; padding: 18px 0; align-items: start;">
+              <div style="width: 24px; height: 24px; border-radius: 50%; background: {{ item.active }}; border: 2px solid #8DA57C; margin-top: 4px;"></div>
+              <div>
+                <div style="font-size: 0.82rem; color: #A1674A; letter-spacing: 0.04em; font-weight: 700;">{{ item.time }}</div>
+                <h4 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #253F30; margin: 2px 0 4px; font-weight: 600;">{{ item.title }}</h4>
+                <p style="font-size: 0.96rem; margin: 0; color: #5B5347;">{{ item.desc }}</p>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" style="padding: 120px 0;" data-screen-label="gallery">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
+      <div style="max-width: 720px; margin: 0 auto 64px; text-align: center;">
+        <span style="display: inline-block; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: #A1674A; font-weight: 700; margin-bottom: 18px;">Our Days, Quietly</span>
+        <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0;">Glimpses of life at the Grove.</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+        <sc-for list="{{ galleryImgs }}" as="src" hint-placeholder-count="8">
+          <div style="border-radius: 16px; overflow: hidden; aspect-ratio: 1/1; background: #C6B7A6;">
+            <img src="{{ src }}" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;"/>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section style="padding: 120px 0; background: #F7EAC4;" data-screen-label="testimonials">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
+      <div style="max-width: 720px; margin: 0 auto 64px; text-align: center;">
+        <span style="display: inline-block; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: #A1674A; font-weight: 700; margin-bottom: 18px;">Voices from our Community</span>
+        <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0;">What families are saying.</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px;">
+        <sc-for list="{{ testimonials }}" as="t" hint-placeholder-count="3">
+          <div style="background: #FFF4D6; padding: 36px 32px; border-radius: 24px; position: relative;">
+            <span style="font-family: 'Playfair Display', serif; font-size: 4rem; color: #C2E0ED; line-height: 1; position: absolute; top: 20px; right: 28px;">&rdquo;</span>
+            <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; line-height: 1.55; color: #253F30; font-style: italic; margin: 0 0 24px;">{{ t.quote }}</p>
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <div style="width: 44px; height: 44px; border-radius: 50%; background: #8DA57C; color: #FFF4D6; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700;">{{ t.initial }}</div>
+              <div>
+                <div style="font-weight: 700; color: #253F30; font-size: 0.95rem;">{{ t.name }}</div>
+                <div style="font-size: 0.84rem; color: #5B5347;">{{ t.role }}</div>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- Land acknowledgment -->
+  <section style="padding: 120px 0; background: #253F30; color: #FFF4D6; position: relative;" data-screen-label="land">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 1;">
+      <div style="max-width: 760px;">
+        <span style="display: inline-block; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: #C2E0ED; font-weight: 700; margin-bottom: 18px;">Land Acknowledgment</span>
+        <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #FFF4D6; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0 0 20px;">We learn on borrowed land.</h2>
+        <p style="color: rgba(255, 244, 214, 0.82); font-size: 1.15rem; max-width: 760px; margin-top: 24px;">
+          Cedar Grove School recognizes that we live, learn, and gather on the
+          traditional territory of the Anishnaabeg, Wendat, and Haudenosaunee
+          peoples, and near the Kanien&rsquo;keha:ka (Mohawk) community of
+          Tyendinaga. We honour their deep, enduring relationship with this
+          land and express our gratitude for their ongoing care and stewardship.
+        </p>
+        <p style="color: rgba(255, 244, 214, 0.82); font-size: 1.15rem; max-width: 760px;">
+          We are committed to fostering respectful partnerships and to protecting
+          the land and water for generations to come.
+        </p>
+        <span style="font-family: 'Playfair Display', serif; font-style: italic; color: #C2E0ED; font-size: 1.4rem; margin-top: 32px; display: block;">&mdash; with gratitude</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="enrol" style="padding: 100px 0;" data-screen-label="cta">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
+      <div style="background: linear-gradient(135deg, #375D47 0%, #253F30 100%); color: #FFF4D6; border-radius: 48px; padding: 80px 64px; text-align: center; position: relative; overflow: hidden;">
+        <span style="display: inline-block; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: #C2E0ED; font-weight: 700; margin-bottom: 18px; position: relative; z-index: 1;">Now Enrolling</span>
+        <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #FFF4D6; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0 0 16px; position: relative; z-index: 1;">Come spend a day with us.</h2>
+        <p style="color: rgba(255, 244, 214, 0.82); font-size: 1.15rem; max-width: 520px; margin: 0 auto 36px; position: relative; z-index: 1;">
+          The best way to know if Cedar Grove is the right home for your child
+          is to walk the land with us. We'd love to meet you.
+        </p>
+        <a href="#" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; border-radius: 999px; font-weight: 700; font-size: 0.94rem; letter-spacing: 0.03em; background: #C2E0ED; color: #253F30; box-shadow: 0 6px 24px rgba(194, 224, 237, 0.4); position: relative; z-index: 1; text-decoration: none;" style-hover="background: #FFF4D6;">
+          Apply for 2026 &ndash; 2027
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" style="background: #F7EAC4; padding: 80px 0 32px; color: #5B5347;" data-screen-label="footer">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 48px; margin-bottom: 56px;">
+        <div style="max-width: 340px;">
+          <img src="assets/logo-cropped.png" alt="Cedar Grove School" style="height: 50px; width: auto; display: block; margin-bottom: 18px;"/>
+          <p style="margin: 0 0 24px; max-width: 320px; font-size: 0.96rem;">A Waldorf-inspired, not-for-profit elementary school nestled on an organic farm in Prince Edward County, Ontario.</p>
+          <div style="display: flex; gap: 12px; margin-top: 8px;">
+            <a href="https://www.instagram.com/cedargroveschool.pec/" aria-label="Instagram" style="width: 40px; height: 40px; border-radius: 50%; background: #FFF4D6; display: flex; align-items: center; justify-content: center; color: #375D47; text-decoration: none;" style-hover="background: #375D47; color: #FFF4D6;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            </a>
+            <a href="https://www.facebook.com/cedargroveschoolpec/" aria-label="Facebook" style="width: 40px; height: 40px; border-radius: 50%; background: #FFF4D6; display: flex; align-items: center; justify-content: center; color: #375D47; text-decoration: none;" style-hover="background: #375D47; color: #FFF4D6;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h2V5h-2c-1.66 0-3 1.34-3 3v2H9v3h2v8h3v-8h2.5l.5-3H14V8.5c0-.28.22-.5.5-.5z"/></svg>
+            </a>
+            <a href="/cdn-cgi/l/email-protection#541530393d3a14373130352633263b223127373c3b3b387a3735" aria-label="Email" style="width: 40px; height: 40px; border-radius: 50%; background: #FFF4D6; display: flex; align-items: center; justify-content: center; color: #375D47; text-decoration: none;" style-hover="background: #375D47; color: #FFF4D6;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="font-family: 'Quicksand', sans-serif; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: #253F30; font-weight: 700; margin: 0 0 18px;">Visit</h4>
+          <ul style="list-style: none; margin: 0; padding: 0;">
+            <li style="margin-bottom: 10px;">2590 County Rd 15</li>
+            <li style="margin-bottom: 10px;">Picton, Ontario</li>
+            <li style="margin-bottom: 10px;">K0K 2T0</li>
+            <li style="margin-bottom: 10px;"><a href="/cdn-cgi/l/email-protection#b6f7d2dbdfd8f6d5d3d2d7c4d1c4d9c0d3c5d5ded9d9da98d5d7" style="color: #5B5347; text-decoration: none;" style-hover="color: #375D47;"><span class="__cf_email__" data-cfemail="cb8aafa6a2a58ba8aeafaab9acb9a4bdaeb8a8a3a4a4a7e5a8aa">[email&#160;protected]</span></a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-family: 'Quicksand', sans-serif; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: #253F30; font-weight: 700; margin: 0 0 18px;">Explore</h4>
+          <ul style="list-style: none; margin: 0; padding: 0;">
+            <li style="margin-bottom: 10px;"><a href="#about" style="color: #5B5347; text-decoration: none;" style-hover="color: #375D47;">About</a></li>
+            <li style="margin-bottom: 10px;"><a href="#programs" style="color: #5B5347; text-decoration: none;" style-hover="color: #375D47;">Programs</a></li>
+            <li style="margin-bottom: 10px;"><a href="#day" style="color: #5B5347; text-decoration: none;" style-hover="color: #375D47;">A Day Here</a></li>
+            <li style="margin-bottom: 10px;"><a href="#gallery" style="color: #5B5347; text-decoration: none;" style-hover="color: #375D47;">Gallery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-family: 'Quicksand', sans-serif; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: #253F30; font-weight: 700; margin: 0 0 18px;">Connect</h4>
+          <ul style="list-style: none; margin: 0; padding: 0;">
+            <li style="margin-bottom: 10px;"><a href="#enrol" style="color: #5B5347; text-decoration: none;" style-hover="color: #375D47;">Apply</a></li>
+            <li style="margin-bottom: 10px;"><a href="#" style="color: #5B5347; text-decoration: none;" style-hover="color: #375D47;">Faculty &amp; Staff</a></li>
+            <li style="margin-bottom: 10px;"><a href="#" style="color: #5B5347; text-decoration: none;" style-hover="color: #375D47;">Calendar</a></li>
+            <li style="margin-bottom: 10px;"><a href="#" style="color: #5B5347; text-decoration: none;" style-hover="color: #375D47;">Job Opportunities</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid rgba(161, 103, 74, 0.2); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; font-size: 0.86rem; flex-wrap: wrap; gap: 16px;">
+        <span>&copy; 2026 Cedar Grove School. A registered not-for-profit.</span>
+        <span style="font-family: 'Playfair Display', serif; font-style: italic; color: #A1674A; font-size: 1.15rem;">Where childhood grows naturally.</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const words = ['Nature','Wonder','Growth','Belonging','Curiosity','Rhythm','Creativity','Stewardship','Childhood','Connection'];
+    return {
+      marqueeItems: [...words, ...words],
+      programs: [
+        { img: 'https://static.wixstatic.com/media/53124a_2fc1267c2feb4221bf687f86190cd81a~mv2.jpg/v1/fill/w_1000,h_800,al_c,q_85,enc_auto/image.jpg', alt: 'Children in a forest classroom', tag: 'Ages 4 – 6', title: 'Kindergarten in the Grove', desc: 'A gentle, play-based introduction to school — full of story, song, baking, and time outside.' },
+        { img: 'https://static.wixstatic.com/media/53124a_9778686f78d543a9bd73bb403e453375~mv2.jpg/v1/fill/w_1000,h_800,al_c,q_85,enc_auto/image.jpg', alt: 'Children working together at Cedar Grove', tag: 'Grades 1 – 3', title: 'The Lower Grades', desc: 'Stories, fairy tales and the natural world become the doorway into reading, writing, math and the arts.' },
+        { img: 'https://static.wixstatic.com/media/53124a_e4c6d8e728ca498ab82479561c867adc~mv2.jpeg/v1/fill/w_1200,h_800,al_c,q_85,enc_auto/image.jpg', alt: 'Older students learning outdoors', tag: 'Grades 4 – 6', title: 'The Upper Grades', desc: 'Deeper academics paired with stewardship of the land — geography, science, history and craft come alive.' },
+        { img: 'https://static.wixstatic.com/media/53124a_168023cc529e49a79c56b5086001daa7~mv2.jpg/v1/fill/w_1000,h_800,al_c,q_85,enc_auto/image.jpg', alt: 'Children exploring the woods', tag: 'Part-Time', title: 'Forest Days & Drop-Ins', desc: 'For homeschool families and curious newcomers — spend a day with us in the woods, the garden and the studio.' }
+      ],
+      dayItems: [
+        { time: '8:30 — Arrival', title: 'Morning circle & verse', desc: 'Greeting the day together with song, movement and a moment of quiet.', active: '#F7EAC4' },
+        { time: '9:00 — Main Lesson', title: 'Deep academic work', desc: 'A two-hour block on one subject — math, language, history or science — taught through story and image.', active: '#375D47' },
+        { time: '11:00 — Outdoors', title: 'Forest, farm & play', desc: 'Free play, animal care, gardening, and exploration of the woods around the school.', active: '#F7EAC4' },
+        { time: '12:30 — Lunch', title: 'A shared, unhurried meal', desc: 'Often featuring food the children helped prepare or harvest themselves.', active: '#F7EAC4' },
+        { time: '1:30 — Afternoon', title: 'Arts, crafts & practical work', desc: 'Painting, handwork, baking, music, French — the work of the hands and the heart.', active: '#F7EAC4' },
+        { time: '3:15 — Closing', title: 'A grateful goodbye', desc: 'A quiet ending and a verse to carry home.', active: '#F7EAC4' }
+      ],
+      galleryImgs: [
+        'https://static.wixstatic.com/media/53124a_ec9a830c103e472d989f3903ad9c7958~mv2.jpg/v1/fill/w_700,h_1400,al_c,q_85,enc_auto/image.jpg',
+        'https://static.wixstatic.com/media/53124a_5acf1ec50284471e86521599c53bd770~mv2.jpg/v1/fill/w_700,h_700,al_c,q_85,enc_auto/image.jpg',
+        'https://static.wixstatic.com/media/53124a_b64dfb826e0c4c5fbb8db509c7f0f710~mv2.jpg/v1/fill/w_700,h_700,al_c,q_85,enc_auto/image.jpg',
+        'https://static.wixstatic.com/media/53124a_8fc2679c39944866b2bcea36acb87dec~mv2.jpg/v1/fill/w_700,h_1400,al_c,q_85,enc_auto/image.jpg',
+        'https://static.wixstatic.com/media/53124a_73535f57fe7346f5a0da5e7f32f088ea~mv2.jpg/v1/fill/w_700,h_700,al_c,q_85,enc_auto/image.jpg',
+        'https://static.wixstatic.com/media/53124a_df98115520b74d7da3b5e138b66b9fca~mv2.jpg/v1/fill/w_700,h_700,al_c,q_85,enc_auto/image.jpg',
+        'https://static.wixstatic.com/media/53124a_bce15d3d08bc4efba64e815f018c6b40~mv2.jpg/v1/fill/w_700,h_700,al_c,q_85,enc_auto/image.jpg',
+        'https://static.wixstatic.com/media/53124a_6d8ee6833aa64f8ebd0f0da9a5adac78~mv2.jpg/v1/fill/w_700,h_700,al_c,q_85,enc_auto/image.jpg'
+      ],
+      testimonials: [
+        { quote: 'Our daughter wakes up excited to go to school. She comes home with stories about the forest, songs she learned, and bread she helped bake.', initial: 'S', name: 'Sarah M.', role: 'Parent, Grade 2' },
+        { quote: "The teachers truly know each child. There's a calm here that's hard to describe — and a real respect for childhood.", initial: 'J', name: 'James & Anna', role: 'Parents, JK & Grade 4' },
+        { quote: "It's the closest thing to the kind of childhood I always wished for: outside, hands in the dirt, with people who care.", initial: 'L', name: 'Liz K.', role: 'Parent, Grade 5' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
