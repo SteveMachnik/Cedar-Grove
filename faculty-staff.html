@@ -19,8 +19,23 @@
   .cg-hover-footer:hover { color: #375D47 !important; }
   .cg-hover-circle:hover { background: #375D47 !important; color: #FFF4D6 !important; }
   .cg-hover-cta:hover { background: #FFF4D6 !important; }
+  .cg-menu-toggle { display: none; }
+  .cg-hamburger { display: none; cursor: pointer; padding: 8px; margin: -8px 0; }
+  .cg-mobile-panel { display: none; flex-direction: column; padding: 4px 32px 20px; }
+  .cg-mobile-panel a { padding: 13px 0; font-size: 1rem; color: #253F30; font-weight: 600; border-bottom: 1px solid rgba(161, 103, 74, 0.14); }
   @media (max-width: 700px) {
     nav.cg-nav a.cg-navlink { display: none; }
+    .cg-hamburger { display: flex; align-items: center; }
+    .cg-menu-toggle:checked ~ .cg-mobile-panel { display: flex; }
+    .cg-team-photo { order: 1 !important; }
+    .cg-team-text { order: 2 !important; }
+    [style*="padding: 80px 0 60px;"] { padding: 48px 0 40px !important; }
+    [style*="padding: 60px 0;"] { padding: 40px 0 !important; }
+    [style*="padding: 60px 0 100px;"] { padding: 40px 0 64px !important; }
+    [style*="padding: 20px 0 100px;"] { padding: 16px 0 64px !important; }
+    [style*="padding: 64px 56px;"] { padding: 40px 28px !important; }
+    [style*="padding: 80px 64px;"] { padding: 40px 24px !important; }
+    [style*="padding: 80px 0 32px;"] { padding: 48px 0 32px !important; }
   }
 </style>
 </head>
@@ -36,6 +51,7 @@
 
   <!-- Header -->
   <header style="position: sticky; top: 0; z-index: 50; background: rgba(255, 244, 214, 0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(161, 103, 74, 0.12);">
+    <input type="checkbox" id="cg-menu" class="cg-menu-toggle" />
     <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 32px; max-width: 1400px; margin: 0 auto; gap: 24px; flex-wrap: wrap;">
       <a href="index.html" aria-label="Cedar Grove School home" style="display: flex; align-items: center; text-decoration: none;">
         <img src="assets/logo.png" alt="Cedar Grove School" style="height: 60px; width: auto; display: block;"/>
@@ -50,7 +66,20 @@
         <a class="cg-navlink cg-hover-link" href="index.html#contact" style="font-size: 0.92rem; color: #253F30; font-weight: 600; letter-spacing: 0.03em; text-decoration: none;">Contact</a>
         <a href="index.html#enrol" class="cg-hover-fill" style="padding: 15px 32px; border-radius: 999px; font-size: 0.92rem; font-weight: 700; letter-spacing: 0.04em; color: #FFF4D6; background: #375D47; box-shadow: 0 8px 22px rgba(55, 93, 71, 0.32); display: inline-flex; align-items: center; text-decoration: none;">Apply for 2026&ndash;27</a>
       </nav>
+
+      <label for="cg-menu" class="cg-hamburger" aria-label="Open menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#253F30" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </label>
     </div>
+
+    <nav class="cg-mobile-panel">
+      <a href="index.html#about">About</a>
+      <a href="index.html#programs">Programs</a>
+      <a href="faculty-staff.html">Faculty &amp; Staff</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
   </header>
 
   <!-- Page header -->
@@ -74,10 +103,10 @@
   <section style="padding: 60px 0;">
     <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 56px; align-items: start;">
-        <div style="position: relative; aspect-ratio: 4/5; max-width: 420px;">
+        <div class="cg-team-photo" style="position: relative; aspect-ratio: 4/5; max-width: 420px;">
           <img src="assets/marissa-norton.jpg" alt="Marissa Norton" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 24px; box-shadow: 0 24px 60px rgba(37, 63, 48, 0.16);"/>
         </div>
-        <div>
+        <div class="cg-team-text">
           <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1.15; margin: -8px 0 6px;">Marissa Norton</h2>
           <p style="font-family: 'Playfair Display', serif; font-style: italic; color: #A1674A; font-size: 1.1rem; margin: 0 0 20px;">School Administrator</p>
           <p style="color: #5B5347; margin: 0 0 18px;">Marissa Norton joins Cedar Grove School with more than twenty years of experience in education and a heartfelt commitment to nurturing children, supporting families, and cultivating thriving learning communities.</p>
@@ -93,7 +122,7 @@
   <section style="padding: 60px 0; background: #F7EAC4;">
     <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 56px; align-items: start;">
-        <div style="order: 1;">
+        <div class="cg-team-text" style="order: 1;">
           <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1.15; margin: -8px 0 6px;">Brittany Shannon</h2>
           <p style="font-family: 'Playfair Display', serif; font-style: italic; color: #A1674A; font-size: 1.1rem; margin: 0 0 20px;">Arts and Handwork Teacher</p>
           <p style="color: #5B5347; margin: 0 0 18px;">Brittany Shannon is a Waldorf-trained educator, artist, and educational leader devoted to whole-child development and nature-based learning. She has been actively involved in developing a Waldorf initiative in Prince Edward County since 2011.</p>
@@ -102,7 +131,7 @@
           <p style="color: #5B5347; margin: 0 0 18px;">As Arts and Handwork Teacher at Cedar Grove School, Brittany brings painting, handwork, and creative practice into the children&rsquo;s daily rhythm. Her teaching is rooted in artistic practice, meaningful work, and a deep respect for childhood.</p>
           <p style="color: #5B5347; margin: 0;">Brittany is also a wife and mother of two sons, and she brings her lived experience of family life into her work with warmth, steadiness, and deep care for the children and families she serves.</p>
         </div>
-        <div style="position: relative; aspect-ratio: 4/5; max-width: 420px; order: 2;">
+        <div class="cg-team-photo" style="position: relative; aspect-ratio: 4/5; max-width: 420px; order: 2;">
           <img src="https://static.wixstatic.com/media/53124a_4d3f0469b65b47af9f33d11c34f12393~mv2.png/v1/fill/w_700,h_875,al_c,q_90,enc_auto/53124a_4d3f0469b65b47af9f33d11c34f12393~mv2.png" alt="Brittany Shannon" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 24px; box-shadow: 0 24px 60px rgba(37, 63, 48, 0.16);"/>
         </div>
       </div>
@@ -112,10 +141,10 @@
   <section style="padding: 60px 0;">
     <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 56px; align-items: start;">
-        <div style="position: relative; aspect-ratio: 4/5; max-width: 420px;">
+        <div class="cg-team-photo" style="position: relative; aspect-ratio: 4/5; max-width: 420px;">
           <img src="https://static.wixstatic.com/media/53124a_3f3649a54c2f418da30c90a106a3961a~mv2.jpg/v1/fill/w_700,h_875,al_c,q_90,enc_auto/53124a_3f3649a54c2f418da30c90a106a3961a~mv2.jpg" alt="Kerri (Kaya&rsquo;tahente) Smart" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 24px; box-shadow: 0 24px 60px rgba(37, 63, 48, 0.16);"/>
         </div>
-        <div>
+        <div class="cg-team-text">
           <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1.15; margin: -8px 0 6px;">Kerri (Kaya&rsquo;tahente) Smart</h2>
           <p style="font-family: 'Playfair Display', serif; font-style: italic; color: #A1674A; font-size: 1.1rem; margin: 0 0 20px;">Lead Teacher, Kindergarten &amp; Grade 1</p>
           <p style="color: #5B5347; margin: 0 0 18px;">Kerri Smart is a Bear Clan woman from Tyendinaga Mohawk Territory and a member of the Ontario College of Teachers. She is also known by her Indigenous name, Kaya&rsquo;tahente (pronounced guy-yut-dah-hon-day), which translates to &ldquo;leader&rdquo; in the Mohawk language. She brings over fifteen years of experience in early childhood education, along with a background in educational administration.</p>
@@ -130,12 +159,12 @@
   <section style="padding: 60px 0; background: #F7EAC4;">
     <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 56px; align-items: start;">
-        <div style="order: 1;">
+        <div class="cg-team-text" style="order: 1;">
           <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1.15; margin: -8px 0 6px;">Henry Lear</h2>
           <p style="font-family: 'Playfair Display', serif; font-style: italic; color: #A1674A; font-size: 1.1rem; margin: 0 0 20px;">Lead Teacher, Grades 2&ndash;5</p>
           <p style="color: #5B5347; margin: 0;">Full bio coming soon.</p>
         </div>
-        <div style="position: relative; aspect-ratio: 4/5; max-width: 420px; order: 2; border-radius: 24px; background: #C6B7A6; box-shadow: 0 24px 60px rgba(37, 63, 48, 0.16); display: flex; align-items: center; justify-content: center; overflow: hidden;">
+        <div class="cg-team-photo" style="position: relative; aspect-ratio: 4/5; max-width: 420px; order: 2; border-radius: 24px; background: #C6B7A6; box-shadow: 0 24px 60px rgba(37, 63, 48, 0.16); display: flex; align-items: center; justify-content: center; overflow: hidden;">
           <span style="font-family: 'Playfair Display', serif; font-weight: 600; font-size: 4.5rem; color: #FFF4D6;">H</span>
         </div>
       </div>
@@ -145,10 +174,10 @@
   <section style="padding: 60px 0;">
     <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 56px; align-items: start;">
-        <div style="position: relative; aspect-ratio: 4/5; max-width: 420px; border-radius: 24px; background: #C6B7A6; box-shadow: 0 24px 60px rgba(37, 63, 48, 0.16); display: flex; align-items: center; justify-content: center; overflow: hidden;">
+        <div class="cg-team-photo" style="position: relative; aspect-ratio: 4/5; max-width: 420px; border-radius: 24px; background: #C6B7A6; box-shadow: 0 24px 60px rgba(37, 63, 48, 0.16); display: flex; align-items: center; justify-content: center; overflow: hidden;">
           <span style="font-family: 'Playfair Display', serif; font-weight: 600; font-size: 4.5rem; color: #FFF4D6;">J</span>
         </div>
-        <div>
+        <div class="cg-team-text">
           <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1.15; margin: -8px 0 6px;">Jasmin Wakeling</h2>
           <p style="font-family: 'Playfair Display', serif; font-style: italic; color: #A1674A; font-size: 1.1rem; margin: 0 0 20px;">Assistant Teacher</p>
           <p style="color: #5B5347; margin: 0 0 18px;">Jaz is thrilled to be joining Cedar Grove as an Assistant Teacher. She brings a positive attitude, a passion for all things nature, and experience working with children in both outdoor and educational settings. Jaz is excited to share her knowledge of the natural world, helping children discover the incredible diversity of species, the interconnectedness of ecosystems, and the importance of caring for our planet, each other, and ourselves.</p>
@@ -162,7 +191,7 @@
   <section style="padding: 60px 0; background: #F7EAC4;">
     <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 56px; align-items: start;">
-        <div style="order: 1;">
+        <div class="cg-team-text" style="order: 1;">
           <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1.15; margin: -8px 0 6px;">Kelly Purves</h2>
           <p style="font-family: 'Playfair Display', serif; font-style: italic; color: #A1674A; font-size: 1.1rem; margin: 0 0 20px;">Teaching Assistant &amp; Administrative Assistant</p>
           <p style="color: #5B5347; margin: 0 0 18px;">Kelly is a lifelong learner and dedicated environmental steward with a history rooted in the natural world. She supports Cedar Grove School through both administration and student learning, bringing a grounded presence to the school&rsquo;s daily operations and living classroom.</p>
@@ -170,7 +199,7 @@
           <p style="color: #5B5347; margin: 0 0 18px;">Kelly&rsquo;s two nature-raised boys have been her greatest teachers, inspiring her to live more intuitively. On this path she has learned to advocate for fueling the body with whole foods, cultivating inner awareness, and weaving movement into everyday life.</p>
           <p style="color: #5B5347; margin: 0;">To Kelly, being in the presence of children is sweet magic. She believes in creating spaces where wonder is the curriculum and children can develop a lasting connection with the wild world.</p>
         </div>
-        <div style="position: relative; aspect-ratio: 4/5; max-width: 420px; order: 2;">
+        <div class="cg-team-photo" style="position: relative; aspect-ratio: 4/5; max-width: 420px; order: 2;">
           <img src="https://static.wixstatic.com/media/53124a_c1ec646419304cee94052ef96ca031f2~mv2.jpg/v1/fill/w_700,h_875,al_l,q_90,enc_auto/53124a_c1ec646419304cee94052ef96ca031f2~mv2.jpg" alt="Kelly Purves" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 24px; box-shadow: 0 24px 60px rgba(37, 63, 48, 0.16);"/>
         </div>
       </div>
@@ -180,10 +209,10 @@
   <section style="padding: 60px 0 100px;">
     <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 56px; align-items: start;">
-        <div style="position: relative; aspect-ratio: 4/5; max-width: 420px;">
+        <div class="cg-team-photo" style="position: relative; aspect-ratio: 4/5; max-width: 420px;">
           <img src="https://static.wixstatic.com/media/53124a_6d9cb5d2ed714a379c8b9a16ce34fa67~mv2.png/v1/fill/w_700,h_875,al_c,q_90,enc_auto/53124a_6d9cb5d2ed714a379c8b9a16ce34fa67~mv2.png" alt="Claire Telford" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 24px; box-shadow: 0 24px 60px rgba(37, 63, 48, 0.16);"/>
         </div>
-        <div>
+        <div class="cg-team-text">
           <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1.15; margin: -8px 0 6px;">Claire Telford</h2>
           <p style="font-family: 'Playfair Display', serif; font-style: italic; color: #A1674A; font-size: 1.1rem; margin: 0 0 20px;">Co-Founder</p>
           <p style="color: #5B5347; margin: 0 0 18px;">Claire is a Co-Founder of Cedar Grove School, bringing a deep commitment to community and to the vision that shaped the school from its earliest days.</p>

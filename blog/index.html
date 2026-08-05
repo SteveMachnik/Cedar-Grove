@@ -20,8 +20,16 @@
   .cg-hover-circle:hover { background: #375D47 !important; color: #FFF4D6 !important; }
   .cg-card:hover .cg-card-img { transform: scale(1.04); }
   .cg-card-img { transition: transform 0.4s ease; }
+  .cg-menu-toggle { display: none; }
+  .cg-hamburger { display: none; cursor: pointer; padding: 8px; margin: -8px 0; }
+  .cg-mobile-panel { display: none; flex-direction: column; padding: 4px 32px 20px; }
+  .cg-mobile-panel a { padding: 13px 0; font-size: 1rem; color: #253F30; font-weight: 600; border-bottom: 1px solid rgba(161, 103, 74, 0.14); }
   @media (max-width: 700px) {
     nav.cg-nav a.cg-navlink { display: none; }
+    .cg-hamburger { display: flex; align-items: center; }
+    .cg-menu-toggle:checked ~ .cg-mobile-panel { display: flex; }
+    [style*="padding: 80px 0 60px;"] { padding: 48px 0 40px !important; }
+    [style*="padding: 80px 0 32px;"] { padding: 48px 0 32px !important; }
   }
 </style>
 </head>
@@ -37,6 +45,7 @@
 
   <!-- Header -->
   <header style="position: sticky; top: 0; z-index: 50; background: rgba(255, 244, 214, 0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(161, 103, 74, 0.12);">
+    <input type="checkbox" id="cg-menu" class="cg-menu-toggle" />
     <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 32px; max-width: 1400px; margin: 0 auto; gap: 24px; flex-wrap: wrap;">
       <a href="../index.html" aria-label="Cedar Grove School home" style="display: flex; align-items: center; text-decoration: none;">
         <img src="../assets/logo.png" alt="Cedar Grove School" style="height: 60px; width: auto; display: block;"/>
@@ -51,7 +60,20 @@
         <a class="cg-navlink cg-hover-link" href="../index.html#contact" style="font-size: 0.92rem; color: #253F30; font-weight: 600; letter-spacing: 0.03em; text-decoration: none;">Contact</a>
         <a href="../index.html#enrol" class="cg-hover-fill" style="padding: 15px 32px; border-radius: 999px; font-size: 0.92rem; font-weight: 700; letter-spacing: 0.04em; color: #FFF4D6; background: #375D47; box-shadow: 0 8px 22px rgba(55, 93, 71, 0.32); display: inline-flex; align-items: center; text-decoration: none;">Apply for 2026&ndash;27</a>
       </nav>
+
+      <label for="cg-menu" class="cg-hamburger" aria-label="Open menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#253F30" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </label>
     </div>
+
+    <nav class="cg-mobile-panel">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#programs">Programs</a>
+      <a href="../index.html#gallery">Gallery</a>
+      <a href="../faculty-staff.html">Faculty &amp; Staff</a>
+      <a href="index.html">Blog</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
   </header>
 
   <!-- Blog header -->
