@@ -46,9 +46,9 @@
   .pg h3 { font-family: 'Playfair Display', serif; font-weight: 600; color: #FFF4D6; font-size: 1.6rem; margin: 0 0 10px; }
   .pg p { margin: 0; color: rgba(255,244,214,0.9); font-size: 0.98rem; line-height: 1.6; }
   .cg-day-col { display: flex; flex-direction: column; }
-  .cg-day-photo { flex: 1 1 auto; min-height: 300px; margin-top: 36px; border-radius: 24px; overflow: hidden; box-shadow: 0 24px 60px rgba(37, 63, 48, 0.16); background: #C6B7A6; }
-  .cg-day-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center bottom; display: block; }
-  @media (max-width: 700px) { .cg-day-photo { flex: 0 0 auto; aspect-ratio: 1/1; min-height: 0; } }
+  .cg-day-photo { position: relative; flex: 1 1 auto; min-height: 260px; margin-top: 36px; border-radius: 24px; overflow: hidden; box-shadow: 0 18px 44px rgba(37,63,48,0.14); background: #C6B7A6; }
+  .cg-day-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center bottom; display: block; }
+  @media (max-width: 700px) { .cg-day-photo { position: static; flex: 0 0 auto; aspect-ratio: 4/3; min-height: 0; } .cg-day-photo img { position: static; } }
 </style>
 </head>
 <body>
