@@ -37,6 +37,14 @@
     [style*="padding: 44px 36px;"] { padding: 28px 22px !important; }
     [style*="padding: 36px 32px;"] { padding: 24px 20px !important; }
   }
+  .pg { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+  .pg .card { background: #F7EAC4; border-radius: 24px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 2px 12px rgba(37,63,48,0.08); }
+  .pg .ph { aspect-ratio: 4/3; overflow: hidden; background: #C6B7A6; }
+  .pg .ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .pg .bd { padding: 28px 26px 30px; }
+  .pg .badge { display: inline-block; background: #375D47; color: #FFF4D6; padding: 5px 13px; border-radius: 999px; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 14px; }
+  .pg h3 { font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: 1.6rem; margin: 0 0 10px; }
+  .pg p { margin: 0; color: #5B5347; font-size: 0.98rem; line-height: 1.6; }
 </style>
 </head>
 <body>
@@ -154,7 +162,7 @@
       <div style="max-width: 720px; margin: 0 auto 64px; text-align: center;">
         <span style="display: inline-block; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: #A1674A; font-weight: 700; margin-bottom: 18px;">Our Approach</span>
         <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0 0 20px;">Head, Heart &amp; Hands</h2>
-        <p style="font-size: 1.1rem; color: #5B5347; margin: 0;">Holistic, nature-based education inspired by Waldorf traditions &mdash; nurturing every part of who a child is becoming.</p>
+        <p style="font-size: 1.1rem; color: #5B5347; margin: 0;">Holistic, nature-based education &mdash; nurturing every part of who a child is becoming.</p>
       </div>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
@@ -244,29 +252,29 @@
         <p style="font-size: 1.1rem; color: #5B5347; margin: 0;">Full and part-time programming, designed to fit naturally into the rhythms of family life and the seasons of childhood.</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 28px;">
-        <div style="position: relative; border-radius: 24px; overflow: hidden; aspect-ratio: 5/4; box-shadow: 0 2px 12px rgba(37, 63, 48, 0.08);">
-          <img src="https://static.wixstatic.com/media/53124a_2fc1267c2feb4221bf687f86190cd81a~mv2.jpg/v1/fill/w_1400,h_1120,al_c,q_85,enc_auto/image.jpg" alt="Children in a forest classroom" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;"/>
-          <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(37, 63, 48, 0.85) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 36px; color: #FFF4D6;">
-            <span style="background: rgba(255, 244, 214, 0.15); backdrop-filter: blur(6px); border: 1px solid rgba(255, 244, 214, 0.3); padding: 6px 14px; border-radius: 999px; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; align-self: flex-start; margin-bottom: 16px;">JK – Grade 1</span>
-            <h3 style="color: #FFF4D6; margin: 0 0 8px; font-size: 1.6rem; font-family: 'Playfair Display', serif; font-weight: 600;">Early Years</h3>
-            <p style="color: rgba(255, 244, 214, 0.88); font-size: 0.98rem; max-width: 420px; margin: 0;">A gentle, play-based introduction to school — full of story, song, baking and time outside, where fairy tales and the natural world become the doorway into reading, writing, math and the arts.</p>
+      <div class="pg">
+        <div class="card">
+          <div class="ph"><img src="https://static.wixstatic.com/media/53124a_2fc1267c2feb4221bf687f86190cd81a~mv2.jpg/v1/fill/w_1400,h_1120,al_c,q_85,enc_auto/image.jpg" alt="Children in a forest classroom" loading="lazy"/></div>
+          <div class="bd">
+            <span class="badge">JK – Grade 1</span>
+            <h3>Early Years</h3>
+            <p>A gentle, play-based introduction to school &mdash; full of story, song, baking and time outside, where fairy tales and the natural world become the doorway into reading, writing, math and the arts.</p>
           </div>
         </div>
-        <div style="position: relative; border-radius: 24px; overflow: hidden; aspect-ratio: 5/4; box-shadow: 0 2px 12px rgba(37, 63, 48, 0.08);">
-          <img src="https://static.wixstatic.com/media/53124a_e4c6d8e728ca498ab82479561c867adc~mv2.jpeg/v1/fill/w_1400,h_1120,al_c,q_85,enc_auto/image.jpg" alt="Older students learning outdoors" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;"/>
-          <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(37, 63, 48, 0.85) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 36px; color: #FFF4D6;">
-            <span style="background: rgba(255, 244, 214, 0.15); backdrop-filter: blur(6px); border: 1px solid rgba(255, 244, 214, 0.3); padding: 6px 14px; border-radius: 999px; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; align-self: flex-start; margin-bottom: 16px;">Grades 2 – 5</span>
-            <h3 style="color: #FFF4D6; margin: 0 0 8px; font-size: 1.6rem; font-family: 'Playfair Display', serif; font-weight: 600;">Lower Grades</h3>
-            <p style="color: rgba(255, 244, 214, 0.88); font-size: 0.98rem; max-width: 420px; margin: 0;">Deeper academics paired with stewardship of the land — geography, science, history and craft come alive.</p>
+        <div class="card">
+          <div class="ph"><img src="https://static.wixstatic.com/media/53124a_e4c6d8e728ca498ab82479561c867adc~mv2.jpeg/v1/fill/w_1400,h_1120,al_c,q_85,enc_auto/image.jpg" alt="Older students learning outdoors" loading="lazy"/></div>
+          <div class="bd">
+            <span class="badge">Grades 2 &ndash; 5</span>
+            <h3>Lower Grades</h3>
+            <p>Deeper academics paired with stewardship of the land &mdash; geography, science, history and craft come alive.</p>
           </div>
         </div>
-        <div style="position: relative; border-radius: 24px; overflow: hidden; aspect-ratio: 5/4; box-shadow: 0 2px 12px rgba(37, 63, 48, 0.08);">
-          <img src="https://static.wixstatic.com/media/53124a_168023cc529e49a79c56b5086001daa7~mv2.jpg/v1/fill/w_1400,h_1120,al_c,q_85,enc_auto/image.jpg" alt="Children exploring the woods" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;"/>
-          <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(37, 63, 48, 0.85) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 36px; color: #FFF4D6;">
-            <span style="background: rgba(255, 244, 214, 0.15); backdrop-filter: blur(6px); border: 1px solid rgba(255, 244, 214, 0.3); padding: 6px 14px; border-radius: 999px; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; align-self: flex-start; margin-bottom: 16px;">Part-Time</span>
-            <h3 style="color: #FFF4D6; margin: 0 0 8px; font-size: 1.6rem; font-family: 'Playfair Display', serif; font-weight: 600;">Part-Time Program</h3>
-            <p style="color: rgba(255, 244, 214, 0.88); font-size: 0.98rem; max-width: 420px; margin: 0;">Open to every family, not just those homeschooling. Kindergarten families choose 1–4 play-based days a week; grade school students join us Fridays for seasonally-aligned, nature-based experiential enrichment — from propagating native trees to fire and shelter-building skills.</p>
+        <div class="card">
+          <div class="ph"><img src="assets/programs-part-time.jpg" alt="A Cedar Grove student on the tire swing" loading="lazy"/></div>
+          <div class="bd">
+            <span class="badge">Part-Time</span>
+            <h3>Part-Time Program</h3>
+            <p>Open to every family, not just those homeschooling. Kindergarten families choose 1&ndash;4 play-based days a week; grade school students join us Fridays for seasonally-aligned, nature-based experiential enrichment &mdash; from propagating native trees to fire and shelter-building skills.</p>
           </div>
         </div>
       </div>
@@ -285,6 +293,9 @@
             stillness and movement, doing and resting. Children know what to expect,
             and within that rhythm, they're free to wonder.
           </p>
+          <div style="margin-top: 36px; border-radius: 24px; overflow: hidden; aspect-ratio: 4/5; max-width: 460px; box-shadow: 0 24px 60px rgba(37, 63, 48, 0.16); background: #C6B7A6;">
+            <img src="blog/images/may-fair-2026/mayfair-01.jpg" alt="A Cedar Grove student during the school day" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;"/>
+          </div>
         </div>
 
         <div style="position: relative;">
