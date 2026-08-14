@@ -7,7 +7,7 @@
 <meta name="description" content="A holistic, nature-based elementary school set on an organic farm in Prince Edward County. Learning with head, heart, and hands." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -38,13 +38,17 @@
     [style*="padding: 36px 32px;"] { padding: 24px 20px !important; }
   }
   .pg { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
-  .pg .card { background: #F7EAC4; border-radius: 24px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 2px 12px rgba(37,63,48,0.08); }
+  .pg .card { background: #375D47; border-radius: 24px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 8px 28px rgba(37,63,48,0.16); }
   .pg .ph { aspect-ratio: 4/3; overflow: hidden; background: #C6B7A6; }
   .pg .ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .pg .bd { padding: 28px 26px 30px; }
-  .pg .badge { display: inline-block; background: #375D47; color: #FFF4D6; padding: 5px 13px; border-radius: 999px; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 14px; }
-  .pg h3 { font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: 1.6rem; margin: 0 0 10px; }
-  .pg p { margin: 0; color: #5B5347; font-size: 0.98rem; line-height: 1.6; }
+  .pg .badge { display: inline-block; background: rgba(255,244,214,0.16); border: 1px solid rgba(255,244,214,0.38); color: #FFF4D6; padding: 5px 13px; border-radius: 999px; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 14px; }
+  .pg h3 { font-family: 'Playfair Display', serif; font-weight: 600; color: #FFF4D6; font-size: 1.6rem; margin: 0 0 10px; }
+  .pg p { margin: 0; color: rgba(255,244,214,0.9); font-size: 0.98rem; line-height: 1.6; }
+  .cg-day-col { display: flex; flex-direction: column; }
+  .cg-day-photo { flex: 1 1 auto; min-height: 300px; margin-top: 36px; border-radius: 24px; overflow: hidden; box-shadow: 0 24px 60px rgba(37, 63, 48, 0.16); background: #C6B7A6; }
+  .cg-day-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center bottom; display: block; }
+  @media (max-width: 700px) { .cg-day-photo { flex: 0 0 auto; aspect-ratio: 1/1; min-height: 0; } }
 </style>
 </head>
 <body>
@@ -284,8 +288,8 @@
   <!-- A Day -->
   <section id="day" style="padding: 120px 0; background: #F7EAC4;">
     <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 80px; align-items: start;">
-        <div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 80px; align-items: stretch;">
+        <div class="cg-day-col">
           <span style="display: inline-block; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: #A1674A; font-weight: 700; margin-bottom: 18px;">A Day Here</span>
           <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0 0 20px;">Days that breathe with rhythm.</h2>
           <p style="color: #5B5347;">
@@ -293,8 +297,8 @@
             stillness and movement, doing and resting. Children know what to expect,
             and within that rhythm, they're free to wonder.
           </p>
-          <div style="margin-top: 36px; border-radius: 24px; overflow: hidden; aspect-ratio: 4/5; max-width: 460px; box-shadow: 0 24px 60px rgba(37, 63, 48, 0.16); background: #C6B7A6;">
-            <img src="blog/images/may-fair-2026/mayfair-01.jpg" alt="A Cedar Grove student during the school day" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;"/>
+          <div class="cg-day-photo">
+            <img src="blog/images/may-fair-2026/mayfair-01.jpg" alt="The Cedar Grove school building across the meadow" loading="lazy"/>
           </div>
         </div>
 
