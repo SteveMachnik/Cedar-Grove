@@ -49,6 +49,9 @@
   .cg-day-photo { position: relative; flex: 1 1 auto; min-height: 260px; margin-top: 36px; border-radius: 24px; overflow: hidden; box-shadow: 0 18px 44px rgba(37,63,48,0.14); background: #C6B7A6; }
   .cg-day-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center bottom; display: block; }
   @media (max-width: 700px) { .cg-day-photo { position: static; flex: 0 0 auto; aspect-ratio: 4/3; min-height: 0; } .cg-day-photo img { position: static; } }
+  .cg-gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  @media (max-width: 900px) { .cg-gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; } }
+  @media (max-width: 620px) { .cg-gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } }
 </style>
 </head>
 <body>
@@ -364,7 +367,7 @@
         <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0;">Glimpses of life at the Grove.</h2>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+      <div class="cg-gallery-grid">
         <div style="border-radius: 16px; overflow: hidden; aspect-ratio: 1/1; background: #C6B7A6;"><img src="https://static.wixstatic.com/media/53124a_ec9a830c103e472d989f3903ad9c7958~mv2.jpg/v1/fill/w_700,h_1400,al_c,q_85,enc_auto/image.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;"/></div>
         <div style="border-radius: 16px; overflow: hidden; aspect-ratio: 1/1; background: #C6B7A6;"><img src="https://static.wixstatic.com/media/53124a_5acf1ec50284471e86521599c53bd770~mv2.jpg/v1/fill/w_700,h_700,al_c,q_85,enc_auto/image.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;"/></div>
         <div style="border-radius: 16px; overflow: hidden; aspect-ratio: 1/1; background: #C6B7A6;"><img src="https://static.wixstatic.com/media/53124a_b64dfb826e0c4c5fbb8db509c7f0f710~mv2.jpg/v1/fill/w_700,h_700,al_c,q_85,enc_auto/image.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;"/></div>
