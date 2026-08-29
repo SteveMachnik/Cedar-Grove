@@ -69,17 +69,6 @@
     .cg-team-text > p:nth-of-type(2) { margin-top: 0 !important; }
   }
 
-  .cg-copy { position: relative; }
-  .cg-copy::after {
-    content: attr(data-copy-label);
-    position: absolute; bottom: calc(100% + 8px); left: 50%;
-    transform: translateX(-50%) translateY(4px);
-    background: #253F30; color: #FFF4D6; font-family: 'Quicksand', sans-serif;
-    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;
-    padding: 5px 10px; border-radius: 6px; white-space: nowrap;
-    opacity: 0; pointer-events: none; transition: opacity .18s ease, transform .18s ease;
-  }
-  .cg-copy[data-copied]::after { opacity: 1; transform: translateX(-50%) translateY(0); }
 </style>
 </head>
 <body>
@@ -283,14 +272,11 @@
           <img src="assets/logo.png" alt="Cedar Grove School" style="height: 72px; width: auto; display: block; margin-bottom: 18px;" width="560" height="173"/>
           <p style="margin: 0 0 24px; max-width: 320px; font-size: 0.96rem;">A nature-based, not-for-profit elementary school nestled on an organic farm in Prince Edward County, Ontario.</p>
           <div style="display: flex; gap: 12px; margin-top: 8px;">
-            <a href="https://www.instagram.com/cedargroveschool.pec/" aria-label="Instagram" class="cg-hover-circle" style="width: 40px; height: 40px; border-radius: 50%; background: #FFF4D6; display: flex; align-items: center; justify-content: center; color: #375D47; text-decoration: none;">
+            <a href="https://www.instagram.com/cedargroveschool.pec/" target="_blank" rel="noopener" aria-label="Instagram" class="cg-hover-circle" style="width: 40px; height: 40px; border-radius: 50%; background: #FFF4D6; display: flex; align-items: center; justify-content: center; color: #375D47; text-decoration: none;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
             </a>
-            <a href="https://www.facebook.com/cedargroveschoolpec/" aria-label="Facebook" class="cg-hover-circle" style="width: 40px; height: 40px; border-radius: 50%; background: #FFF4D6; display: flex; align-items: center; justify-content: center; color: #375D47; text-decoration: none;">
+            <a href="https://www.facebook.com/cedargroveschoolpec/" target="_blank" rel="noopener" aria-label="Facebook" class="cg-hover-circle" style="width: 40px; height: 40px; border-radius: 50%; background: #FFF4D6; display: flex; align-items: center; justify-content: center; color: #375D47; text-decoration: none;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h2V5h-2c-1.66 0-3 1.34-3 3v2H9v3h2v8h3v-8h2.5l.5-3H14V8.5c0-.28.22-.5.5-.5z"/></svg>
-            </a>
-            <a href="mailto:Admin@cedargroveschool.ca" aria-label="Copy email address" title="Copy email address" data-copy-email="Admin@cedargroveschool.ca" data-copy-label="Copied" class="cg-hover-circle cg-copy" style="width: 40px; height: 40px; border-radius: 50%; background: #FFF4D6; display: flex; align-items: center; justify-content: center; color: #375D47; text-decoration: none;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
             </a>
           </div>
         </div>
@@ -334,32 +320,5 @@
 </div>
 
 
-<script>
-(function () {
-  document.querySelectorAll('[data-copy-email]').forEach(function (el) {
-    el.addEventListener('click', function (e) {
-      var addr = el.getAttribute('data-copy-email');
-      var flash = function () {
-        el.setAttribute('data-copied', '');
-        setTimeout(function () { el.removeAttribute('data-copied'); }, 1800);
-      };
-      var fallback = function () { window.location.href = 'mailto:' + addr; };
-      e.preventDefault();
-      if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(addr).then(flash).catch(fallback);
-      } else {
-        try {
-          var t = document.createElement('textarea');
-          t.value = addr; t.setAttribute('readonly', '');
-          t.style.position = 'fixed'; t.style.opacity = '0';
-          document.body.appendChild(t); t.select();
-          document.execCommand('copy'); document.body.removeChild(t);
-          flash();
-        } catch (err) { fallback(); }
-      }
-    });
-  });
-})();
-</script>
 </body>
 </html>
