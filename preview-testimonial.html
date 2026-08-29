@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Cedar Grove School — Rooted in Wonder</title>
+<title>[PREVIEW] Cedar Grove School — Rooted in Wonder</title>
 <meta name="description" content="A holistic, nature-based elementary school set on an organic farm in Prince Edward County. Learning with head, heart, and hands." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -108,22 +108,26 @@
     .cg-pillars > div > h3, .cg-pillars > div > p { grid-column: 2; }
   }
 
-  .cg-copy { position: relative; }
-  .cg-copy::after {
-    content: attr(data-copy-label);
-    position: absolute; bottom: calc(100% + 8px); left: 50%;
-    transform: translateX(-50%) translateY(4px);
-    background: #253F30; color: #FFF4D6; font-family: 'Quicksand', sans-serif;
-    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;
-    padding: 5px 10px; border-radius: 6px; white-space: nowrap;
-    opacity: 0; pointer-events: none; transition: opacity .18s ease, transform .18s ease;
+  .cg-quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 28px; max-width: 1080px; margin: 0 auto; align-items: stretch; }
+  .cg-quote { background: #FFF4D6; border-radius: 28px; padding: 46px 40px 36px; position: relative; display: flex; flex-direction: column; margin: 0; }
+  .cg-quote-mark { position: absolute; top: 14px; right: 30px; font-family: 'Playfair Display', serif; font-size: 4.2rem; line-height: 1; color: #C2E0ED; }
+  .cg-quote blockquote { margin: 0 0 26px; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem; line-height: 1.55; color: #253F30; flex: 1 1 auto; }
+  .cg-quote figcaption { display: flex; align-items: center; gap: 14px; }
+  .cg-quote-avatar { width: 44px; height: 44px; flex: none; border-radius: 50%; background: #8DA57C; color: #FFF4D6; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; }
+  .cg-quote-name { font-weight: 700; color: #253F30; font-size: 0.98rem; }
+  @media (max-width: 700px) {
+    .cg-quotes { gap: 16px; }
+    .cg-quote { padding: 30px 22px 24px; border-radius: 20px; }
+    .cg-quote-mark { font-size: 3rem; top: 8px; right: 16px; }
+    .cg-quote blockquote { font-size: 1rem; line-height: 1.5; margin-bottom: 20px; }
   }
-  .cg-copy[data-copied]::after { opacity: 1; transform: translateX(-50%) translateY(0); }
 </style>
 </head>
 <body>
 
 <div>
+
+  <div style="background:#253F30;color:#FFF4D6;text-align:center;padding:12px 20px;font-family:'Playfair Display',serif;"><strong>Testimonials &mdash; two real quotes</strong><span style="display:block;font-size:0.85rem;opacity:0.8;font-family:'Quicksand',sans-serif;">Placeholders replaced. &middot; PREVIEW ONLY</span></div>
 
   <!-- Announcement bar -->
   <div style="background: #375D47; color: #FFF4D6; text-align: center; padding: 10px 24px; font-size: 0.92rem; letter-spacing: 0.02em;">
@@ -444,45 +448,28 @@
   <!-- Testimonials -->
   <section style="padding: 120px 0; background: #F7EAC4;">
     <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
-      <div style="max-width: 720px; margin: 0 auto 64px; text-align: center;">
+      <div style="max-width: 720px; margin: 0 auto 48px; text-align: center;">
         <span style="display: inline-block; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: #A1674A; font-weight: 700; margin-bottom: 18px;">Voices from our Community</span>
         <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0;">What families are saying.</h2>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px;">
-        <div style="background: #FFF4D6; padding: 36px 32px; border-radius: 24px; position: relative;">
-          <span style="font-family: 'Playfair Display', serif; font-size: 4rem; color: #C2E0ED; line-height: 1; position: absolute; top: 20px; right: 28px;">&rdquo;</span>
-          <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; line-height: 1.55; color: #253F30; font-style: italic; margin: 0 0 24px;">Our daughter wakes up excited to go to school. She comes home with stories about the forest, songs she learned, and bread she helped bake.</p>
-          <div style="display: flex; align-items: center; gap: 14px;">
-            <div style="width: 44px; height: 44px; border-radius: 50%; background: #8DA57C; color: #FFF4D6; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700;">S</div>
-            <div>
-              <div style="font-weight: 700; color: #253F30; font-size: 0.95rem;">Sarah M.</div>
-              <div style="font-size: 0.84rem; color: #5B5347;">Parent, Grade 2</div>
-            </div>
-          </div>
-        </div>
-        <div style="background: #FFF4D6; padding: 36px 32px; border-radius: 24px; position: relative;">
-          <span style="font-family: 'Playfair Display', serif; font-size: 4rem; color: #C2E0ED; line-height: 1; position: absolute; top: 20px; right: 28px;">&rdquo;</span>
-          <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; line-height: 1.55; color: #253F30; font-style: italic; margin: 0 0 24px;">The teachers truly know each child. There's a calm here that's hard to describe — and a real respect for childhood.</p>
-          <div style="display: flex; align-items: center; gap: 14px;">
-            <div style="width: 44px; height: 44px; border-radius: 50%; background: #8DA57C; color: #FFF4D6; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700;">J</div>
-            <div>
-              <div style="font-weight: 700; color: #253F30; font-size: 0.95rem;">James & Anna</div>
-              <div style="font-size: 0.84rem; color: #5B5347;">Parents, JK & Grade 4</div>
-            </div>
-          </div>
-        </div>
-        <div style="background: #FFF4D6; padding: 36px 32px; border-radius: 24px; position: relative;">
-          <span style="font-family: 'Playfair Display', serif; font-size: 4rem; color: #C2E0ED; line-height: 1; position: absolute; top: 20px; right: 28px;">&rdquo;</span>
-          <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; line-height: 1.55; color: #253F30; font-style: italic; margin: 0 0 24px;">It's the closest thing to the kind of childhood I always wished for: outside, hands in the dirt, with people who care.</p>
-          <div style="display: flex; align-items: center; gap: 14px;">
-            <div style="width: 44px; height: 44px; border-radius: 50%; background: #8DA57C; color: #FFF4D6; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700;">L</div>
-            <div>
-              <div style="font-weight: 700; color: #253F30; font-size: 0.95rem;">Liz K.</div>
-              <div style="font-size: 0.84rem; color: #5B5347;">Parent, Grade 5</div>
-            </div>
-          </div>
-        </div>
+      <div class="cg-quotes">
+        <figure class="cg-quote">
+          <span class="cg-quote-mark" aria-hidden="true">&rdquo;</span>
+          <blockquote>Our son has thrived in Cedar Grove&rsquo;s supportive, nurturing environment. He looks forward to school every day. The teachers are so thoughtful and caring, and we can&rsquo;t wait for our daughter to join in the fall.</blockquote>
+          <figcaption>
+            <span class="cg-quote-avatar" aria-hidden="true">S</span>
+            <span class="cg-quote-name">Sarah Fournier</span>
+          </figcaption>
+        </figure>
+        <figure class="cg-quote">
+          <span class="cg-quote-mark" aria-hidden="true">&rdquo;</span>
+          <blockquote>Our five year old twins came home glowing, telling us about learning to build a fire and cook with their friends outdoors, and that&rsquo;s when we knew Cedar Grove was different. In this small, Waldorf inspired forest school, teachers know our boys by name and give them room to grow more confident and independent every day, connected to the earth in a way no classroom alone could teach.</blockquote>
+          <figcaption>
+            <span class="cg-quote-avatar" aria-hidden="true">L</span>
+            <span class="cg-quote-name">Leslie Ng</span>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -519,7 +506,7 @@
             <a href="https://www.facebook.com/cedargroveschoolpec/" aria-label="Facebook" class="cg-hover-circle" style="width: 40px; height: 40px; border-radius: 50%; background: #FFF4D6; display: flex; align-items: center; justify-content: center; color: #375D47; text-decoration: none;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h2V5h-2c-1.66 0-3 1.34-3 3v2H9v3h2v8h3v-8h2.5l.5-3H14V8.5c0-.28.22-.5.5-.5z"/></svg>
             </a>
-            <a href="mailto:Admin@cedargroveschool.ca" aria-label="Copy email address" title="Copy email address" data-copy-email="Admin@cedargroveschool.ca" data-copy-label="Copied" class="cg-hover-circle cg-copy" style="width: 40px; height: 40px; border-radius: 50%; background: #FFF4D6; display: flex; align-items: center; justify-content: center; color: #375D47; text-decoration: none;">
+            <a href="mailto:Admin@cedargroveschool.ca" aria-label="Email" class="cg-hover-circle" style="width: 40px; height: 40px; border-radius: 50%; background: #FFF4D6; display: flex; align-items: center; justify-content: center; color: #375D47; text-decoration: none;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
             </a>
           </div>
@@ -564,33 +551,5 @@
 
 </div>
 
-
-<script>
-(function () {
-  document.querySelectorAll('[data-copy-email]').forEach(function (el) {
-    el.addEventListener('click', function (e) {
-      var addr = el.getAttribute('data-copy-email');
-      var flash = function () {
-        el.setAttribute('data-copied', '');
-        setTimeout(function () { el.removeAttribute('data-copied'); }, 1800);
-      };
-      var fallback = function () { window.location.href = 'mailto:' + addr; };
-      e.preventDefault();
-      if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(addr).then(flash).catch(fallback);
-      } else {
-        try {
-          var t = document.createElement('textarea');
-          t.value = addr; t.setAttribute('readonly', '');
-          t.style.position = 'fixed'; t.style.opacity = '0';
-          document.body.appendChild(t); t.select();
-          document.execCommand('copy'); document.body.removeChild(t);
-          flash();
-        } catch (err) { fallback(); }
-      }
-    });
-  });
-})();
-</script>
 </body>
 </html>
