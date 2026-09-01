@@ -111,19 +111,27 @@
   }
 
 
-  .cg-quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 28px; max-width: 1080px; margin: 0 auto; align-items: stretch; }
-  .cg-quote { background: #FFF4D6; border-radius: 28px; padding: 46px 40px 36px; position: relative; display: flex; flex-direction: column; margin: 0; }
-  .cg-quote-mark { position: absolute; top: 14px; right: 30px; font-family: 'Playfair Display', serif; font-size: 4.2rem; line-height: 1; color: #C2E0ED; }
-  .cg-quote blockquote { margin: 0 0 26px; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem; line-height: 1.55; color: #253F30; flex: 1 1 auto; }
-  .cg-quote figcaption { display: flex; align-items: center; gap: 14px; }
-  .cg-quote-avatar { width: 44px; height: 44px; flex: none; border-radius: 50%; background: #8DA57C; color: #FFF4D6; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; }
-  .cg-quote-name { font-weight: 700; color: #253F30; font-size: 0.98rem; }
-  @media (max-width: 700px) {
-    .cg-quotes { gap: 16px; }
-    .cg-quote { padding: 30px 22px 24px; border-radius: 20px; }
-    .cg-quote-mark { font-size: 3rem; top: 8px; right: 16px; }
-    .cg-quote blockquote { font-size: 1rem; line-height: 1.5; margin-bottom: 20px; }
-  }
+
+  .q-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; align-items: start; }
+  .q-x { background: #FFF4D6; border-radius: 28px; padding: 40px 34px 30px; position: relative; }
+  .q-x summary { list-style: none; cursor: pointer; }
+  .q-x summary::-webkit-details-marker { display: none; }
+  .q-mark { position: absolute; top: 10px; right: 26px; font-family: 'Playfair Display', serif;
+            font-size: 3.6rem; line-height: 1; color: #C2E0ED; }
+  .q-lead { display: block; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem;
+            line-height: 1.55; color: #253F30; }
+  .q-more { display: inline-block; margin-top: 14px; font-size: 0.8rem; font-weight: 700;
+            letter-spacing: 0.08em; text-transform: uppercase; color: #A1674A; }
+  .q-x[open] .q-more { display: none; }
+  .q-rest p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem;
+              line-height: 1.55; color: #253F30; margin: 14px 0 0; }
+  .q-by { display: flex; align-items: center; gap: 14px; margin-top: 22px; }
+  .q-av { width: 44px; height: 44px; flex: none; border-radius: 50%; background: #8DA57C; color: #FFF4D6;
+          display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif;
+          font-size: 1.2rem; font-weight: 700; }
+  .q-nm { font-weight: 700; color: #253F30; font-size: 0.98rem; }
+  @media (max-width: 700px) { .q-x { padding: 26px 22px 22px; border-radius: 20px; }
+    .q-lead, .q-rest p { font-size: 1.02rem; } }
 </style>
 </head>
 <body>
@@ -454,23 +462,34 @@
         <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0;">What families are saying.</h2>
       </div>
 
-      <div class="cg-quotes">
-        <figure class="cg-quote">
-          <span class="cg-quote-mark" aria-hidden="true">&rdquo;</span>
-          <blockquote>Our son has thrived in Cedar Grove&rsquo;s supportive, nurturing environment. He looks forward to school every day. The teachers are so thoughtful and caring, and we can&rsquo;t wait for our daughter to join in the fall.</blockquote>
-          <figcaption>
-            <span class="cg-quote-avatar" aria-hidden="true">S</span>
-            <span class="cg-quote-name">Sarah Fournier</span>
-          </figcaption>
-        </figure>
-        <figure class="cg-quote">
-          <span class="cg-quote-mark" aria-hidden="true">&rdquo;</span>
-          <blockquote>Our five year old twins came home glowing, telling us about learning to build a fire and cook with their friends outdoors, and that&rsquo;s when we knew Cedar Grove was different. In this small, Waldorf inspired forest school, teachers know our boys by name and give them room to grow more confident and independent every day, connected to the earth in a way no classroom alone could teach.</blockquote>
-          <figcaption>
-            <span class="cg-quote-avatar" aria-hidden="true">L</span>
-            <span class="cg-quote-name">Leslie Ng</span>
-          </figcaption>
-        </figure>
+      <div class="q-grid">
+        <details class="q-x">
+          <summary>
+            <span class="q-mark" aria-hidden="true">&rdquo;</span>
+            <span class="q-lead">From the moment you arrive at Cedar Grove, you immediately feel a sense of calmness and connection.</span>
+            <span class="q-more">Read more</span>
+          </summary>
+          <div class="q-rest"><p>The unhurried rhythm of each day is so refreshing &mdash; children exploring and learning in nature, the smell of freshly baked bread on baking days, seasonal art and crafts proudly displayed on the walls, and a community that encourages children to just be.</p><p>We are so grateful to have been part of the Cedar Grove community over the past two years. It has been incredible to watch the impact this environment has had on our son &mdash; not only in the way he approaches learning, but in his confidence, curiosity, independence, and overall well-being. It&rsquo;s truly a special place to call &ldquo;school&rdquo;.</p></div>
+          <div class="q-by"><span class="q-av">M</span><span class="q-nm">Melissa Machnik</span></div>
+        </details>
+        <details class="q-x">
+          <summary>
+            <span class="q-mark" aria-hidden="true">&rdquo;</span>
+            <span class="q-lead">Fantastic place for our kids to learn.</span>
+            <span class="q-more">Read more</span>
+          </summary>
+          <div class="q-rest"><p>We have loved our first year at Cedar Grove. Our son has thrived in their supportive and nurturing environment. He looks forward to attending school everyday and always comes home feeling fulfilled. The teachers are all so thoughtful and caring, each making my son feel safe to learn in their environment. We look forward to attending Cedar Grove in the future and having our daughter begin in the fall.</p></div>
+          <div class="q-by"><span class="q-av">S</span><span class="q-nm">Sarah Fournier</span></div>
+        </details>
+        <details class="q-x">
+          <summary>
+            <span class="q-mark" aria-hidden="true">&rdquo;</span>
+            <span class="q-lead">The moment I knew Cedar Grove was different was when our five year old twins came home glowing, telling us all about learning to build a fire and cook with their friends outdoors.</span>
+            <span class="q-more">Read more</span>
+          </summary>
+          <div class="q-rest"><p>That kind of trust comes from a small, Waldorf inspired school where teachers know your children by name and guide rather than manage a crowd. Our boys are known, watched over, and given room to grow more confident and independent every day, connected to the earth in a way no classroom alone could teach.</p></div>
+          <div class="q-by"><span class="q-av">L</span><span class="q-nm">Leslie Ng</span></div>
+        </details>
       </div>
     </div>
   </section>
