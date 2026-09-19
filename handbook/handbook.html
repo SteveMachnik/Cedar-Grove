@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Cedar Grove School — Family Handbook 2026–2027</title>
+<style>
+  /* ---------- page setup ---------- */
+  @page {
+    size: Letter;
+    margin: 17mm 18mm 14mm;
+    background: #FFF4D6;
+    @bottom-left  { content: "Cedar Grove School — Family Handbook 2026–2027";
+                    font-family: 'Carlito', sans-serif; font-size: 7.6pt; color: #8C8574; }
+    @bottom-right { content: counter(page); font-family: 'Carlito', sans-serif;
+                    font-size: 7.6pt; color: #8C8574; }
+  }
+  @page cover { margin: 0; background: #375D47; @bottom-left { content: "" } @bottom-right { content: "" } }
+  @page contents { @bottom-left { content: "" } }
+
+  html { background: #FFF4D6; }
+  body { margin: 0; font-family: 'Carlito', 'DejaVu Sans', sans-serif;
+         color: #3F3A31; font-size: 10pt; line-height: 1.54; }
+
+  /* ---------- cover ---------- */
+  .cover { page: cover; background: #375D47; color: #FFF4D6;
+           height: 279.4mm; padding: 38mm 26mm 24mm; box-sizing: border-box;
+           display: flex; flex-direction: column; justify-content: space-between;
+           page-break-after: always; }
+  .cover .mark { font-family: 'C059','Century Schoolbook L',serif; font-size: 13pt;
+                 letter-spacing: 0.34em; text-transform: uppercase; color: #C2E0ED; }
+  .cover h1 { font-family: 'C059','Century Schoolbook L',serif; font-weight: normal;
+              font-size: 46pt; line-height: 1.06; margin: 0 0 10mm; color: #FFF4D6; }
+  .cover h1 em { font-style: italic; color: #C2E0ED; }
+  .cover .yr { font-family: 'C059','Century Schoolbook L',serif; font-size: 20pt;
+               color: #C2E0ED; letter-spacing: 0.06em; }
+  .cover .rule { width: 46mm; height: 2px; background: #A1674A; margin: 8mm 0; }
+  .cover .foot { font-size: 9.6pt; color: rgba(255,244,214,0.82); line-height: 1.75; }
+
+  /* ---------- contents ---------- */
+  .contents { page: contents; page-break-after: always; }
+  .toc { column-count: 2; column-gap: 12mm; margin-top: 6mm; }
+  .toc div { break-inside: avoid; font-size: 9.4pt; padding: 2.1mm 0;
+             border-bottom: 1px solid rgba(161,103,74,0.16); color: #4A443A; }
+  .toc div.grp { font-family: 'C059','Century Schoolbook L',serif; color: #253F30;
+                 font-size: 10.6pt; border-bottom: 1px solid rgba(55,93,71,0.35);
+                 margin-top: 4mm; padding-bottom: 1.6mm; }
+  .toc div.grp:first-child { margin-top: 0; }
+  .toc span { float: right; color: #A1674A; }
+
+  /* ---------- typography ---------- */
+  .eyebrow { font-size: 7.6pt; letter-spacing: 0.22em; text-transform: uppercase;
+             color: #A1674A; font-weight: bold; margin: 0 0 2mm; }
+  h1.sec { font-family: 'C059','Century Schoolbook L',serif; font-weight: normal;
+           font-size: 22pt; color: #253F30; margin: 0 0 4mm; line-height: 1.12; }
+  h2 { font-family: 'C059','Century Schoolbook L',serif; font-weight: normal;
+       font-size: 15pt; color: #253F30; margin: 7mm 0 2mm; line-height: 1.2;
+       page-break-after: avoid; }
+  h3 { font-family: 'C059','Century Schoolbook L',serif; font-weight: normal;
+       font-size: 12.4pt; color: #375D47; margin: 6mm 0 1.5mm; page-break-after: avoid; }
+  p { margin: 0 0 3mm; }
+  a { color: #375D47; text-decoration: none; }
+  ul { margin: 0 0 3.4mm; padding-left: 5.5mm; }
+  li { margin-bottom: 1.6mm; }
+  ul ul { margin: 1.6mm 0 0; }
+  strong { color: #253F30; }
+
+  .section { page-break-before: always; }
+  .section.run-on { page-break-before: auto; }
+
+  /* ---------- components ---------- */
+  .lead { font-family: 'C059','Century Schoolbook L',serif; font-style: italic;
+          font-size: 12.4pt; line-height: 1.55; color: #375D47; margin: 0 0 6mm; }
+
+  .note { background: #F7EAC4; border-left: 3px solid #A1674A; border-radius: 2mm;
+          padding: 4mm 5mm; margin: 4mm 0; page-break-inside: avoid; }
+  .note p:last-child { margin-bottom: 0; }
+  .note .lbl { font-size: 7.4pt; letter-spacing: 0.18em; text-transform: uppercase;
+               color: #A1674A; font-weight: bold; display: block; margin-bottom: 1.6mm; }
+
+  .green { background: #375D47; color: #FFF4D6; border-radius: 3mm;
+           padding: 5mm 6mm; margin: 5mm 0; page-break-inside: avoid; }
+  .green h3, .green strong { color: #FFF4D6; }
+  .green .lbl { font-size: 7.4pt; letter-spacing: 0.18em; text-transform: uppercase;
+                color: #C2E0ED; font-weight: bold; display: block; margin-bottom: 2mm; }
+  .green p:last-child { margin-bottom: 0; }
+  .green a { color: #C2E0ED; }
+
+  .values { list-style: none; padding: 0; margin: 4mm 0 0;
+            column-count: 2; column-gap: 10mm; }
+  .values li { break-inside: avoid; padding: 2.6mm 0 2.6mm 9mm; position: relative;
+               border-bottom: 1px solid rgba(161,103,74,0.16); margin: 0; }
+  .values li b { position: absolute; left: 0; top: 2.6mm;
+                 font-family: 'C059','Century Schoolbook L',serif; font-size: 12pt; color: #A1674A; }
+
+  .people { margin: 3mm 0 0; }
+  .person { display: flex; justify-content: space-between; align-items: baseline;
+            padding: 2.4mm 0; border-bottom: 1px solid rgba(161,103,74,0.16); }
+  .person .nm { color: #253F30; font-weight: bold; }
+  .person .rl { color: #6B6456; font-size: 9pt; }
+  .person .em { color: #375D47; font-size: 8.8pt; }
+
+  .two { column-count: 2; column-gap: 10mm; }
+  .two li { break-inside: avoid; }
+
+  .timebox { display: flex; gap: 6mm; margin: 4mm 0 5mm; page-break-inside: avoid; }
+  .timebox div { flex: 1; background: #F7EAC4; border-radius: 3mm; padding: 5mm; }
+  .timebox .t { font-family: 'C059','Century Schoolbook L',serif; font-size: 19pt;
+                color: #375D47; line-height: 1; margin-bottom: 1.5mm; }
+  .timebox .l { font-size: 8.4pt; letter-spacing: 0.14em; text-transform: uppercase;
+                color: #A1674A; font-weight: bold; }
+
+  .end { text-align: center; margin-top: 12mm; padding-top: 6mm;
+         border-top: 1px solid rgba(161,103,74,0.25);
+         font-family: 'C059','Century Schoolbook L',serif; font-style: italic;
+         font-size: 12pt; color: #A1674A; }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<div class="cover">
+  <div class="mark">Cedar Grove School</div>
+  <div>
+    <div class="rule"></div>
+    <h1>Family<br/><em>Handbook</em></h1>
+    <div class="yr">2026 – 2027</div>
+  </div>
+  <div class="foot">
+    2590 County Rd 15, Picton, Ontario K0K 2T0<br/>
+    (343) 309-5890 &nbsp;·&nbsp; admin@cedargroveschool.ca<br/>
+    www.cedargroveschool.ca
+  </div>
+</div>
+
+<!-- ============ CONTENTS ============ -->
+<div class="contents">
+  <p class="eyebrow">In this handbook</p>
+  <h1 class="sec">Contents</h1>
+  <div class="toc">
+    <div class="grp">Welcome</div>
+    <div>Welcome to Cedar Grove School</div>
+    <div>Vision</div>
+    <div>Mission</div>
+    <div>Our Core Values</div>
+    <div>School Code</div>
+
+    <div class="grp">Administrative Information</div>
+    <div>Faculty and Administration</div>
+    <div>Office Hours</div>
+    <div>Morning Drop-Off</div>
+    <div>Afternoon Pick-Up</div>
+    <div>Professional Activity &amp; Conference Days</div>
+    <div>Inclement Weather and School Closure</div>
+
+    <div class="grp">Cedar Grove Programs</div>
+    <div>Kindergarten / Grade One Program</div>
+    <div>Rhythms</div>
+    <div>Grade School Program</div>
+    <div>Grade School Classroom Guidelines</div>
+    <div>Food</div>
+    <div>Festivals</div>
+    <div>Birthdays</div>
+    <div>Field Trips</div>
+
+    <div class="grp">Health, Safety and Development</div>
+    <div>Health, Safety and Development</div>
+    <div>Illness and Attendance Guidelines</div>
+    <div>Guidelines for Gear and Clothing</div>
+    <div>Electronics and Media</div>
+
+    <div class="grp">Community</div>
+    <div>Communication and Culture</div>
+    <div>Parent-School Communication</div>
+  </div>
+</div>
+
+<!-- ============ WELCOME ============ -->
+<div class="section">
+  <p class="eyebrow">Welcome</p>
+  <h1 class="sec">Welcome to Cedar Grove School</h1>
+
+  <p class="lead">The Cedar Grove School Faculty and Staff extend a warm welcome to all families.
+  We respect the trust that you have shown us by placing your child in our school and look forward
+  to working together for the benefit of your child.</p>
+
+  <p>We envision our independent and community-based school to flourish with the participation of
+  generations of new families who offer diverse ideas, skills and experiences. Parents, guardians,
+  and extended community members build and sustain the fabric of our school. Each family's
+  participation is welcome and essential to the continued strength of our community. Here are a few
+  of the possibilities for involvement:</p>
+
+  <h3>Enhance your child's classroom experience</h3>
+  <p>Parents/guardians and extended family members are welcome to help with various classroom tasks
+  like laundry and minor repairs, and to work with the teacher to share a celebration or festival,
+  and/or share knowledge and experience in support of the class curriculum in many different areas.
+  Please see parent participation form for more information.</p>
+
+  <h3>Join an intentional and collaborative community</h3>
+  <p>Parents/guardians are welcome to all social events. Getting involved is a great way to get to
+  know other families, teachers, and the wider community. Most importantly, our students sense the
+  meaning and sense of belonging that comes with their parents', guardians', or extended family
+  members' contribution to the school.</p>
+
+  <div class="green">
+    <span class="lbl">Vision</span>
+    <p>To return childhood to nature. We envision a world where learning is joyful, soulful and
+    grounded in community and place. Where children are free to explore, create and grow at their
+    own rhythm, guided by mentors who honour their individuality and uphold the integrity of each
+    developmental phase. We seek to cultivate a generation of socially conscious, environmentally
+    attuned and compassionately engaged human beings.</p>
+  </div>
+
+  <div class="green">
+    <span class="lbl">Mission</span>
+    <p>We provide holistic, nature-based education that honours the sacred unfolding of childhood.
+    Inspired by Waldorf traditions, our programs nurture the full spectrum of human development,
+    head, heart and hands, through imaginative, experiential and relationship-rich learning. We
+    support children in becoming capable, creative, resilient individuals who are connected to the
+    land, themselves and one another.</p>
+  </div>
+</div>
+
+<!-- ============ VALUES ============ -->
+<div class="section">
+  <p class="eyebrow">What we stand for</p>
+  <h1 class="sec">Our Core Values</h1>
+
+  <ul class="values">
+    <li><b>1</b>Reverence for Childhood</li>
+    <li><b>2</b>Developmentally-Aligned Learning</li>
+    <li><b>3</b>Nature as Teacher</li>
+    <li><b>4</b>Whole Child Approach</li>
+    <li><b>5</b>Relationships at the Centre</li>
+    <li><b>6</b>Inclusion and Belonging</li>
+    <li><b>7</b>Screen-Free, Human-Centred Learning</li>
+    <li><b>8</b>Artistic, Experiential Pedagogy</li>
+    <li><b>9</b>Community Life and Festival Culture</li>
+  </ul>
+
+  <h2>School Code</h2>
+  <p class="lead">Respect ourselves, respect others, and respect our environment. We show our
+  respect through inclusion, kindness, and responsibility.</p>
+</div>
+
+<!-- ============ ADMIN ============ -->
+<div class="section">
+  <p class="eyebrow">Administrative Information</p>
+  <h1 class="sec">Faculty and Administration</h1>
+
+  <p>A very warm welcome to Cedar Grove School from the Faculty of 2026–2027:</p>
+  <div class="people">
+    <div class="person"><span class="nm">Kerri Smart</span><span class="rl">Lead Kindergarten Teacher</span><span class="em">kerri@cedargroveschool.ca</span></div>
+    <div class="person"><span class="nm">Henry Lear</span><span class="rl">Lead Grade School Teacher</span><span class="em">henry@cedargroveschool.ca</span></div>
+    <div class="person"><span class="nm">Jasmin Wakeling</span><span class="rl">Assistant Teacher</span><span class="em">jasmin@cedargroveschool.ca</span></div>
+    <div class="person"><span class="nm">Sara Benedict</span><span class="rl">Music Teacher</span><span class="em"></span></div>
+  </div>
+
+  <p style="margin-top:5mm;">The Administration of Cedar Grove School also welcomes you:</p>
+  <div class="people">
+    <div class="person"><span class="nm">Kelly Purves</span><span class="rl">Administrative Assistant</span><span class="em">kelly@cedargroveschool.ca</span></div>
+    <div class="person"><span class="nm">Marissa Norton</span><span class="rl">Head of School</span><span class="em">marissa@cedargroveschool.ca</span></div>
+    <div class="person"><span class="nm">Claire Telford</span><span class="rl">Co-Founder / Operational Support</span><span class="em">claire@cedargroveschool.ca</span></div>
+  </div>
+
+  <h2>Office Hours</h2>
+  <p>The school is open from 8:30am to 3:30pm, Monday to Friday. We look forward to keeping in touch
+  with parents/guardians and community members in person, by telephone or by email. In-person
+  meetings are by appointment only. Enquiries may be directed in either of the following ways:</p>
+
+  <div class="note">
+    <span class="lbl">Getting in touch</span>
+    <p><strong>For pedagogical enquiries:</strong> marissa@cedargroveschool.ca<br/>
+    <strong>For all other enquiries:</strong> admin@cedargroveschool.ca<br/>
+    <strong>Phone:</strong> (343) 309-5890</p>
+  </div>
+</div>
+
+<!-- ============ ARRIVAL & DEPARTURE ============ -->
+<div class="section">
+  <p class="eyebrow">The daily rhythm</p>
+  <h1 class="sec">Arrival &amp; Departure</h1>
+
+  <div class="timebox">
+    <div><div class="t">8:40 am</div><div class="l">Morning Drop-Off</div></div>
+    <div><div class="t">3:30 pm</div><div class="l">Afternoon Pick-Up</div></div>
+  </div>
+
+  <h2>Morning Drop-Off</h2>
+  <p>Please park in the parking lot at the school entrance next to County Road 15 and walk your
+  child down the winding trail to the school for sign in at 8:40 am. This walk provides the children
+  the opportunity for movement and to breathe and experience nature before entering the school.</p>
+  <p>Attendance is confirmed with the office at 9:15am. Parents will receive a phone call if their
+  child is absent or late without notice.</p>
+
+  <div class="note">
+    <span class="lbl">Absence or lateness</span>
+    <p>Please phone the Office at <strong>(343) 309-5890</strong> if your child will be absent or late.</p>
+  </div>
+
+  <p>Strive to make your goodbye routine consistent and simple. Say your goodbye to your child, then
+  take a moment to share a smile and a "hello" with the teacher. It is important that the children
+  see their parents/guardians and teachers greeting one another warmly. Trust the teachers to guide
+  your child through the goodbye once you have said you are leaving. <strong>Rest assured that if
+  your child experiences prolonged upset over separation, we will contact you.</strong></p>
+  <p>Please contact the Lead Teacher if you feel that goodbyes are a challenge. We will be happy to
+  find ways to support you and your child in this process.</p>
+
+  <h2>Afternoon Pick-Up</h2>
+  <p>Please park in the parking lot at the school entrance next to County Road 15. This will allow
+  you to walk with your child down the winding trail at the end of the day. This walk provides the
+  children the opportunity for movement and to tell you about their day, experiencing nature before
+  entering your vehicle.</p>
+  <p>Please ensure children are picked up promptly at 3:30 at the school building. The time after
+  dismissal is a valuable work period for educators to complete planning, preparation, and other
+  important tasks that cannot be done while they are caring for and teaching the children.</p>
+
+  <div class="note">
+    <span class="lbl">Please remember</span>
+    <p>To ensure the safety of all students, please supervise your child once they are dismissed
+    from their teacher's care. Playground rules continue to apply after dismissal.</p>
+    <p>At pick-up and drop-off, teachers are supervising children and are unavailable for in-depth
+    discussions. You may use email or a written note to schedule a time to speak with your child's
+    teacher by phone or in person.</p>
+    <p>It is a legal requirement that each child be signed in and out each day by the teachers.</p>
+  </div>
+
+  <h3>A Special Note about the First Days for Kindergarten Students</h3>
+  <p>We appreciate that for some children this will be the first day in a new class and/or the first
+  time away from home. Your child will become comfortable with the teachers and the group more
+  easily if goodbyes are heartfelt and brief. If you find goodbyes are challenging for your child,
+  it is helpful to say goodbye and depart without lingering, especially during the first month of
+  school.</p>
+</div>
+
+<!-- ============ CALENDAR & WEATHER ============ -->
+<div class="section">
+  <p class="eyebrow">Through the year</p>
+  <h1 class="sec">Calendar &amp; Closures</h1>
+
+  <h2>Professional Activity and Parent/Guardian-Teacher Conference Days</h2>
+  <p>There are two Parent/Guardian-Teacher Conferences scheduled on Professional Activity days.
+  There will be no regular classes on PA Days. Please refer to the calendar on
+  www.cedargroveschool.ca for dates.</p>
+  <div class="note">
+    <p><strong>Please note:</strong> Parent/Guardian-Teacher Conferences are for those students
+    attending 4–5 days.</p>
+  </div>
+
+  <h2>Inclement Weather and School Closure</h2>
+  <p>Cedar Grove School will be closed when travelling conditions are extremely hazardous or in the
+  event of unsafe conditions at the school (prolonged power outage, water stoppage, etc).</p>
+  <p>All efforts will be made to send an email communication by 7:30 a.m that morning. We urge
+  parents/guardians to exercise caution when making the decision to drive to school. Depending on
+  attendance and staffing, groups may be combined and alternative programming may be offered.</p>
+  <p>If weather conditions become worse during the course of the day, parents/guardians will be
+  called to pick up their child(ren) early. The safety of families and staff is our primary
+  concern.</p>
+</div>
+
+<!-- ============ PROGRAMS ============ -->
+<div class="section">
+  <p class="eyebrow">Cedar Grove Programs</p>
+  <h1 class="sec">Our Programs</h1>
+
+  <p class="lead">Because Nature as Teacher is a core value of Cedar Grove School, outdoor learning
+  and exploration are essential pillars of our curriculum.</p>
+  <p>Our goal is to spend as much time outside as possible, whether for structured academic
+  activities or unstructured play. Depending on the season and the activity at hand, outdoor time
+  can range from a minimum of 2 hours during the coldest months to full days spent outside in more
+  temperate weather.</p>
+
+  <h2>Kindergarten / Grade One Program</h2>
+  <p>The Cedar Grove Kindergarten/Grade One program fosters the natural curiosity and wonder of
+  children ages four through seven by providing a beautiful and caring environment. Through a
+  carefully unified program of structured activities and creative play, the children are given full
+  scope to unfold their creative and imaginative faculties.</p>
+  <p>Simple toys stimulate the child's imagination to create an endless variety of play scenarios
+  both indoors and out. Time outdoors in nature, painting, singing, oral storytelling, beeswax
+  modelling, drawing, gardening, puppetry, play acting, woodworking, baking, circles games,
+  handwork and unstructured play are all a part of the rhythm.</p>
+  <p>These essential developmental activities foster the young child's natural aptitude in oral
+  literacy and numeracy and lay a strong foundation for literacy and numeracy.</p>
+
+  <h3>Rhythms</h3>
+  <p>Children thrive when their days are predictable and balanced. Just like the natural rhythms we
+  all experience of waking and sleeping, eating meals, or the changing seasons; a steady rhythm in
+  the classroom helps young children feel secure, enabling them to fully engage in the present
+  activity or play.</p>
+  <p>In our Kindergarten/Grade One class, we structure the day with a thoughtful flow between active
+  and quiet moments. Our daily Rhythm includes: plenty of energetic outdoor play, a restful break,
+  creative indoor play, focussed group activities and practical tasks. Children are invited to take
+  part in daily classroom tasks, building a sense of responsibility and community.</p>
+  <p>Transitions are gently guided with a song or a familiar routine so children move from one
+  activity to the next with ease. This daily rhythm provides consistency and supports the healthy
+  development of attention, imagination, and social skills.</p>
+  <p>The grade one students will work on their main lesson while the Kindergarten students enjoy a
+  period of free play in the shared space.</p>
+
+  <h2>Grade School Program</h2>
+  <p>Rhythm is of central importance to the nourishment and orientation of students. Our Waldorf
+  inspired curriculum follows a rhythm, which builds successively through each subject block,
+  usually three to four weeks long. There is an academic and social momentum that builds for the
+  whole group of students within a class. Together they become engaged in the subject through
+  listening to stories, artistic activities and group discussions. Cedar Grove programs follow
+  daily, weekly and yearly patterns.</p>
+</div>
+
+<!-- ============ CLASSROOM LIFE ============ -->
+<div class="section">
+  <p class="eyebrow">Classroom life</p>
+  <h1 class="sec">Guidelines &amp; Traditions</h1>
+
+  <h2>Attendance</h2>
+  <p>Students receive a rigorous academic and experiential curriculum which is integrated with art,
+  music and movement. In order to benefit from the full curriculum and become part of the social
+  fabric of the class and school community, your child's participation in all parts of the day is
+  important. Please help your child to arrive on time at school (at 8:40am). Late arrivals are
+  disruptive to the class community and cause students to miss warm up activities that are important
+  to building social relationships and reinforcing academic learning.</p>
+  <p>Absences interrupt the learning experience for the student who is away as well as for the rest
+  of the class. Please notify the Office and your child's teacher of any planned extended
+  absences.</p>
+
+  <h2>Food</h2>
+  <p>Our school supports the belief that what we eat and drink has a profound effect on the health of
+  our bodies. If your child is on a special diet, please notify the teacher. Advise the Office and
+  teacher of all allergies or health issues.</p>
+  <p>All students are to bring their own lunches and water from home. Please provide plenty of simple
+  and wholesome food for your child. We strive to have litter-free lunches — garbage and compost will
+  be sent home.</p>
+
+  <h2>Festivals</h2>
+  <p>Festivals are based on the season or a cultural celebration. As the year weaves from one
+  festival to another, we are provided with the opportunity for joyful preparation and a true reason
+  for celebration. For the young child, preparation is half the joy. They love discovering the
+  classroom decorations, baking special treats and learning songs and verses chosen just for that
+  particular festival.</p>
+  <p>Parents/guardians are encouraged to support the planning and implementation of the festivals
+  through the Festival Committee. Interested parents can connect with the Festival Committee
+  Chair.</p>
+
+  <h2>Birthdays</h2>
+  <p>Birthday celebrations bring a wondrous glow that surrounds the children. The teachers regard
+  your child's presence as a blessing and are grateful for the opportunity to express appreciation
+  on their birthday. Please share any considerations about celebrating your child at school with the
+  teacher. Our school celebrations include all of the children in the class, please inform the Head
+  of School if your family does not celebrate birthdays.</p>
+  <div class="note">
+    <p><strong>Please note:</strong> if you are having a celebration at home that does not include
+    everyone in the class, please hand invitations directly to parents/guardians as a way of
+    avoiding awkwardness or hurt feelings.</p>
+  </div>
+
+  <h2>Field Trips</h2>
+  <p>The Kindergarten class currently does not have any field trips planned, however, 1–2 trips may
+  be scheduled as the year unfolds. Should we integrate field trips into the year, you will be given
+  advanced notice.</p>
+</div>
+
+<!-- ============ HEALTH & SAFETY ============ -->
+<div class="section">
+  <p class="eyebrow">Health, Safety and Development</p>
+  <h1 class="sec">Keeping Children Well</h1>
+
+  <p>Dietary and allergy restrictions should be communicated to us so that necessary adjustments can
+  be made. The Head of School and Lead Teacher must be advised of all allergies and medical issues
+  and updated as soon as possible if there are changes.</p>
+  <p>Staff will not generally administer medication, unless previously detailed on the Health and
+  Emergency information form. On an "exception only" basis, medicine prescribed by a physician in
+  the original container may be administered. The parents must notify the Head of School in advance
+  and the proper forms must be signed.</p>
+  <p>All classroom volunteers (including parents/guardians, grandparents, and teacher candidates)
+  whose roles involve being left alone to supervise children must provide the school with a copy of
+  a current (within 6 months) Vulnerable Sector Check, and provide a copy to keep on file in the
+  school Office. If you anticipate volunteering in this capacity, please email
+  admin@cedargroveschool.ca for a letter requesting this check well in advance, as it can take
+  multiple weeks to receive.</p>
+  <p>Cedar Grove School strives to provide a healthy environment for students, staff and families.
+  To avoid many common illnesses, teach children HOW and WHEN to wash their hands properly: wash
+  regularly before eating and after using the toilet or blowing your nose.</p>
+
+  <h2>Illness and Attendance Guidelines</h2>
+  <div class="note">
+    <p>Please phone the Office at <strong>(343) 309-5890</strong> if your child will be late or absent.</p>
+  </div>
+  <p>When a student becomes ill during the day, parents/guardians will be contacted to make
+  arrangements for their child to be taken home if the symptoms:</p>
+  <ul>
+    <li>Prevent the student from participating comfortably in program activities</li>
+    <li>May be contagious</li>
+  </ul>
+  <p>Please keep in mind that lively classrooms are not a soothing environment for a student who is
+  not well. Please keep your child home when they are exhibiting symptoms of illness to prevent
+  germs from spreading through the class.</p>
+
+  <h3>Keep your child home if any of the following are present</h3>
+  <ul>
+    <li><strong>Unusual behaviour:</strong> including extreme lethargy or irritability, persistent
+    crying, difficulty breathing, or other signs of possible illness.</li>
+    <li><strong>Diarrhea:</strong> An episode of diarrhea within the past 24 hours. Children should
+    stay home until symptom-free for 24 hours.</li>
+    <li><strong>Vomiting:</strong> An episode of vomiting during the previous 24 hours. Children
+    should stay home until symptom-free for 24 hours.</li>
+    <li><strong>Fever:</strong> Children should stay home until fever-free without medication for
+    24 hours.</li>
+    <li><strong>Rash:</strong> A rash appearing with fever or behaviour change. Exclusion from
+    school should continue until the child is evaluated by a healthcare professional. (See Impetigo)</li>
+    <li><strong>Impetigo:</strong> Highly contagious. Exclusion from school should continue until
+    the child is evaluated by a healthcare professional.</li>
+    <li><strong>Pinworms:</strong> Notify school if there is any possibility of pinworms as it is
+    highly contagious. Children must be finished treatment before returning to school to avoid an
+    outbreak.</li>
+    <li><strong>Lice:</strong> Notify school if there is any suspicion of head lice as it is highly
+    contagious. Children should be treated before returning to school to avoid an outbreak.</li>
+    <li><strong>Pink Eye:</strong> Highly contagious. Children must be finished treatment before
+    returning to school to avoid an outbreak.</li>
+  </ul>
+</div>
+
+<!-- ============ GEAR ============ -->
+<div class="section">
+  <p class="eyebrow">Coming prepared</p>
+  <h1 class="sec">Gear &amp; Clothing</h1>
+
+  <div class="green">
+    <p style="font-family:'C059','Century Schoolbook L',serif; font-size:13pt; margin:0;">
+    Please label all clothing, gear, and personal items.</p>
+  </div>
+
+  <p>The classrooms and yards are places of active work and play. Based on our experience, we offer
+  the following guidelines to ensure that your child is comfortable, safe, and fully able to
+  participate in all our activities.</p>
+  <p>Where possible, for all clothing and accessories (e.g., lunch bags, backpacks, hats), we ask
+  that you choose items that are free of distractions (e.g., items that are free of brands and
+  commercial images). More on this in the Electronics and Media section below.</p>
+
+  <h2>Outerwear and Gear</h2>
+  <p>To allow your child to experience nature and the elements in an enjoyable, comfortable way,
+  clothing is extremely important. Please provide:</p>
+  <ul class="two">
+    <li>A reusable water bottle</li>
+    <li>Appropriately-sized backpack — please check backpacks each evening for items to be removed
+    or replaced</li>
+    <li>Layers to accommodate temperature changes, during the day and between indoors and outdoors —
+    natural base materials improve breathability and warmth</li>
+    <li>Rain boots, pants and jacket (when raining or ground is wet)</li>
+    <li>A hat appropriate for season</li>
+    <li>Labeled sunscreen in warmer weather</li>
+    <li>Mittens (plus extra pair) rather than gloves — fingers stay warmer when together</li>
+    <li>Socks (plus extra pair); wool socks are best in cold or wet weather</li>
+  </ul>
+  <div class="note">
+    <span class="lbl">Please avoid</span>
+    <p>Flip-flops, and open-toed shoes or sandals — they do not provide enough support, traction,
+    and protection for play in our yards.</p>
+  </div>
+
+  <h2>Indoor Clothing</h2>
+  <p>The children sing, dance, stretch, jump, draw, paint, and help with a variety of classroom
+  tasks. In order for your child to participate without hindrances in all our activities we ask you
+  to provide:</p>
+  <ul>
+    <li>Clothing made of natural fibres when possible (more breathable, insulating and flexible)</li>
+    <li>Layers for inside play as well</li>
+    <li>Clothing that allows freedom of movement and independent changing (we suggest avoiding jeans
+    and belts)</li>
+    <li>Save makeup, nail polish, temporary tattoos, jewelry and watches for home</li>
+  </ul>
+
+  <h2>Items Needed from Home</h2>
+  <ul>
+    <li>Indoor shoes to be left at school</li>
+    <li>Extra clothes bag to be left at school: please provide a complete change of clothes for your
+    child in a clearly labeled bag. Bags will be sent home to be refreshed. A sample extra clothing
+    bag contains:
+      <ul>
+        <li>Full change of seasonally appropriate clothes</li>
+        <li>Two to three pairs of socks and underwear</li>
+        <li>Plastic bag</li>
+      </ul>
+    </li>
+    <li>Extra fleece or sweater to be left at school</li>
+    <li>A full water bottle and lunch</li>
+    <li>A backpack</li>
+  </ul>
+  <p>We are pleased to have children bring in treasures from nature to share. These will be returned
+  home. Toys, collections, books and other 'special' items are best left at home.</p>
+</div>
+
+<!-- ============ MEDIA ============ -->
+<div class="section">
+  <p class="eyebrow">Our approach</p>
+  <h1 class="sec">Electronics and Media</h1>
+
+  <div class="green">
+    <p>We understand that every family has their own approach to media, and we deeply respect those
+    choices. Our intention is not to prescribe or judge, but to share the vision and the why behind
+    the space we work to create: a space that fosters true imagination, connection and presence.</p>
+  </div>
+
+  <p>At Cedar Grove, we believe early childhood is a time for deep human connection, imaginative
+  play and hands-on learning.</p>
+  <p>A central value of our program is to encourage children to access and develop their true
+  imagination and creativity. By maintaining a school environment free from consumer and commercial
+  influences, we help children more easily connect with and develop their own original ideas and
+  imaginative play.</p>
+  <p>To help preserve a media-free learning environment, we ask families to share in our "media is
+  for home, not school" approach and avoid sending media-related items (e.g. clothing, backpacks,
+  water bottles, toys etc) with children. We will echo this approach in the classroom so that
+  together we can create an environment where children can leave powerful media influences at the
+  door and deeply enter their true imagination more readily.</p>
+  <p>It is our recommendation that families minimize or avoid screen use for young children,
+  especially before and after school. As mentioned, we understand that every family has their own
+  approach to technology. If you've found a screen use routine that works well for your household,
+  that's wonderful. If you're interested in parent information nights pertaining to screen use in
+  the home, let us know by emailing admin@cedargroveschool.ca and we'll work toward organizing a
+  parent night to share ideas, strategies, and community support.</p>
+</div>
+
+<!-- ============ COMMUNICATION ============ -->
+<div class="section">
+  <p class="eyebrow">Community</p>
+  <h1 class="sec">Communication and Culture</h1>
+
+  <p>Healthy communication between parents/guardians, teachers, and the school community is
+  important to all of us and vital to support learning and strengthen relationships. To facilitate
+  productive communication, we suggest the following:</p>
+  <ul>
+    <li>Simple topics may be communicated via email or by giving the teacher a note at drop-off or
+    pick-up</li>
+    <li>At pick-up and drop-off times, teachers are supervising children and are unavailable at that
+    time for in-depth discussions</li>
+    <li>Please contact the Head of School by phone or in person if a more in-depth discussion is
+    required</li>
+    <li>Teachers respond to emails within 1–2 business days</li>
+  </ul>
+
+  <h2>Parent-School Communication</h2>
+  <p>Honest, respectful, and timely communication is of utmost importance. We will contact you
+  immediately if there are any concerns about the safety, development, or well being of your child.
+  In turn, we encourage you to speak to us about your concerns or questions. Please inform us as
+  soon as possible of any significant changes in home life or routine so that we can be sensitive to
+  your child's needs.</p>
+  <p>If it is necessary to leave a message for a teacher or arrange changes regarding your child's
+  routine, please email admin@cedargroveschool.ca.</p>
+
+  <h3>Parent/Guardian-Teacher Conferences</h3>
+  <p>Held in Fall and Spring, these provide an opportunity for strengthening the
+  parent/guardian-teacher relationship, allowing your child's teacher to share observations about
+  your child, and deepening the teacher's understanding of your child.</p>
+
+  <h3>Report Cards</h3>
+  <p>Report Cards are provided for students attending 4–5 days and are sent home twice a year.</p>
+
+  <h3>Student Work</h3>
+  <p>Student work remains at the school and is sent home at the end of each term.</p>
+
+  <h3>School Newsletters</h3>
+  <p>Newsletters are sent by email and written monthly. Please let us know if you are not receiving
+  our communications.</p>
+
+  <p>We encourage parents/guardians to review the Cedar Grove School website
+  www.cedargroveschool.ca and Instagram account @cedargroveschool.pec for updated school events.</p>
+
+  <div class="end">Where childhood grows naturally.</div>
+</div>
+
+</body>
+</html>
