@@ -6,14 +6,18 @@
 <title>Cedar Grove School | Rooted in Wonder</title>
 <meta name="description" content="A holistic, nature-based elementary school set on an organic farm in Prince Edward County. Learning with head, heart, and hands." />
 <link rel="preload" as="image" href="assets/hero.jpg" fetchpriority="high">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Quicksand:wght@400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Quicksand:wght@400;600;700&display=swap"></noscript>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   section[id] { scroll-margin-top: 96px; }
-  body { margin: 0; -webkit-font-smoothing: antialiased; font-family: 'Quicksand', sans-serif; color: #2A2823; background: #FFF4D6; line-height: 1.65; overflow-x: hidden; }
+  body { margin: 0; -webkit-font-smoothing: antialiased; font-family: 'Quicksand', 'Century Gothic', 'Avenir Next', 'Segoe UI', sans-serif; color: #2A2823; background: #FFF4D6; line-height: 1.65; overflow-x: hidden; }
   img { max-width: 100%; display: block; }
   a { text-decoration: none; }
   @keyframes cg-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
@@ -45,7 +49,7 @@
   .pg .ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .pg .bd { padding: 28px 26px 30px; }
   .pg .badge { display: inline-block; background: rgba(255,244,214,0.16); border: 1px solid rgba(255,244,214,0.38); color: #FFF4D6; padding: 5px 13px; border-radius: 999px; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 14px; }
-  .pg h3 { font-family: 'Playfair Display', serif; font-weight: 600; color: #FFF4D6; font-size: 1.6rem; margin: 0 0 10px; }
+  .pg h3 { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-weight: 600; color: #FFF4D6; font-size: 1.6rem; margin: 0 0 10px; }
   .pg p { margin: 0; color: rgba(255,244,214,0.9); font-size: 0.98rem; line-height: 1.6; }
   .cg-day-col { display: flex; flex-direction: column; }
   .cg-day-photo { position: relative; flex: 1 1 auto; min-height: 260px; margin-top: 36px; border-radius: 24px; overflow: hidden; box-shadow: 0 18px 44px rgba(37,63,48,0.14); background: #C6B7A6; }
@@ -116,18 +120,18 @@
   .q-x { background: #FFF4D6; border-radius: 28px; padding: 40px 34px 30px; position: relative; }
   .q-x summary { list-style: none; cursor: pointer; }
   .q-x summary::-webkit-details-marker { display: none; }
-  .q-mark { position: absolute; top: 10px; right: 26px; font-family: 'Playfair Display', serif;
+  .q-mark { position: absolute; top: 10px; right: 26px; font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-weight: 600;
             font-size: 3.6rem; line-height: 1; color: #C2E0ED; }
-  .q-lead { display: block; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem;
+  .q-lead { display: block; font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-style: italic; font-size: 1.15rem;
             line-height: 1.55; color: #253F30; }
   .q-more { display: inline-block; margin-top: 14px; font-size: 0.8rem; font-weight: 700;
             letter-spacing: 0.08em; text-transform: uppercase; color: #A1674A; }
   .q-x[open] .q-more { display: none; }
-  .q-rest p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem;
+  .q-rest p { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-style: italic; font-size: 1.15rem;
               line-height: 1.55; color: #253F30; margin: 14px 0 0; }
   .q-by { display: flex; align-items: center; gap: 14px; margin-top: 22px; }
   .q-av { width: 44px; height: 44px; flex: none; border-radius: 50%; background: #8DA57C; color: #FFF4D6;
-          display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif;
+          display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
           font-size: 1.2rem; font-weight: 700; }
   .q-nm { font-weight: 700; color: #253F30; font-size: 0.98rem; }
   @media (max-width: 700px) { .q-x { padding: 26px 22px 22px; border-radius: 20px; }
@@ -184,8 +188,8 @@
     <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 64px; align-items: center;">
         <div>
-          <span style="display: inline-flex; align-items: center; gap: 10px; color: #A1674A; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.3rem; margin-bottom: 18px;">A holistic, nature-based school</span>
-          <h1 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; line-height: 1.12; letter-spacing: -0.01em; font-size: clamp(2.6rem, 5.8vw, 5.2rem); margin: 0 0 24px;">Rooted in <em style="color: #A1674A; font-weight: 600;">wonder.</em><br/>Growing with the seasons.</h1>
+          <span style="display: inline-flex; align-items: center; gap: 10px; color: #A1674A; font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-style: italic; font-size: 1.3rem; margin-bottom: 18px;">A holistic, nature-based school</span>
+          <h1 style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-weight: 600; color: #253F30; line-height: 1.12; letter-spacing: -0.01em; font-size: clamp(2.6rem, 5.8vw, 5.2rem); margin: 0 0 24px;">Rooted in <em style="color: #A1674A; font-weight: 600;">wonder.</em><br/>Growing with the seasons.</h1>
           <p style="font-size: 1.2rem; line-height: 1.6; margin: 0 0 36px; max-width: 520px; color: #5B5347;">
             A small, not-for-profit elementary school nestled on an organic farm
             in Prince Edward County. We learn outdoors, work with our hands, and
@@ -209,7 +213,7 @@
             Now enrolling, JK &ndash; Grade 5
           </div>
           <div style="position: absolute; bottom: -32px; right: -20px; background: #FFF4D6; padding: 24px 28px; border-radius: 16px; box-shadow: 0 24px 60px rgba(37, 63, 48, 0.16); max-width: 240px;">
-            <div style="font-family: 'Playfair Display', serif; font-size: 2.6rem; color: #375D47; font-weight: 700; line-height: 1;">8:1</div>
+            <div style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 2.6rem; color: #375D47; font-weight: 700; line-height: 1;">8:1</div>
             <div style="font-size: 0.88rem; color: #5B5347; margin-top: 6px;">Student-to-teacher ratio. Small classes, deep relationships.</div>
           </div>
         </div>
@@ -220,26 +224,26 @@
   <!-- Marquee -->
   <div style="background: #375D47; color: #FFF4D6; padding: 28px 0; overflow: hidden; border-top: 1px solid rgba(255,244,214,0.1); border-bottom: 1px solid rgba(255,244,214,0.1);" aria-hidden="true">
     <div style="display: flex; gap: 60px; animation: cg-scroll 38s linear infinite; white-space: nowrap; width: max-content;">
-      <span style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Nature<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
-      <span style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Wonder<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
-      <span style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Growth<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
-      <span style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Belonging<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
-      <span style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Curiosity<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
-      <span style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Rhythm<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
-      <span style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Creativity<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
-      <span style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Stewardship<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
-      <span style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Childhood<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
-      <span style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Connection<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
-      <span style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Nature<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
-      <span style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Wonder<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
-      <span style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Growth<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
-      <span style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Belonging<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
-      <span style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Curiosity<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
-      <span style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Rhythm<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
-      <span style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Creativity<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
-      <span style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Stewardship<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
-      <span style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Childhood<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
-      <span style="font-family: 'Playfair Display', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Connection<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
+      <span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Nature<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
+      <span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Wonder<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
+      <span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Growth<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
+      <span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Belonging<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
+      <span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Curiosity<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
+      <span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Rhythm<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
+      <span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Creativity<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
+      <span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Stewardship<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
+      <span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Childhood<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
+      <span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Connection<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
+      <span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Nature<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
+      <span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Wonder<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
+      <span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Growth<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
+      <span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Belonging<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
+      <span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Curiosity<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
+      <span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Rhythm<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
+      <span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Creativity<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
+      <span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Stewardship<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
+      <span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Childhood<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
+      <span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.6rem; font-style: italic; display: flex; align-items: center; gap: 60px; color: #FFF4D6;">Connection<span style="width: 8px; height: 8px; border-radius: 50%; background: #A1674A; display: inline-block;"></span></span>
     </div>
   </div>
 
@@ -248,7 +252,7 @@
     <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
       <div style="max-width: 720px; margin: 0 auto 64px; text-align: center;">
         <span style="display: inline-block; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: #A1674A; font-weight: 700; margin-bottom: 18px;">Our Approach</span>
-        <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0 0 20px;">Head, Heart &amp; Hands</h2>
+        <h2 style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-weight: 600; color: #253F30; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0 0 20px;">Head, Heart &amp; Hands</h2>
         <p style="font-size: 1.1rem; color: #5B5347; margin: 0;">Holistic, nature-based education that nurtures every part of who a child is becoming.</p>
       </div>
 
@@ -257,7 +261,7 @@
           <div style="width: 64px; height: 64px; border-radius: 50%; background: #FFF4D6; display: flex; align-items: center; justify-content: center; color: #375D47; margin-bottom: 24px; box-shadow: inset 0 0 0 1px rgba(55, 93, 71, 0.14);">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9 9 a3 3 0 0 1 6 0 c0 2-3 2-3 4 M12 17 v.01"/></svg>
           </div>
-          <h3 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: 1.7rem; margin: 0 0 12px;"><span style="font-family: 'Playfair Display', serif; font-style: italic; color: #A1674A; display: block; font-size: 1.2rem; font-weight: 500; margin-bottom: 4px;">thinking</span>Head</h3>
+          <h3 style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-weight: 600; color: #253F30; font-size: 1.7rem; margin: 0 0 12px;"><span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-style: italic; color: #A1674A; display: block; font-size: 1.2rem; font-weight: 400; margin-bottom: 4px;">thinking</span>Head</h3>
           <p style="margin: 0; color: #5B5347;">Imaginative academics that build curiosity, critical thinking, and a deep love of learning, at a pace that honours childhood.</p>
         </div>
 
@@ -265,7 +269,7 @@
           <div style="width: 64px; height: 64px; border-radius: 50%; background: #FFF4D6; display: flex; align-items: center; justify-content: center; color: #375D47; margin-bottom: 24px; box-shadow: inset 0 0 0 1px rgba(55, 93, 71, 0.14);">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21 C 4 14, 4 8, 8 6 c 2-1 3 0 4 2 c 1-2 2-3 4-2 c 4 2 4 8 -4 15 Z"/></svg>
           </div>
-          <h3 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: 1.7rem; margin: 0 0 12px;"><span style="font-family: 'Playfair Display', serif; font-style: italic; color: #A1674A; display: block; font-size: 1.2rem; font-weight: 500; margin-bottom: 4px;">feeling</span>Heart</h3>
+          <h3 style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-weight: 600; color: #253F30; font-size: 1.7rem; margin: 0 0 12px;"><span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-style: italic; color: #A1674A; display: block; font-size: 1.2rem; font-weight: 400; margin-bottom: 4px;">feeling</span>Heart</h3>
           <p style="margin: 0; color: #5B5347;">Strong relationships, emotional intelligence, music, story and reverence for the rhythms of the natural world.</p>
         </div>
 
@@ -273,7 +277,7 @@
           <div style="width: 64px; height: 64px; border-radius: 50%; background: #FFF4D6; display: flex; align-items: center; justify-content: center; color: #375D47; margin-bottom: 24px; box-shadow: inset 0 0 0 1px rgba(55, 93, 71, 0.14);">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 11 V 5 a1.5 1.5 0 0 1 3 0 V 11 M12 11 V 4 a1.5 1.5 0 0 1 3 0 V 11 M15 11 V 6 a1.5 1.5 0 0 1 3 0 V 13 c 0 4-2 8-6 8 H 9 c-3 0-5-2-6-5 L 1 12 a1.5 1.5 0 0 1 3-1 L 6 14"/></svg>
           </div>
-          <h3 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: 1.7rem; margin: 0 0 12px;"><span style="font-family: 'Playfair Display', serif; font-style: italic; color: #A1674A; display: block; font-size: 1.2rem; font-weight: 500; margin-bottom: 4px;">doing</span>Hands</h3>
+          <h3 style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-weight: 600; color: #253F30; font-size: 1.7rem; margin: 0 0 12px;"><span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-style: italic; color: #A1674A; display: block; font-size: 1.2rem; font-weight: 400; margin-bottom: 4px;">doing</span>Hands</h3>
           <p style="margin: 0; color: #5B5347;">Real work like gardening, baking, woodwork and handcrafts, building competence, capability, and confidence in the body.</p>
         </div>
       </div>
@@ -293,7 +297,7 @@
 
         <div>
           <span style="display: inline-block; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: #A1674A; font-weight: 700; margin-bottom: 18px;">Our Story</span>
-          <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0 0 20px;">A peaceful woodland classroom on an organic farm.</h2>
+          <h2 style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-weight: 600; color: #253F30; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0 0 20px;">A peaceful woodland classroom on an organic farm.</h2>
           <p style="color: #5B5347;">
             Cedar Grove is a small, not-for-profit school nestled within a red
             cedar grove on many acres of farm and forested land. Our curriculum
@@ -302,7 +306,7 @@
             focused academic work, and afternoons unfolding into arts,
             handwork, baking and other specialty subjects.
           </p>
-          <blockquote style="border-left: 3px solid #A1674A; padding-left: 20px; margin: 28px 0; font-family: 'Playfair Display', serif; font-size: 1.4rem; font-style: italic; color: #253F30; line-height: 1.4;">
+          <blockquote style="border-left: 3px solid #A1674A; padding-left: 20px; margin: 28px 0; font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.4rem; font-style: italic; color: #253F30; line-height: 1.4;">
             &ldquo;Where childhood grows naturally, and learning happens with the whole self.&rdquo;
           </blockquote>
           <p style="color: #5B5347;">
@@ -313,11 +317,11 @@
 
           <div style="display: flex; gap: 40px; margin-top: 36px; flex-wrap: wrap;">
             <div>
-              <div style="font-family: 'Playfair Display', serif; font-size: 2.4rem; color: #375D47; font-weight: 700;">JK &ndash; 5</div>
+              <div style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 2.4rem; color: #375D47; font-weight: 700;">JK &ndash; 5</div>
               <div style="font-size: 0.88rem; color: #5B5347; margin-top: 2px;">Mixed-age learning</div>
             </div>
             <div>
-              <div style="font-family: 'Playfair Display', serif; font-size: 2.4rem; color: #375D47; font-weight: 700;">Daily</div>
+              <div style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 2.4rem; color: #375D47; font-weight: 700;">Daily</div>
               <div style="font-size: 0.88rem; color: #5B5347; margin-top: 2px;">Outdoor learning</div>
             </div>
           </div>
@@ -331,7 +335,7 @@
     <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
       <div style="max-width: 720px; margin-bottom: 64px;">
         <span style="display: inline-block; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: #A1674A; font-weight: 700; margin-bottom: 18px;">Programs</span>
-        <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0 0 20px;">Pathways for every kind of family.</h2>
+        <h2 style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-weight: 600; color: #253F30; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0 0 20px;">Pathways for every kind of family.</h2>
         <p style="font-size: 1.1rem; color: #5B5347; margin: 0;">Full and part-time programming, designed to fit naturally into the rhythms of family life and the seasons of childhood.</p>
       </div>
 
@@ -370,7 +374,7 @@
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 80px; align-items: stretch;">
         <div class="cg-day-col">
           <span style="display: inline-block; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: #A1674A; font-weight: 700; margin-bottom: 18px;">A Day Here</span>
-          <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0 0 20px;">Days that breathe with rhythm.</h2>
+          <h2 style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-weight: 600; color: #253F30; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0 0 20px;">Days that breathe with rhythm.</h2>
           <p style="color: #5B5347;">
             Each day moves between focused academic work and time outdoors, between
             stillness and movement, doing and resting. Children know what to expect,
@@ -386,7 +390,7 @@
             <div style="width: 24px; height: 24px; border-radius: 50%; background: #F7EAC4; border: 2px solid #8DA57C; margin-top: 4px;"></div>
             <div>
               <div style="font-size: 0.82rem; color: #A1674A; letter-spacing: 0.04em; font-weight: 700;">8:40 Arrival</div>
-              <h4 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #253F30; margin: 2px 0 4px; font-weight: 600;">Morning Gratitude</h4>
+              <h4 style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.2rem; color: #253F30; margin: 2px 0 4px; font-weight: 600;">Morning Gratitude</h4>
               <p style="font-size: 0.96rem; margin: 0; color: #5B5347;">Greeting the day as a whole school with song, movement and a moment of gratitude.</p>
             </div>
           </div>
@@ -394,7 +398,7 @@
             <div style="width: 24px; height: 24px; border-radius: 50%; background: #375D47; border: 2px solid #8DA57C; margin-top: 4px;"></div>
             <div>
               <div style="font-size: 0.82rem; color: #A1674A; letter-spacing: 0.04em; font-weight: 700;">Main Lesson</div>
-              <h4 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #253F30; margin: 2px 0 4px; font-weight: 600;">Deep academic work <span style="font-family: 'Quicksand', sans-serif; font-size: 0.8rem; font-style: italic; font-weight: 500; color: #A1674A;">(Grades only)</span></h4>
+              <h4 style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.2rem; color: #253F30; margin: 2px 0 4px; font-weight: 600;">Deep academic work <span style="font-family: 'Quicksand', 'Century Gothic', 'Avenir Next', 'Segoe UI', sans-serif; font-size: 0.8rem; font-style: italic; font-weight: 600; color: #A1674A;">(Grades only)</span></h4>
               <p style="font-size: 0.96rem; margin: 0; color: #5B5347;">Academic blocks taught through story and image.</p>
             </div>
           </div>
@@ -402,7 +406,7 @@
             <div style="width: 24px; height: 24px; border-radius: 50%; background: #F7EAC4; border: 2px solid #8DA57C; margin-top: 4px;"></div>
             <div>
               <div style="font-size: 0.82rem; color: #A1674A; letter-spacing: 0.04em; font-weight: 700;">Outdoors</div>
-              <h4 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #253F30; margin: 2px 0 4px; font-weight: 600;">Forest play</h4>
+              <h4 style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.2rem; color: #253F30; margin: 2px 0 4px; font-weight: 600;">Forest play</h4>
               <p style="font-size: 0.96rem; margin: 0; color: #5B5347;">Free play and exploration of our wooded playground, with the cows roaming nearby. Children enjoy a minimum two hours a day in the outdoors.</p>
             </div>
           </div>
@@ -410,7 +414,7 @@
             <div style="width: 24px; height: 24px; border-radius: 50%; background: #F7EAC4; border: 2px solid #8DA57C; margin-top: 4px;"></div>
             <div>
               <div style="font-size: 0.82rem; color: #A1674A; letter-spacing: 0.04em; font-weight: 700;">Lunch</div>
-              <h4 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #253F30; margin: 2px 0 4px; font-weight: 600;">An unhurried meal</h4>
+              <h4 style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.2rem; color: #253F30; margin: 2px 0 4px; font-weight: 600;">An unhurried meal</h4>
               <p style="font-size: 0.96rem; margin: 0; color: #5B5347;">Beginning with a candle and a verse, children enjoy lunch together.</p>
             </div>
           </div>
@@ -418,7 +422,7 @@
             <div style="width: 24px; height: 24px; border-radius: 50%; background: #F7EAC4; border: 2px solid #8DA57C; margin-top: 4px;"></div>
             <div>
               <div style="font-size: 0.82rem; color: #A1674A; letter-spacing: 0.04em; font-weight: 700;">Afternoon</div>
-              <h4 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #253F30; margin: 2px 0 4px; font-weight: 600;">Arts, crafts & practical work</h4>
+              <h4 style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.2rem; color: #253F30; margin: 2px 0 4px; font-weight: 600;">Arts, crafts & practical work</h4>
               <p style="font-size: 0.96rem; margin: 0; color: #5B5347;">Painting, handwork, baking, music. The work of the hands and the heart.</p>
             </div>
           </div>
@@ -426,7 +430,7 @@
             <div style="width: 24px; height: 24px; border-radius: 50%; background: #F7EAC4; border: 2px solid #8DA57C; margin-top: 4px;"></div>
             <div>
               <div style="font-size: 0.82rem; color: #A1674A; letter-spacing: 0.04em; font-weight: 700;">3:30 Departure</div>
-              <h4 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #253F30; margin: 2px 0 4px; font-weight: 600;">A grateful goodbye</h4>
+              <h4 style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.2rem; color: #253F30; margin: 2px 0 4px; font-weight: 600;">A grateful goodbye</h4>
               <p style="font-size: 0.96rem; margin: 0; color: #5B5347;">Closing the day before departure with an afternoon gratitude circle as a whole school.</p>
             </div>
           </div>
@@ -440,7 +444,7 @@
     <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
       <div style="max-width: 720px; margin: 0 auto 64px; text-align: center;">
         <span style="display: inline-block; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: #A1674A; font-weight: 700; margin-bottom: 18px;">Our Days, Quietly</span>
-        <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0;">Glimpses of life at the Grove.</h2>
+        <h2 style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-weight: 600; color: #253F30; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0;">Glimpses of life at the Grove.</h2>
       </div>
 
       <div class="cg-gallery-grid">
@@ -461,7 +465,7 @@
     <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
       <div style="max-width: 720px; margin: 0 auto 48px; text-align: center;">
         <span style="display: inline-block; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: #A1674A; font-weight: 700; margin-bottom: 18px;">Voices from our Community</span>
-        <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0;">What families are saying.</h2>
+        <h2 style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-weight: 600; color: #253F30; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0;">What families are saying.</h2>
       </div>
 
       <div class="q-grid">
@@ -501,7 +505,7 @@
     <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
       <div style="background: linear-gradient(135deg, #375D47 0%, #253F30 100%); color: #FFF4D6; border-radius: 48px; padding: 80px 64px; text-align: center; position: relative; overflow: hidden;">
         <span style="display: inline-block; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: #C2E0ED; font-weight: 700; margin-bottom: 18px; position: relative; z-index: 1;">Now Enrolling</span>
-        <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #FFF4D6; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0 0 16px; position: relative; z-index: 1;">Come for a tour.</h2>
+        <h2 style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-weight: 600; color: #FFF4D6; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0 0 16px; position: relative; z-index: 1;">Come for a tour.</h2>
         <p style="color: rgba(255, 244, 214, 0.82); font-size: 1.15rem; max-width: 520px; margin: 0 auto 36px; position: relative; z-index: 1;">
           The best way to know if Cedar Grove is the right home for your child
           is to walk the land with us. We'd love to meet you.
@@ -532,7 +536,7 @@
         </div>
 
         <div>
-          <h4 style="font-family: 'Quicksand', sans-serif; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: #253F30; font-weight: 700; margin: 0 0 18px;">Visit</h4>
+          <h4 style="font-family: 'Quicksand', 'Century Gothic', 'Avenir Next', 'Segoe UI', sans-serif; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: #253F30; font-weight: 700; margin: 0 0 18px;">Visit</h4>
           <ul style="list-style: none; margin: 0; padding: 0;">
             <li style="margin-bottom: 10px;">2590 County Rd 15</li>
             <li style="margin-bottom: 10px;">Picton, Ontario</li>
@@ -542,7 +546,7 @@
         </div>
 
         <div>
-          <h4 style="font-family: 'Quicksand', sans-serif; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: #253F30; font-weight: 700; margin: 0 0 18px;">Explore</h4>
+          <h4 style="font-family: 'Quicksand', 'Century Gothic', 'Avenir Next', 'Segoe UI', sans-serif; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: #253F30; font-weight: 700; margin: 0 0 18px;">Explore</h4>
           <ul style="list-style: none; margin: 0; padding: 0;">
             <li style="margin-bottom: 10px;"><a href="#about" class="cg-hover-footer" style="color: #5B5347; text-decoration: none;">About</a></li>
             <li style="margin-bottom: 10px;"><a href="#programs" class="cg-hover-footer" style="color: #5B5347; text-decoration: none;">Programs</a></li>
@@ -553,7 +557,7 @@
         </div>
 
         <div>
-          <h4 style="font-family: 'Quicksand', sans-serif; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: #253F30; font-weight: 700; margin: 0 0 18px;">Connect</h4>
+          <h4 style="font-family: 'Quicksand', 'Century Gothic', 'Avenir Next', 'Segoe UI', sans-serif; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: #253F30; font-weight: 700; margin: 0 0 18px;">Connect</h4>
           <ul style="list-style: none; margin: 0; padding: 0;">
             <li style="margin-bottom: 10px;"><a href="https://form.jotform.com/251934741370053" target="_blank" rel="noopener" class="cg-hover-footer" style="color: #5B5347; text-decoration: none;">Apply</a></li>
             <li style="margin-bottom: 10px;"><a href="faculty-staff.html" class="cg-hover-footer" style="color: #5B5347; text-decoration: none;">Faculty &amp; Staff</a></li>
@@ -564,7 +568,7 @@
 
       <div style="border-top: 1px solid rgba(161, 103, 74, 0.2); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; font-size: 0.86rem; flex-wrap: wrap; gap: 16px;">
         <span>&copy; 2026 Cedar Grove School. A registered not-for-profit.</span>
-        <span style="font-family: 'Playfair Display', serif; font-style: italic; color: #A1674A; font-size: 1.15rem;">Where childhood grows naturally.</span>
+        <span style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-style: italic; color: #A1674A; font-size: 1.15rem;">Where childhood grows naturally.</span>
       </div>
     </div>
   </footer>
