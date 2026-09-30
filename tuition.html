@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tuition | Cedar Grove School</title>
+<meta name="description" content="Tuition for the 2026–2027 school year at Cedar Grove School. Families choose one to five days a week, with a 5% sibling discount." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  section[id] { scroll-margin-top: 96px; }
+  body { margin: 0; -webkit-font-smoothing: antialiased; font-family: 'Quicksand', sans-serif; color: #2A2823; background: #FFF4D6; line-height: 1.65; overflow-x: hidden; }
+  img { max-width: 100%; display: block; }
+  a { text-decoration: none; }
+  .cg-hover-fill:hover { background: #253F30 !important; }
+  .cg-hover-outline:hover { background: #375D47 !important; color: #FFF4D6 !important; }
+  .cg-hover-link:hover { color: #A1674A !important; }
+  .cg-hover-footer:hover { color: #375D47 !important; }
+  .cg-hover-circle:hover { background: #375D47 !important; color: #FFF4D6 !important; }
+  .cg-hover-cta:hover { background: #FFF4D6 !important; }
+  .cg-menu-toggle { display: none; }
+  .cg-hamburger { display: none; cursor: pointer; padding: 8px; margin: -8px 0; }
+  .cg-mobile-panel { display: none; flex-direction: column; padding: 4px 32px 20px; }
+  .cg-mobile-panel a { padding: 13px 0; font-size: 1rem; color: #253F30; font-weight: 600; border-bottom: 1px solid rgba(161, 103, 74, 0.14); }
+  @media (max-width: 700px) {
+    nav.cg-nav a.cg-navlink { display: none; }
+    .cg-hamburger { display: flex; align-items: center; }
+    .cg-menu-toggle:checked ~ .cg-mobile-panel { display: flex; }
+    [style*="padding: 100px 0;"] { padding: 48px 0 !important; }
+    [style*="padding: 80px 0 60px;"] { padding: 44px 0 32px !important; }
+    [style*="padding: 80px 64px;"] { padding: 40px 24px !important; }
+  }
+
+  /* --- the ladder --- */
+  .t-band { display: grid; grid-template-columns: 210px 1fr auto; gap: 32px; align-items: center;
+            background: #FFF4D6; border-radius: 22px; padding: 30px 34px; margin-bottom: 14px;
+            border: 1px solid rgba(161, 103, 74, 0.14); }
+  .t-band.alt { background: #F7EAC4; }
+  .t-n { font-family: 'Playfair Display', serif; font-size: 2.3rem; font-weight: 600; color: #253F30; line-height: 1.05; }
+  .t-n span { display: block; font-family: 'Quicksand', sans-serif; font-size: 0.74rem; font-weight: 700;
+              letter-spacing: 0.18em; text-transform: uppercase; color: #A1674A; margin-top: 8px; }
+  .t-desc { color: #5B5347; font-size: 0.98rem; }
+  .t-desc strong { color: #253F30; font-weight: 700; }
+  .t-pills { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .t-pill { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+            padding: 4px 12px; border-radius: 999px; background: #8DA57C; color: #FFF4D6; }
+  .t-pill.blue { background: #C2E0ED; color: #253F30; }
+  .t-cost { font-family: 'Playfair Display', serif; font-size: 2.1rem; font-weight: 600; color: #375D47;
+            white-space: nowrap; text-align: right; }
+  .t-cost span { display: block; font-family: 'Quicksand', sans-serif; font-size: 0.76rem; font-weight: 600;
+                 letter-spacing: 0.1em; text-transform: uppercase; color: #8A8172; margin-top: 4px; }
+  .t-cost span em { display: block; font-style: normal; font-size: 0.8rem; font-weight: 600;
+                    letter-spacing: 0.02em; text-transform: none; color: #A1674A; margin-top: 5px; }
+  @media (max-width: 780px) {
+    .t-band { grid-template-columns: 1fr auto; gap: 12px 20px; padding: 22px 22px; border-radius: 18px; }
+    .t-n { grid-column: 1; font-size: 1.9rem; }
+    .t-n span { margin-top: 5px; }
+    .t-cost { grid-column: 2; text-align: right; font-size: 1.7rem; }
+    .t-desc { grid-column: 1 / -1; font-size: 0.94rem; }
+  }
+
+  /* --- sibling discount --- */
+  .t-sib { display: grid; grid-template-columns: 64px 1fr; gap: 24px; align-items: start;
+           background: linear-gradient(135deg, #375D47 0%, #253F30 100%); color: #FFF4D6;
+           border-radius: 22px; padding: 34px 36px; margin-top: 30px; }
+  .t-sib-icon { width: 64px; height: 64px; border-radius: 50%; background: rgba(194, 224, 237, 0.18);
+                display: flex; align-items: center; justify-content: center; color: #C2E0ED; }
+  .t-sib h3 { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 1.5rem; margin: 0 0 8px; color: #FFF4D6; }
+  .t-sib p { margin: 0; color: rgba(255, 244, 214, 0.86); font-size: 1rem; max-width: 620px; }
+  @media (max-width: 780px) {
+    .t-sib { grid-template-columns: 1fr; gap: 16px; padding: 26px 24px; }
+    .t-sib-icon { width: 52px; height: 52px; }
+  }
+
+  /* --- closing notes --- */
+  .t-notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; margin-top: 56px; }
+  .t-note h4 { font-family: 'Quicksand', sans-serif; font-size: 0.78rem; letter-spacing: 0.18em;
+               text-transform: uppercase; color: #253F30; font-weight: 700; margin: 0 0 12px; }
+  .t-note p { margin: 0; font-size: 0.96rem; color: #5B5347; }
+</style>
+</head>
+<body>
+
+<div>
+
+  <!-- Announcement bar -->
+  <div style="background: #375D47; color: #FFF4D6; text-align: center; padding: 10px 24px; font-size: 0.92rem; letter-spacing: 0.02em;">
+    Enrolment for the 2026&ndash;2027 school year is open.
+    <a href="https://form.jotform.com/251934741370053" target="_blank" rel="noopener" style="color: #C2E0ED; text-decoration: underline; text-underline-offset: 3px; font-weight: 600;">Apply now</a>
+  </div>
+
+  <!-- Header -->
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(255, 244, 214, 0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(161, 103, 74, 0.12);">
+    <input type="checkbox" id="cg-menu" class="cg-menu-toggle" />
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 32px; max-width: 1400px; margin: 0 auto; gap: 24px; flex-wrap: wrap;">
+      <a href="index.html" aria-label="Cedar Grove School home" style="display: flex; align-items: center; text-decoration: none;">
+        <img src="assets/logo.png" alt="Cedar Grove School" style="height: 60px; width: auto; display: block;" width="560" height="173"/>
+      </a>
+
+      <nav class="cg-nav" style="display: flex; gap: 28px; align-items: center; flex-wrap: wrap;">
+        <a class="cg-navlink cg-hover-link" href="index.html#about" style="font-size: 0.92rem; color: #253F30; font-weight: 600; letter-spacing: 0.03em; text-decoration: none;">About</a>
+        <a class="cg-navlink cg-hover-link" href="index.html#programs" style="font-size: 0.92rem; color: #253F30; font-weight: 600; letter-spacing: 0.03em; text-decoration: none;">Programs</a>
+        <a class="cg-navlink cg-hover-link" href="tuition.html" style="font-size: 0.92rem; color: #A1674A; font-weight: 700; letter-spacing: 0.03em; text-decoration: none;">Tuition</a>
+        <a class="cg-navlink cg-hover-link" href="index.html#gallery" style="font-size: 0.92rem; color: #253F30; font-weight: 600; letter-spacing: 0.03em; text-decoration: none;">Gallery</a>
+        <a class="cg-navlink cg-hover-link" href="faculty-staff.html" style="font-size: 0.92rem; color: #253F30; font-weight: 600; letter-spacing: 0.03em; text-decoration: none;">Faculty &amp; Staff</a>
+        <a class="cg-navlink cg-hover-link" href="index.html#enrol" style="font-size: 0.92rem; color: #253F30; font-weight: 600; letter-spacing: 0.03em; text-decoration: none;">Contact</a>
+        <a href="https://form.jotform.com/251934741370053" target="_blank" rel="noopener" class="cg-hover-fill" style="padding: 15px 32px; border-radius: 999px; font-size: 0.92rem; font-weight: 700; letter-spacing: 0.04em; color: #FFF4D6; background: #375D47; box-shadow: 0 8px 22px rgba(55, 93, 71, 0.32); display: inline-flex; align-items: center; text-decoration: none;">Apply for 2026&ndash;27</a>
+      </nav>
+
+      <label for="cg-menu" class="cg-hamburger" aria-label="Open menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#253F30" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </label>
+    </div>
+
+    <nav class="cg-mobile-panel">
+      <a href="index.html#about">About</a>
+      <a href="index.html#programs">Programs</a>
+      <a href="tuition.html">Tuition</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="faculty-staff.html">Faculty &amp; Staff</a>
+      <a href="index.html#enrol">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Page header -->
+  <section style="padding: 80px 0 60px;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
+      <div style="max-width: 720px;">
+        <span style="display: inline-block; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: #A1674A; font-weight: 700; margin-bottom: 18px;">Tuition</span>
+        <h1 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #253F30; font-size: clamp(2.2rem, 4.6vw, 3.4rem); margin: 0 0 20px; line-height: 1.15;">Choose the rhythm that fits<br/>your family.</h1>
+        <p style="font-size: 1.1rem; color: #5B5347; margin: 0; max-width: 640px;">Tuition for the 2026&ndash;2027 school year. Families build their week from one day to five, and the cost follows the days you choose.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The ladder -->
+  <section id="rates" style="padding: 0 0 40px;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
+
+      <div class="t-band">
+        <div class="t-n">Five days<span>The full week</span></div>
+        <div class="t-desc">The whole rhythm, Monday to Friday. Morning gratitude, main lesson, afternoons outdoors, and every festival in between.
+          <div class="t-pills"><span class="t-pill">Kinder &ndash; Gr 1</span><span class="t-pill">Grades 2 &ndash; 5</span></div>
+        </div>
+        <div class="t-cost">$12,500<span>per year<em>or $1,250&thinsp;/&thinsp;month</em></span></div>
+      </div>
+
+      <div class="t-band alt">
+        <div class="t-n">Four days<span>A day at home</span></div>
+        <div class="t-desc">Nearly the full week, with one day kept back for family, rest, or whatever else your household needs.
+          <div class="t-pills"><span class="t-pill">Kinder &ndash; Gr 1</span><span class="t-pill">Grades 2 &ndash; 5</span></div>
+        </div>
+        <div class="t-cost">$12,000<span>per year<em>or $1,200&thinsp;/&thinsp;month</em></span></div>
+      </div>
+
+      <div class="t-band">
+        <div class="t-n">Three days<span>A steady half</span></div>
+        <div class="t-desc">Enough to belong to the class and know the rhythm, with the rest of the week your own.
+          <div class="t-pills"><span class="t-pill">Kinder &ndash; Gr 1</span></div>
+        </div>
+        <div class="t-cost">$9,000<span>per year<em>or $900&thinsp;/&thinsp;month</em></span></div>
+      </div>
+
+      <div class="t-band alt">
+        <div class="t-n">Two days<span>A gentle start</span></div>
+        <div class="t-desc">A soft introduction to school life for the youngest children, or a good fit alongside learning at home.
+          <div class="t-pills"><span class="t-pill">Kinder &ndash; Gr 1</span></div>
+        </div>
+        <div class="t-cost">$6,000<span>per year<em>or $600&thinsp;/&thinsp;month</em></span></div>
+      </div>
+
+      <div class="t-band">
+        <div class="t-n">One day<span>The part-time program</span></div>
+        <div class="t-desc">Open to every family, not only those homeschooling. Grade 2&ndash;5 students join us <strong>on Fridays</strong> for seasonally-aligned, nature-based enrichment, from propagating native trees to fire and shelter-building skills.
+          <div class="t-pills"><span class="t-pill">Kinder &ndash; Gr 1</span><span class="t-pill blue">Grades 2 &ndash; 5 on Fridays</span></div>
+        </div>
+        <div class="t-cost">$3,000<span>per year<em>or $300&thinsp;/&thinsp;month</em></span></div>
+      </div>
+
+      <!-- Sibling discount -->
+      <div class="t-sib">
+        <div class="t-sib-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <div>
+          <h3>A 5% sibling discount</h3>
+          <p>Families with more than one child enrolled at Cedar Grove receive 5% off tuition. It is applied automatically, so there is nothing to ask for.</p>
+        </div>
+      </div>
+
+      <div class="t-notes">
+        <div class="t-note">
+          <h4>A not-for-profit school</h4>
+          <p>Cedar Grove is a registered not-for-profit. Tuition covers the real cost of running a small school with an 8:1 ratio, and nothing beyond it.</p>
+        </div>
+        <div class="t-note">
+          <h4>Paying for the year</h4>
+          <p>Tuition can be paid as a single lump sum, or spread evenly across ten monthly payments, whichever suits your household better.</p>
+        </div>
+        <div class="t-note">
+          <h4>Places are limited</h4>
+          <p>Our ratio is the reason we keep classes small, and the reason places fill early. We enrol JK through Grade 5.</p>
+        </div>
+        <div class="t-note">
+          <h4>Questions about cost</h4>
+          <p>If tuition is the thing standing between your family and Cedar Grove, please write to us at <a href="mailto:Admin@cedargroveschool.ca" class="cg-hover-footer" style="color: #A1674A; font-weight: 600;">Admin@cedargroveschool.ca</a>. We would rather have the conversation.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="enrol" style="padding: 100px 0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
+      <div style="background: linear-gradient(135deg, #375D47 0%, #253F30 100%); color: #FFF4D6; border-radius: 48px; padding: 80px 64px; text-align: center; position: relative; overflow: hidden;">
+        <span style="display: inline-block; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: #C2E0ED; font-weight: 700; margin-bottom: 18px; position: relative; z-index: 1;">Now Enrolling</span>
+        <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; color: #FFF4D6; font-size: clamp(2rem, 3.6vw, 3rem); margin: 0 0 16px; position: relative; z-index: 1;">Come for a tour.</h2>
+        <p style="color: rgba(255, 244, 214, 0.82); font-size: 1.15rem; max-width: 520px; margin: 0 auto 36px; position: relative; z-index: 1;">
+          The best way to know if Cedar Grove is the right home for your child
+          is to walk the land with us. We'd love to meet you.
+        </p>
+        <a href="https://form.jotform.com/251934741370053" target="_blank" rel="noopener" class="cg-hover-cta" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; border-radius: 999px; font-weight: 700; font-size: 0.94rem; letter-spacing: 0.03em; background: #C2E0ED; color: #253F30; box-shadow: 0 6px 24px rgba(194, 224, 237, 0.4); position: relative; z-index: 1; text-decoration: none;">
+          Apply for 2026 &ndash; 2027
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" style="background: #F7EAC4; padding: 80px 0 32px; color: #5B5347;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 48px; margin-bottom: 56px;">
+        <div style="max-width: 340px;">
+          <img src="assets/logo.png" alt="Cedar Grove School" style="height: 72px; width: auto; display: block; margin-bottom: 18px;" width="560" height="173"/>
+          <p style="margin: 0 0 24px; max-width: 320px; font-size: 0.96rem;">A nature-based, not-for-profit elementary school nestled on an organic farm in Prince Edward County, Ontario.</p>
+          <div style="display: flex; gap: 12px; margin-top: 8px;">
+            <a href="https://www.instagram.com/cedargroveschool.pec/" target="_blank" rel="noopener" aria-label="Instagram" class="cg-hover-circle" style="width: 40px; height: 40px; border-radius: 50%; background: #FFF4D6; display: flex; align-items: center; justify-content: center; color: #375D47; text-decoration: none;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            </a>
+            <a href="https://www.facebook.com/cedargroveschoolpec/" target="_blank" rel="noopener" aria-label="Facebook" class="cg-hover-circle" style="width: 40px; height: 40px; border-radius: 50%; background: #FFF4D6; display: flex; align-items: center; justify-content: center; color: #375D47; text-decoration: none;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h2V5h-2c-1.66 0-3 1.34-3 3v2H9v3h2v8h3v-8h2.5l.5-3H14V8.5c0-.28.22-.5.5-.5z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="font-family: 'Quicksand', sans-serif; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: #253F30; font-weight: 700; margin: 0 0 18px;">Visit</h4>
+          <ul style="list-style: none; margin: 0; padding: 0;">
+            <li style="margin-bottom: 10px;">2590 County Rd 15</li>
+            <li style="margin-bottom: 10px;">Picton, Ontario</li>
+            <li style="margin-bottom: 10px;">K0K 2T0</li>
+            <li style="margin-bottom: 10px;"><a href="mailto:Admin@cedargroveschool.ca" class="cg-hover-footer" style="color: #5B5347; text-decoration: none;">Admin@cedargroveschool.ca</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-family: 'Quicksand', sans-serif; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: #253F30; font-weight: 700; margin: 0 0 18px;">Explore</h4>
+          <ul style="list-style: none; margin: 0; padding: 0;">
+            <li style="margin-bottom: 10px;"><a href="index.html#about" class="cg-hover-footer" style="color: #5B5347; text-decoration: none;">About</a></li>
+            <li style="margin-bottom: 10px;"><a href="index.html#programs" class="cg-hover-footer" style="color: #5B5347; text-decoration: none;">Programs</a></li>
+            <li style="margin-bottom: 10px;"><a href="tuition.html" class="cg-hover-footer" style="color: #5B5347; text-decoration: none;">Tuition</a></li>
+            <li style="margin-bottom: 10px;"><a href="index.html#day" class="cg-hover-footer" style="color: #5B5347; text-decoration: none;">A Day Here</a></li>
+            <li style="margin-bottom: 10px;"><a href="index.html#gallery" class="cg-hover-footer" style="color: #5B5347; text-decoration: none;">Gallery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-family: 'Quicksand', sans-serif; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: #253F30; font-weight: 700; margin: 0 0 18px;">Connect</h4>
+          <ul style="list-style: none; margin: 0; padding: 0;">
+            <li style="margin-bottom: 10px;"><a href="https://form.jotform.com/251934741370053" target="_blank" rel="noopener" class="cg-hover-footer" style="color: #5B5347; text-decoration: none;">Apply</a></li>
+            <li style="margin-bottom: 10px;"><a href="faculty-staff.html" class="cg-hover-footer" style="color: #5B5347; text-decoration: none;">Faculty &amp; Staff</a></li>
+            <li style="margin-bottom: 10px;"><a href="faculty-staff.html#specialty-teachers" class="cg-hover-footer" style="color: #5B5347; text-decoration: none;">Job Opportunities</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid rgba(161, 103, 74, 0.2); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; font-size: 0.86rem; flex-wrap: wrap; gap: 16px;">
+        <span>&copy; 2026 Cedar Grove School. A registered not-for-profit.</span>
+        <span style="font-family: 'Playfair Display', serif; font-style: italic; color: #A1674A; font-size: 1.15rem;">Where childhood grows naturally.</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
