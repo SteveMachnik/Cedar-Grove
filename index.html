@@ -130,7 +130,7 @@
   ]
 }
 </script>
-<link rel="preload" as="image" href="assets/hero.jpg" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" imagesrcset="assets/hero-450.webp 450w, assets/hero-700.webp 700w, assets/hero-900.webp 900w" imagesizes="(max-width: 900px) 92vw, 500px" fetchpriority="high">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="assets/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -139,6 +139,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Quicksand:wght@400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Quicksand:wght@400;600;700&display=swap"></noscript>
 <style>
+  @media (max-width: 480px) { .cg-stat { right: 0 !important; max-width: 210px !important; } }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   section[id] { scroll-margin-top: 96px; }
@@ -341,14 +342,14 @@
         </div>
 
         <div style="position: relative; aspect-ratio: 4/5;">
-          <img src="assets/hero.jpg"
+          <img src="assets/hero.jpg" srcset="assets/hero-450.webp 450w, assets/hero-700.webp 700w, assets/hero-900.webp 900w" sizes="(max-width: 900px) 92vw, 500px"
                alt="A Cedar Grove student outdoors" fetchpriority="high" decoding="async"
                style="width: 100%; height: 100%; object-fit: cover; border-radius: 48px 48px 28px 28px; box-shadow: 0 24px 60px rgba(37, 63, 48, 0.16);" width="900" height="1200"/>
           <div style="position: absolute; top: 28px; left: -20px; background: #FFF4D6; border-radius: 999px; padding: 14px 22px; box-shadow: 0 12px 40px rgba(37, 63, 48, 0.12); display: flex; align-items: center; gap: 10px; font-size: 0.9rem; font-weight: 600; color: #253F30;">
             <span style="width: 8px; height: 8px; border-radius: 50%; background: #8DA57C; animation: cg-pulse 2.4s infinite; display: inline-block;"></span>
             Now enrolling, JK &ndash; Grade 5
           </div>
-          <div style="position: absolute; bottom: -32px; right: -20px; background: #FFF4D6; padding: 24px 28px; border-radius: 16px; box-shadow: 0 24px 60px rgba(37, 63, 48, 0.16); max-width: 240px;">
+          <div class="cg-stat" style="position: absolute; bottom: -32px; right: -20px; background: #FFF4D6; padding: 24px 28px; border-radius: 16px; box-shadow: 0 24px 60px rgba(37, 63, 48, 0.16); max-width: 240px;">
             <div style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 2.6rem; color: #375D47; font-weight: 700; line-height: 1;">8:1</div>
             <div style="font-size: 0.88rem; color: #5B5347; margin-top: 6px;">Student-to-teacher ratio. Small classes, deep relationships.</div>
           </div>
